@@ -69,12 +69,12 @@ return new class extends Migration
             $table->text("achievements-text");
             $table->text("achievements-years-nummber");
             $table->text("achievements-year");
-            $table->jeson("achievements")->nullable; // Include number,tittle and text
+            $table->json("achievements")->nullable; // Include number,tittle and text
 
             // Timeline
             $table->string("tmeline-tag");
             $table->text("tmeline-tittle");
-            $table->jeson("tmeline")->nullable;
+            $table->json("tmeline")->nullable;
 
             // Team
             $table->string("team-taag");

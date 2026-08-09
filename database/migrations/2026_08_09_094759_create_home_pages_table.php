@@ -16,10 +16,10 @@ return new class extends Migration
 
             // Hero Section 
             $table->json('images')->nullable(); //Image
-            $table->sting("hero-tag");
+            $table->string("hero-tag");
             $table->text("hero-title");
             $table->text("sub-title");
-            $table->sting("hajj-season");
+            $table->string("hajj-season");
             $table->text("hero-floating-image");
 
             // pilgrimCount
@@ -37,21 +37,21 @@ return new class extends Migration
             $table->string("section1-tag");
             $table->string("section1-title");
             $table->string("section1-subtitle");
-            $table->int("hotline");
+            $table->integer("hotline");
 
             //Section 2
-            $table->string("section1-tag");
-            $table->string("section1-title");
+            $table->string("section2-tag");
+            $table->string("section2-title");
 
             //Section 3
             $table->text("section3-image");
             $table->text("section3-floating-image");
             //Our services 
-            $table->jeson("Our Services")->nullable(); // Incude image,tag,title and subtittle
+            $table->json("Our Services")->nullable(); // Incude image,tag,title and subtittle
 
             // Experiences
             $table->string("experiences");
-            $table->jeson("comments")->nullable; // Include name and comment text
+            $table->json("comments")->nullable; // Include name and comment text
 
             $table->timestamps();
         });
