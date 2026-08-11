@@ -13,6 +13,22 @@ return new class extends Migration
     {
         Schema::create('contact_us_pages', function (Blueprint $table) {
             $table->id();
+            // Contact Information
+            $table->string('hotline')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->string('email')->nullable();
+
+            // Contact Form
+            $table->string('contact_name')->nullable();
+            $table->string('contact_email')->nullable();
+            $table->text('contact_message')->nullable();
+
+            // Booking Request
+            $table->enum('service_type', ['hajj', 'umrah'])->nullable();
+            $table->string('full_name')->nullable();
+            $table->string('booking_whatsapp')->nullable();
+            $table->unsignedInteger('travelers_count')->nullable();
+
             $table->timestamps();
         });
     }

@@ -23,7 +23,6 @@ return new class extends Migration
             $table->integer('Deposit')->nullable();
             $table->integer('entrey-fee')->nullable();
 
-            
             //MAKA
             $table->string('maka-hotel')->nullable();
             $table->string('maka-address')->nullable();
@@ -44,20 +43,30 @@ return new class extends Migration
             $table->string('madina-duration')->nullable();
             $table->boolean('madina-includes-iftar')->default(false)->nullable();
             $table->json('madina-images')->nullable(); // array of images
-            $table->text('madina-location')->nullable();            
+            $table->text('madina-location')->nullable();
+
+            //details
+            $table->string('description');
+            $table->json('events');   //an array of events 
+            //each event has a type and a data array of attributes depending on hte type
+            //flight: data array only has key text holding string
+            //stay: data array has date, area, hotel, duration and meals all are strings
 
             //flight
             $table->string('flight-host')->nullable();
             $table->json('flight-stops')->nullable(); //just an array of strings
-            
 
             $table->json('program_includes')->nullable();  //array of strings
             $table->json('general_notes')->nullable();  //array of strings
             $table->json('required_papers')->nullable();  //array of strings
             $table->json('cancelation_policy')->nullable();  //array of strings
             $table->json('external_visas')->nullable();  //array of strings
+<<<<<<< HEAD
+=======
 
-            $table->text('notes')->nullable();
+            $table->json('notes')->nullable();  //array of strings
+>>>>>>> da9381ae28d5e57956807c3f0a8a65bb2ab6a6f6
+
 
             $table->timestamps();
         });
