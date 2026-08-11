@@ -24,6 +24,7 @@ return new class extends Migration
 
             // Video
             $table->text("vidoe");
+
             $table->timestamps();
         });
     }

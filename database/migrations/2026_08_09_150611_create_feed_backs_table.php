@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('feed_backs', function (Blueprint $table) {
             $table->id();
+
+            //Hero Section
+            $table->sring("hero-tag");
+            $table->text("hero-text");
+            $table->text("hero-image");
+
+            // // Experiences
+            $table->string("experiences");
+            $table->json("comments")->nullable; // Include name and comment text
+
+            // Video
+            $table->text("vidoe");
+
             $table->timestamps();
         });
     }
