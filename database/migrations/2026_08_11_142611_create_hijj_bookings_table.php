@@ -13,6 +13,21 @@ return new class extends Migration
     {
         Schema::create('hajj_bookings', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('hajj_price_id')
+                ->constrained('hajj_prices')
+                ->cascadeOnDelete();
+
+            $table->foreignId('hajj_package_id')
+                ->constrained('hajj_packages')
+                ->cascadeOnDelete();
+
+            $table->text('name');
+            $table->text('phone');
+
+            $table->integer('count');
+            $table->integer('price');
+
             $table->timestamps();
         });
     }

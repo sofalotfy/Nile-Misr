@@ -23,14 +23,13 @@ return new class extends Migration
             $table->text("hero-floating-image")->nullable();
 
             // pilgrimCount
-            // $table->string("pilgrim-count")->nullable();
-            // $table->string("pilgrim-text")->nullable();
+            $table->string("pilgrim-text")->nullable();
 
             // Rate
+            $table->string("rate-text")->nullable();
 
             //Review
-            // $table->float("review-count")->nullable();
-            // $table->string("review-text")->nullable();
+            $table->string("review-text")->nullable();
 
             //Section 1
             $table->text("section1-image")->nullable();

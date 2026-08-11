@@ -19,9 +19,6 @@ return new class extends Migration
             $table->text("hero-sub-title")->nullable();
             $table->text("hero-image")->nullable();
 
-            //Sites
-            $table->json('sites')->nullable();  //image,name,address,location,number
-
 
             // Contact card
             $table->text('card-tag')->nullable();
@@ -45,10 +42,6 @@ return new class extends Migration
 
             //social media
             $table->text('social-quote')->nullable();
-            $table->text('social-tiktok')->nullable();
-            $table->text('social-twitter')->nullable();
-            $table->text('social-instgram')->nullable();
-            $table->text('social-facebook')->nullable();
 
             $table->timestamps();
         });

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('single_hijj_package_pages', function (Blueprint $table) {
             $table->id();
+
+            $table->text('title')->nullable();
+            $table->text('quote')->nullable();
+            
             $table->timestamps();
         });
     }

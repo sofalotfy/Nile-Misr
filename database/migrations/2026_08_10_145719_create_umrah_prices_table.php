@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('header__footers', function (Blueprint $table) {
+        Schema::create('umrah_prices', function (Blueprint $table) {
             $table->id();
 
-            $table->text('header-logo');
-            $table->text('footer-logo');
+            $table->foreignId('umrah_package_id')
+                ->constrained('umrahs_packages')
+                ->cascadeOnDelete();
+
+            $table->string('type');  //enum
+            $table->integer('price');
 
 
             $table->timestamps();
@@ -27,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('header__footers');
+        Schema::dropIfExists('umrah_prices');
     }
 };

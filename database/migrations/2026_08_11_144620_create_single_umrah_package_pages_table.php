@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('header__footers', function (Blueprint $table) {
+        Schema::create('single_umrah_package_pages', function (Blueprint $table) {
             $table->id();
 
-            $table->text('header-logo');
-            $table->text('footer-logo');
-
-
+            $table->text('title')->nullable();
+            $table->text('quote')->nullable();
+            
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('header__footers');
+        Schema::dropIfExists('single_umrah_package_pages');
     }
 };

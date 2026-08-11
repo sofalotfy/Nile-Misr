@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class AboutUsPage extends Model
 {
-    //
+    protected $guarded = [];
+
+    protected $casts = [
+        'achievements' => 'array',
+        'tmeline' => 'array',
+    ];
 }

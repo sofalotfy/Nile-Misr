@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SingleHijjPackagePage extends Model
 {
-    //
+    protected $guarded = [];
 }

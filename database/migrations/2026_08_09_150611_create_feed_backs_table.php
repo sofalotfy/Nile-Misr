@@ -15,16 +15,9 @@ return new class extends Migration
             $table->id();
 
             //Hero Section
-            $table->string("hero-tag");
-            $table->text("hero-text");
-            $table->text("hero-image");
-
-            // // Experiences
-            $table->string("experiences");
-            $table->json("comments")->nullable; // Include name and comment text
-
-            // Video
-            $table->text("vidoe");
+            $table->text("name");
+            $table->text("email");
+            $table->text("message");
 
             $table->timestamps();
         });

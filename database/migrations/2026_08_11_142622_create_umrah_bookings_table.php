@@ -13,6 +13,21 @@ return new class extends Migration
     {
         Schema::create('umrah_bookings', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('umrah_price_id')
+                ->constrained('umrah_prices')
+                ->cascadeOnDelete();
+
+            $table->foreignId('umrah_package_id')
+                ->constrained('umrahs_packages')
+                ->cascadeOnDelete();
+
+            $table->text('name');
+            $table->text('phone');
+
+            $table->integer('count');
+            $table->integer('price');
+
             $table->timestamps();
         });
     }
