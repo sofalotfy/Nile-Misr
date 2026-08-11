@@ -14,18 +14,26 @@ return new class extends Migration
         Schema::create('media_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->string("hero-tag");
-            $table->text("hero-text");
-            $table->text("hero-image");
+            $table->text("hero-title")->nullable();
+            $table->text("hero-sub-title")->nullable();
+            $table->text("hero-image")->nullable();
 
             //media solutions
-            $table->string("media-solutions-tag");
-            $table->text("media-solutions-tittle");
-            $table->text("media-solutions-text");
-            $table->json("image")->nullable;
+            $table->strtexting("media-solutions-quote")->nullable();
+            $table->text("media-solutions-title")->nullable();
+            $table->text("media-solutions-text")->nullable();
+            $table->json("images")->nullable(); // array of strings
 
             // Video
-            $table->text("vidoe");
+            $table->text("vidoe")->nullable();
+
+            //media
+            $table->text("media-image-1")->nullable();
+            $table->text("media-image-2")->nullable();
+            $table->text("media-image-3")->nullable();
+            $table->text("media-image-4")->nullable();
+            $table->text("media-image-5")->nullable();
+            $table->text("media-image-6")->nullable();
 
             $table->timestamps();
         });

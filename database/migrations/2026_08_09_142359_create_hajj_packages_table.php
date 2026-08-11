@@ -61,11 +61,8 @@ return new class extends Migration
             $table->json('required_papers')->nullable();  //array of strings
             $table->json('cancelation_policy')->nullable();  //array of strings
             $table->json('external_visas')->nullable();  //array of strings
-<<<<<<< HEAD
-=======
 
             $table->json('notes')->nullable();  //array of strings
->>>>>>> da9381ae28d5e57956807c3f0a8a65bb2ab6a6f6
 
 
             $table->timestamps();

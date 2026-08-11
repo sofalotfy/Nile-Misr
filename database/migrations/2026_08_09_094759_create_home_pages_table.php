@@ -52,7 +52,6 @@ return new class extends Migration
 
             // Experiences
             $table->string("experiences-title")->nullable();
-            $table->json("comments")->nullable(); // Include name and comment text
 
             $table->timestamps();
         });

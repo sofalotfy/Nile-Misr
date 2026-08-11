@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('our_supervisors_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->text("hero-title");->nullable()
+            $table->text("hero-title")->nullable();
             $table->text("hero-sub-title")->nullable();
             $table->text("hero-image")->nullable();
 

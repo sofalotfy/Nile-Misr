@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             //Hero Section
-            $table->text("hero-title");->nullable()
+            $table->text("hero-title")->nullable();
             $table->text("hero-sub-title")->nullable();
             $table->text("hero-image")->nullable();
 

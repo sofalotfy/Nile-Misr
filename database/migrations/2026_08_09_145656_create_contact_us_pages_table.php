@@ -13,21 +13,42 @@ return new class extends Migration
     {
         Schema::create('contact_us_pages', function (Blueprint $table) {
             $table->id();
-            // Contact Information
-            $table->string('hotline')->nullable();
-            $table->string('whatsapp')->nullable();
-            $table->string('email')->nullable();
 
-            // Contact Form
-            $table->string('contact_name')->nullable();
-            $table->string('contact_email')->nullable();
-            $table->text('contact_message')->nullable();
+            //Hero Section
+            $table->text("hero-title")->nullable();
+            $table->text("hero-sub-title")->nullable();
+            $table->text("hero-image")->nullable();
 
-            // Booking Request
-            $table->enum('service_type', ['hajj', 'umrah'])->nullable();
-            $table->string('full_name')->nullable();
-            $table->string('booking_whatsapp')->nullable();
-            $table->unsignedInteger('travelers_count')->nullable();
+            //Sites
+            $table->json('sites')->nullable();  //image,name,address,location,number
+
+
+            // Contact card
+            $table->text('card-tag')->nullable();
+            $table->text('card-title')->nullable();
+            $table->text('card-sub-title')->nullable();
+            $table->text('card-hotline')->nullable();
+            $table->text('card-whatsapp')->nullable();
+            $table->text('card-sales-contact')->nullable();
+
+
+            //contact form
+            $table->text('form-title')->nullable();
+            $table->text('form-name-title')->nullable();
+            $table->text('form-name-place-holder')->nullable();
+            $table->text('form-email-title')->nullable();
+            $table->text('form-email-place-holder')->nullable();
+            $table->text('form-message-title')->nullable();
+            $table->text('form-message-place-holder')->nullable();
+            $table->text('form-note')->nullable();
+            $table->text('form-button-text')->nullable();
+
+            //social media
+            $table->text('social-quote')->nullable();
+            $table->text('social-tiktok')->nullable();
+            $table->text('social-twitter')->nullable();
+            $table->text('social-instgram')->nullable();
+            $table->text('social-facebook')->nullable();
 
             $table->timestamps();
         });

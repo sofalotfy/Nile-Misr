@@ -14,16 +14,15 @@ return new class extends Migration
         Schema::create('reviews_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->sring("hero-tag");
-            $table->text("hero-text");
-            $table->text("hero-image");
+            $table->sring("hero-tag")->nullable();
+            $table->text("hero-text")->nullable();
+            $table->text("hero-image")->nullable();
 
             // Experiences
-            $table->string("experiences");
-            $table->jeson("comments")->nullable; // Include name and comment text
+            $table->string("experiences-title")->nullable();
 
             // Video
-            $table->text("vidoe");
+            $table->text("vidoe")->nullable();
 
             $table->timestamps();
         });

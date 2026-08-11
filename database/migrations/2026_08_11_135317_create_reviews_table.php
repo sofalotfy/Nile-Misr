@@ -11,15 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('umrah_packages_pages', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-
-            //Hero Section
-            $table->text("hero-title")->nullable();
-            $table->text("hero-sub-title")->nullable();
-            $table->text("hero-image")->nullable();
-            $table->text("note")->nullable();
-
             $table->timestamps();
         });
     }
@@ -29,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('umrah_pages');
+        Schema::dropIfExists('reviews');
     }
 };
