@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
 
             //Hero Section
-            $table->sring("hero-tag");
+            $table->string("hero-tag");
             $table->text("hero-text");
             $table->text("hero-image");
 

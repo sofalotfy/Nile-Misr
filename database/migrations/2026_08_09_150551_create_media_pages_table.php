@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('media_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->sring("hero-tag");
+            $table->string("hero-tag");
             $table->text("hero-text");
             $table->text("hero-image");
 
             //media solutions
-            $table->sring("media-solutions-tag");
+            $table->string("media-solutions-tag");
             $table->text("media-solutions-tittle");
             $table->text("media-solutions-text");
             $table->json("image")->nullable;
