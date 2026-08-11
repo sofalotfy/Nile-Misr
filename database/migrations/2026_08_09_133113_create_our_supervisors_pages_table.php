@@ -14,36 +14,35 @@ return new class extends Migration
         Schema::create('our_supervisors_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->string("hero-tag");
-            $table->text("hero-text");
-            $table->text("hero-image");
+            $table->text("hero-title");->nullable()
+            $table->text("hero-sub-title")->nullable();
+            $table->text("hero-image")->nullable();
 
             // Our Supervisors
-            $table->string("our-supervisors-tag");
-            $table->text("our-supervisors-tittle");
-            $table->text("our-supervisors-text");
-            $table->text("our-supervisors-include-text");
-            $table->text("our-supervisors-image");
+            $table->text("our-supervisors-tag")->nullable();
+            $table->text("our-supervisors-quote")->nullable();
+            $table->text("our-supervisors-text")->nullable();
+            $table->text("our-supervisors-include-text")->nullable();
 
             //Organizational Supervision
-            $table->text("organizational-supervisors-image");
-            $table->text("organizational-supervisors-tittle");
-            $table->text("organizational-supervisors-text");
+            $table->text("organizational-supervisors-image")->nullable();
+            $table->text("organizational-supervisors-title")->nullable();
+            $table->text("organizational-supervisors-text")->nullable();
 
             // Service Supervision
-            $table->text("service-supervisors-image");
-            $table->text("service-supervisors-tittle");
-            $table->text("service-supervisors-text");
+            $table->text("service-supervisors-image")->nullable();
+            $table->text("service-supervisors-title")->nullable();
+            $table->text("service-supervisors-text")->nullable();
 
             //Religious Supervision            
-            $table->text("religious-supervisors-image");
-            $table->text("religious-supervisors-tittle");
-            $table->text("religious-supervisors-text");
+            $table->text("religious-supervisors-image")->nullable();
+            $table->text("religious-supervisors-title")->nullable();
+            $table->text("religious-supervisors-text")->nullable();
 
             //Emergency and Safety Management
-            $table->text("safety-management-image");
-            $table->text("safety-management-tittle");
-            $table->text("safety-management-text");
+            $table->text("safety-management-image")->nullable();
+            $table->text("safety-management-title")->nullable();
+            $table->text("safety-management-text")->nullable();
 
             $table->timestamps();
         });

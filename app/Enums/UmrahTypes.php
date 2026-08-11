@@ -1,6 +1,6 @@
 <?php
 
-namespace 
+namespace App\Enums;
 
 enum StayDuration: string
 {

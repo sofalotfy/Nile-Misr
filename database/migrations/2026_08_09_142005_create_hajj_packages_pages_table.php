@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('hajj_packages_pages', function (Blueprint $table) {
             $table->id();
+
+            $table->text("hero-title");->nullable()
+            $table->text("hero-sub-title")->nullable();
+            $table->text("hero-image")->nullable();
+            $table->text("description")->nullable();
+
             $table->timestamps();
         });
     }

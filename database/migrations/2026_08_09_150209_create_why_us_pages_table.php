@@ -15,42 +15,40 @@ return new class extends Migration
             $table->id();
 
             //Hero Section
-            $table->sring("hero-tag");
-            $table->text("hero-text");
-            $table->text("hero-image");
+            $table->text("hero-title");->nullable()
+            $table->text("hero-sub-title")->nullable();
+            $table->text("hero-image")->nullable();
 
 
-            //Accreditations and Creams
-            $table->string("accreditations-tittle");
-            $table->text("accreditations-text");
-
-            // Our Sales
-            $table->text("sales-text");
-            $table->json("image")->nullable; // Images
+            //Accreditations and notations
+            $table->text("accreditations-title")->nullable();
+            $table->text("accreditations-text")->nullable();
+            $table->text("accreditations-note")->nullable();
+            $table->json("images")->nullable(); // array of strings
 
             // Strategic Partnerships
-            $table->string("strategic-partnerships-tittle");
-            $table->text("strategic-partnerships-text");
-            $table->json("image")->nullable; // Images for Strategic Partnerships
+            $table->string("strategic-partnerships-title")->nullable();
+            $table->text("strategic-partnerships-text")->nullable();
+            $table->json("images")->nullable(); // array of stringss
 
             // Our Partnerships
-            $table->string("partnerships-tittle");
-            $table->text("partnerships-text");
-            $table->text("achievement-text");
+            $table->text("partnerships-title")->nullable();
+            $table->text("partnerships-text")->nullable();
+            $table->text("partnerships-note")->nullable();
 
             //Royal Inn
-            $table->text("royal-inn-image");
-            $table->text("royal-inn-fullimage");
-            $table->text("royal-inn-titlle");
-            $table->text("royal-inn-tag");
-            $table->text("royal-inn-text");
+            $table->text("royal-inn-logo")->nullable();
+            $table->text("royal-inn-image")->nullable();
+            $table->text("royal-inn-titlle")->nullable();
+            $table->text("royal-inn-tag")->nullable();
+            $table->text("royal-inn-text")->nullable();
 
             //Noon
-            $table->text("noon-image");
-            $table->text("noon-titlle");
-            $table->text("noon-tag");
-            $table->text("noon-text");
-            $table->text("noon-fullimage");
+            $table->text("noon-logo")->nullable();
+            $table->text("noon-titlle")->nullable();
+            $table->text("noon-tag")->nullable();
+            $table->text("noon-text")->nullable();
+            $table->text("noon-image")->nullable();
 
 
             $table->timestamps();

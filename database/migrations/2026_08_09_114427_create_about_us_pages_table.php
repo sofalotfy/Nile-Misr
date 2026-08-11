@@ -21,19 +21,19 @@ return new class extends Migration
 
             // Origins and Beginnings Section
             $table->string("beginning-tag")->nullable();
-            $table->text("beginning-tittle")->nullable();
+            $table->text("beginning-title")->nullable();
             $table->text("beginning-text")->nullable();
 
             // Our vision Section
             $table->string("our-vision-tag")->nullable();
             $table->text("our-vision-vertical-tag")->nullable();
-            $table->text("our-vision-tittle")->nullable();
+            $table->text("our-vision-title")->nullable();
             $table->text("our-vision-text")->nullable();
             $table->text("our-vision-image")->nullable();
 
             //Our Mission Section
             $table->string("our-mission-tag")->nullable();
-            $table->text("our-mission-tittle")->nullable();
+            $table->text("our-mission-title")->nullable();
             $table->text("our-mission-text")->nullable();
             $table->text("our-mission-image")->nullable();
             $table->text("our-mission-floating-image")->nullable();
@@ -43,36 +43,36 @@ return new class extends Migration
             $table->text("values-title")->nullable();
             $table->string("respecting-sanctity-title")->nullable();
             $table->text("respecting-sanctity-text")->nullable();
-            $table->string("integrity-and-credibility-tittle")->nullable();
+            $table->string("integrity-and-credibility-title")->nullable();
             $table->text("integrity-and-credibility-text")->nullable();
-            $table->string("experience-and-professionalism-tittle")->nullable();
+            $table->string("experience-and-professionalism-title")->nullable();
             $table->text("experience-and-professionalism-text")->nullable();
-            $table->string("comfort-and-safety-tittle")->nullable();
+            $table->string("comfort-and-safety-title")->nullable();
             $table->text("comfort-and-safety-text")->nullable();
-            $table->string("innovation-and-evelopment-tittle")->nullable();
+            $table->string("innovation-and-evelopment-title")->nullable();
             $table->text("innovation-and-evelopment-text")->nullable();
-            $table->string("service-excellence-tittle")->nullable();
+            $table->string("service-excellence-title")->nullable();
             $table->text("service-excellence-text")->nullable();
-            $table->string("egyptian-authenticity-tittle")->nullable();
+            $table->string("egyptian-authenticity-title")->nullable();
             $table->text("egyptian-authenticity-text")->nullable();
 
             // Nile Journey
             $table->string("nile-journey-tag")->nullable();
-            $table->text("nile-journey-tittle")->nullable();
+            $table->text("nile-journey-title")->nullable();
             $table->text("nile-journey-text")->nullable();
             $table->text("nile-journey-image")->nullable();
             $table->text("nile-journey-floating-image")->nullable();
 
             // Achievements
             $table->text("achievements-quote")->nullable();
-            $table->text("achievements-tittle")->nullable();
+            $table->text("achievements-title")->nullable();
             $table->text("achievements-text")->nullable();
             $table->integer("achievements-years-count")->nullable();
-            $table->json("achievements")->nullable(); // Include tittle and text
+            $table->json("achievements")->nullable(); // Include title and text
 
             // Timeline
             $table->string("tmeline-tag")->nullable();
-            $table->text("tmeline-tittle")->nullable();
+            $table->text("tmeline-title")->nullable();
             $table->json("tmeline")->nullable(); // array of dictionaries each include year and an array of events strings
 
             // Team

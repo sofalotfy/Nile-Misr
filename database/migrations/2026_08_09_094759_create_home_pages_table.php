@@ -11,79 +11,48 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('about_us_pages', function (Blueprint $table) {
+        Schema::create('home_pages', function (Blueprint $table) {
             $table->id();
 
-            // Hero Section
-            $table->text("hero-image")->nullable();
-            $table->string("title")->nullable();
-            $table->string("subtitle")->nullable();
+            // Hero Section 
+            $table->json('images')->nullable(); //Image
+            $table->string("hero-tag")->nullable();
+            $table->string("hero-title")->nullable();
+            $table->text("sub-title")->nullable();
+            $table->string("hajj-season")->nullable();
+            $table->text("hero-floating-image")->nullable();
 
-            // Origins and Beginnings Section
-            $table->string("beginning-tag")->nullable();
-            $table->text("beginning-tittle")->nullable();
-            $table->text("beginning-text")->nullable();
+            // pilgrimCount
+            // $table->string("pilgrim-count")->nullable();
+            // $table->string("pilgrim-text")->nullable();
 
-            // Our vision Section
-            $table->string("our-vision-tag")->nullable();
-            $table->text("our-vision-vertical-tag")->nullable();
-            $table->text("our-vision-tittle")->nullable();
-            $table->text("our-vision-text")->nullable();
-            $table->text("our-vision-image")->nullable();
+            // Rate
 
-            //Our Mission Section
-            $table->string("our-mission-tag")->nullable();
-            $table->text("our-mission-tittle")->nullable();
-            $table->text("our-mission-text")->nullable();
-            $table->text("our-mission-image")->nullable();
-            $table->text("our-mission-floating-image")->nullable();
+            //Review
+            // $table->float("review-count")->nullable();
+            // $table->string("review-text")->nullable();
 
-            // Values
-            $table->string("values-tag")->nullable();
-            $table->text("values-title")->nullable();
-            $table->string("respecting-sanctity-title")->nullable();
-            $table->text("respecting-sanctity-text")->nullable();
-            $table->string("integrity-and-credibility-tittle")->nullable();
-            $table->text("integrity-and-credibility-text")->nullable();
-            $table->string("experience-and-professionalism-tittle")->nullable();
-            $table->text("experience-and-professionalism-text")->nullable();
-            $table->string("comfort-and-safety-tittle")->nullable();
-            $table->text("comfort-and-safety-text")->nullable();
-            $table->string("innovation-and-evelopment-tittle")->nullable();
-            $table->text("innovation-and-evelopment-text")->nullable();
-            $table->string("service-excellence-tittle")->nullable();
-            $table->text("service-excellence-text")->nullable();
-            $table->string("egyptian-authenticity-tittle")->nullable();
-            $table->text("egyptian-authenticity-text")->nullable();
+            //Section 1
+            $table->text("section1-image")->nullable();
+            $table->text("section1-floating-image")->nullable();
+            $table->string("section1-tag")->nullable();
+            $table->text("section1-title")->nullable();
+            $table->text("section1-description")->nullable();
+            $table->integer("hotline")->nullable();
 
-            // Nile Journey
-            $table->string("nile-journey-tag")->nullable();
-            $table->text("nile-journey-tittle")->nullable();
-            $table->text("nile-journey-text")->nullable();
-            $table->text("nile-journey-image")->nullable();
-            $table->text("nile-journey-floating-image")->nullable();
+            //Section 2
+            $table->string("section2-tag")->nullable();
+            $table->text("section2-title")->nullable();
 
-            // Achievements
-            $table->text("achievements-quote")->nullable();
-            $table->text("achievements-tittle")->nullable();
-            $table->text("achievements-text")->nullable();
-            $table->integer("achievements-years-count")->nullable();
-            $table->json("achievements")->nullable(); // Include tittle and text
+            //Section 3
+            $table->text("section3-image")->nullable();
+            $table->text("section3-floating-image")->nullable();
+            //Our services 
+            $table->json("Our Services")->nullable(); // Incude image,title,description,button_text
 
-            // Timeline
-            $table->string("tmeline-tag")->nullable();
-            $table->text("tmeline-tittle")->nullable();
-            $table->json("tmeline")->nullable(); // array of dictionaries each include year and an array of events strings
-
-            // Team
-            $table->string("team-tag")->nullable();
-            $table->text("team-title")->nullable();
-            $table->text("team-text")->nullable();
-            $table->text("team-image")->nullable();
-
-            // Video
-            $table->text("video")->nullable();
-
+            // Experiences
+            $table->string("experiences-title")->nullable();
+            $table->json("comments")->nullable(); // Include name and comment text
 
             $table->timestamps();
         });
@@ -94,6 +63,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('about_us_pages');
+        Schema::dropIfExists('home_pages');
     }
 };

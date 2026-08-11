@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
 
             //Data
-            $table->string('tag')->nullable();
+            $table->string('tag')->nullable(); // enum
             $table->string('title')->nullable();
-            $table->integer('duration')->nullable(); //in days
+            $table->integer('duration')->nullable(); //enum
             $table->string('date')->nullable();
             $table->float('rating')->nullable();
             $table->integer('Deposit')->nullable();
