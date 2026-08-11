@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text("hero-image")->nullable();
 
             //media solutions
-            $table->strtexting("media-solutions-quote")->nullable();
+            $table->text("media-solutions-quote")->nullable();
             $table->text("media-solutions-title")->nullable();
             $table->text("media-solutions-text")->nullable();
             $table->json("images")->nullable(); // array of strings

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reviews_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->sring("hero-tag")->nullable();
+            $table->string("hero-tag")->nullable();
             $table->text("hero-text")->nullable();
             $table->text("hero-image")->nullable();
 

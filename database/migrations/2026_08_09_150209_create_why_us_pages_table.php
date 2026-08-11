@@ -24,12 +24,12 @@ return new class extends Migration
             $table->text("accreditations-title")->nullable();
             $table->text("accreditations-text")->nullable();
             $table->text("accreditations-note")->nullable();
-            $table->json("images")->nullable(); // array of strings
+            $table->json("accreditations-images")->nullable(); // array of strings
 
             // Strategic Partnerships
-            $table->string("strategic-partnerships-title")->nullable();
+            $table->text("strategic-partnerships-title")->nullable();
             $table->text("strategic-partnerships-text")->nullable();
-            $table->json("images")->nullable(); // array of stringss
+            $table->json("strategic-partnerships-images")->nullable(); // array of stringss
 
             // Our Partnerships
             $table->text("partnerships-title")->nullable();
