@@ -14,33 +14,33 @@ return new class extends Migration
         Schema::create('our_services_pages', function (Blueprint $table) {
             $table->id();
             //Hero Section
-            $table->string("our-services-tittle");
-            $table->text("our-services-text");
+            $table->string("our-services-tittle")->nullable();
+            $table->text("our-services-text")->nullable();
 
             //Hajj Service
-            $table->text("hajj-service-right-image");
-            $table->text("hajj-service-center-image");
-            $table->text("hajj-service-left-image");
-            $table->string("hajj-service-tag");
-            $table->text("hajj-service-tittle");
-            $table->text("hajj-service-text");
-            $table->text("with-you-tittle");
-            $table->text("with-you-text");
+            $table->text("hajj-service-right-image")->nullable();
+            $table->text("hajj-service-center-image")->nullable();
+            $table->text("hajj-service-left-image")->nullable();
+            $table->text("hajj-service-tag")->nullable();
+            $table->text("hajj-service-tittle")->nullable();
+            $table->text("hajj-service-text")->nullable();
+            $table->text("with-you-tittle")->nullable();
+            $table->text("with-you-text")->nullable();
 
             //Umrah Service
-            $table->text("umrah-service-right-image");
-            $table->text("umrah-service-left-image");
-            $table->string("umrah-service-tag");
-            $table->text("umrah-service-tittle");
-            $table->text("umrah-service-text");
-            $table->text("care-about-you-tittle");
-            $table->text("care-about-you-text");
+            $table->text("umrah-service-right-image")->nullable();
+            $table->text("umrah-service-left-image")->nullable();
+            $table->text("umrah-service-tag")->nullable();
+            $table->text("umrah-service-tittle")->nullable();
+            $table->text("umrah-service-text")->nullable();
+            $table->text("care-about-you-tittle")->nullable();
+            $table->text("care-about-you-text")->nullable();
 
             // Residents abroad
-            $table->text("residents-abroad-image");
-            $table->string("residents-abroad-tag");
-            $table->text("residents-abroad-tittle");
-            $table->text("residents-abroad-text");
+            $table->text("residents-abroad-image")->nullable();
+            $table->text("residents-abroad-tag")->nullable();
+            $table->text("residents-abroad-tittle")->nullable();
+            $table->text("residents-abroad-text")->nullable();
 
 
             $table->timestamps();
