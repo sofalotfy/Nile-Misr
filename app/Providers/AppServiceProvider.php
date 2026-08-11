@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use App\Services\General\GetSiteData;
 class AppServiceProvider extends ServiceProvider
