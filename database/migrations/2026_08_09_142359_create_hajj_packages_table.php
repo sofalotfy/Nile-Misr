@@ -51,11 +51,11 @@ return new class extends Migration
             $table->json('flight-stops')->nullable(); //just an array of strings
             
 
-            $table->json('program_includes')->nullable()  //array of strings
-            $table->json('general_notes')->nullable()  //array of strings
-            $table->json('required_papers')->nullable()  //array of strings
-            $table->json('cancelation_policy')->nullable()  //array of strings
-            $table->json('external_visas')->nullable()  //array of strings
+            $table->json('program_includes')->nullable();  //array of strings
+            $table->json('general_notes')->nullable();  //array of strings
+            $table->json('required_papers')->nullable();  //array of strings
+            $table->json('cancelation_policy')->nullable();  //array of strings
+            $table->json('external_visas')->nullable();  //array of strings
 
             $table->text('notes')->nullable();
 

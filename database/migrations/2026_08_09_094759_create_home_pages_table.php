@@ -16,42 +16,43 @@ return new class extends Migration
 
             // Hero Section 
             $table->json('images')->nullable(); //Image
-            $table->string("hero-tag");
-            $table->text("hero-title");
-            $table->text("sub-title");
-            $table->string("hajj-season");
-            $table->text("hero-floating-image");
+            $table->string("hero-tag")->nullable();
+            $table->string("hero-title")->nullable();
+            $table->text("sub-title")->nullable();
+            $table->string("hajj-season")->nullable();
+            $table->text("hero-floating-image")->nullable();
 
             // pilgrimCount
-            $table->string("pilgrim-count");
-            $table->string("pilgrim-text");
+            // $table->string("pilgrim-count")->nullable();
+            // $table->string("pilgrim-text")->nullable();
+
             // Rate
 
             //Review
-            $table->string("review-count");
-            $table->string("review-text");
+            // $table->float("review-count")->nullable();
+            // $table->string("review-text")->nullable();
 
             //Section 1
-            $table->text("section1-image");
-            $table->text("section1-floating-image");
-            $table->string("section1-tag");
-            $table->string("section1-title");
-            $table->string("section1-subtitle");
-            $table->integer("hotline");
+            $table->text("section1-image")->nullable();
+            $table->text("section1-floating-image")->nullable();
+            $table->string("section1-tag")->nullable();
+            $table->text("section1-title")->nullable();
+            $table->text("section1-description")->nullable();
+            $table->integer("hotline")->nullable();
 
             //Section 2
-            $table->string("section2-tag");
-            $table->string("section2-title");
+            $table->string("section2-tag")->nullable();
+            $table->text("section2-title")->nullable();
 
             //Section 3
-            $table->text("section3-image");
-            $table->text("section3-floating-image");
+            $table->text("section3-image")->nullable();
+            $table->text("section3-floating-image")->nullable();
             //Our services 
-            $table->json("Our Services")->nullable(); // Incude image,tag,title and subtittle
+            $table->json("Our Services")->nullable(); // Incude image,title,description,button_text
 
             // Experiences
-            $table->string("experiences");
-            $table->json("comments")->nullable; // Include name and comment text
+            $table->string("experiences-title")->nullable();
+            $table->json("comments")->nullable(); // Include name and comment text
 
             $table->timestamps();
         });
