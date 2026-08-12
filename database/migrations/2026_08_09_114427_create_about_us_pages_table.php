@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string("beginning-tag")->nullable();
             $table->text("beginning-title")->nullable();
             $table->text("beginning-text")->nullable();
+            $table->integer("Beginnings-year")->nullable();
+            $table->integer("Beginnings-word")->nullable();
 
             // Our vision Section
             $table->string("our-vision-tag")->nullable();

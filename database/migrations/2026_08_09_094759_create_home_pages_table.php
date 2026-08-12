@@ -37,6 +37,7 @@ return new class extends Migration
             $table->string("section1-tag")->nullable();
             $table->text("section1-title")->nullable();
             $table->text("section1-description")->nullable();
+            $table->string("btn-text")->nullable();
             $table->integer("hotline")->nullable();
 
             //Section 2
@@ -51,6 +52,7 @@ return new class extends Migration
 
             // Experiences
             $table->string("experiences-title")->nullable();
+            $table->string("experiences-opinion")->nullable();
 
             $table->timestamps();
         });
