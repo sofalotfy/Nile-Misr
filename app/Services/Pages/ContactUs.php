@@ -11,6 +11,11 @@ class ContactUs
     {
         $contact = ContactUsPage::first();
         $company = Company::select(self::getSelects())->first();
+
+        return array_merge(
+                $contact?->toArray() ?? [],
+                $company?->toArray() ?? [],
+            );
     }
 
     private static function getSelects()
