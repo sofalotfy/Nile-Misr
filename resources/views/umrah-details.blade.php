@@ -1,4 +1,4 @@
-@include('header.php'); ?>
+@include('header'); ?>
 
 <!-- start page title -->
 <section class="ipad-top-space-margin md-pt-0">
@@ -470,4 +470,4 @@
 
 
 
-@include('footer.php');
+@include('footer');

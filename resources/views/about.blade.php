@@ -1,4 +1,4 @@
-﻿@include('header.php');
+﻿@include('header');
 
 <!-- start page title -->
 <section class="page-title-separate-breadcrumbs cover-background  top-space-margin " style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/about-banner-2.jpg")   }}" )>
@@ -785,4 +785,4 @@
         </div>
     </div>
 </section>
-@include('footer.php');
+@include('footer');

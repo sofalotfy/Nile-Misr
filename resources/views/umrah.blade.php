@@ -1,4 +1,4 @@
-@include('header.php');
+@include('header');
 
 @include('umrah-data.php');
 
@@ -416,4 +416,4 @@
     });
 </script>
 
-@include('footer.php');
+@include('footer');

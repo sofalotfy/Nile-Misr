@@ -1,4 +1,4 @@
-@include('header.php'); ?>
+@include('header'); ?>
 
 <?php
 // Hajj Packages extracted from PDF
@@ -377,4 +377,4 @@ $hajj_programs = [
     });
 </script>
 
-@include('footer.php'); ?>
+@include('footer'); ?>

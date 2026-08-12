@@ -1,4 +1,4 @@
-﻿@include('header.php')
+﻿@include('header')
 <!-- start page title -->
 <section class="page-title-separate-breadcrumbs cover-background top-space-margin" style="background-image: url(imgs/why.jpg)">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
@@ -410,4 +410,4 @@
     </div>
 </section>
 <!-- end section -->
-@include('footer.php')
+@include('footer')

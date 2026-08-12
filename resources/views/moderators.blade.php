@@ -1,14 +1,14 @@
-@include('header.php');
+@include('header');
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url(imgs/service-banner-2.jpg)">
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/service-banner-2.jpg")   }})">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">مشرفين نيل مصر</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pagedata['hero-title']?? 'مشرفين نيل مصر' !!}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData["hero-text"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' !!}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 md-mb-20px sm-mb-0" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <h2 class="text-dark-gray fw-500 ls-minus-2px alt-font">مشرفين نيل مصر</h2>
+                <h2 class="text-dark-gray fw-500 ls-minus-2px alt-font">{!! $pageData[""] !!}مشرفين نيل مصر</h2>
                 <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px">علم مضيء في سماء السياحة الدينية</span>
                 <img src="imgs/arrow.png" class="position-relative mt-5" alt="" data-bottom-top="transform: rotate(120deg);" data-top-bottom="transform: rotate(0);" />
             </div>
@@ -171,4 +171,4 @@
     </div>
 </section>
 <!-- end section -->
-@include('footer.php');
+@include('footer');

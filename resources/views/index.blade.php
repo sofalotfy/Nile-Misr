@@ -1,4 +1,4 @@
-@include('header.php');
+@include('header');
 <!-- start banner slider -->
 <section class="p-0 bg-dark-gray position-relative">
     <!-- Static Overlay -->
@@ -429,4 +429,4 @@
     </div>
 </section>
 <!-- end section -->
-@include('footer.php');
+@include('footer');
