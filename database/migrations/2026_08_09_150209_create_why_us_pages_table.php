@@ -53,6 +53,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('why_us_pages')->insert(['id'  => 1]);
     }
 
     /**

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string("review-count")->nullable();
 
             //Sites
-            $table->json('sites');  //image,name,address,location,number
+            $table->json('sites')->nullable();  //image,name,address,location,number
 
             //social media
             $table->text('tiktok')->nullable();
@@ -28,11 +28,13 @@ return new class extends Migration
             $table->text('instgram')->nullable();
             $table->text('facebook')->nullable();
 
-            $table->json('phones');  //array of strings
-            $table->json('emails');  //array of strings
+            $table->json('phones')->nullable();  //array of strings
+            $table->json('emails')->nullable();  //array of strings
 
             $table->timestamps();
         });
+
+        DB::table('companies')->insert(['id'  => 1]);
     }
 
     /**

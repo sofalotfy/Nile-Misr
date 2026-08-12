@@ -22,6 +22,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('umrah_packages_pages')->insert(['id'  => 1]);
     }
 
     /**
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('umrah_pages');
+        Schema::dropIfExists('umrah_packages_pages');
     }
 };

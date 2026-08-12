@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('header__footers', function (Blueprint $table) {
             $table->id();
 
-            $table->text('header-logo');
-            $table->text('footer-logo');
+            $table->text('header-logo')->nullable();
+            $table->text('footer-logo')->nullable();
 
 
             $table->timestamps();
         });
+
+        DB::table('header__footers')->insert(['id'  => 1]);
     }
 
     /**

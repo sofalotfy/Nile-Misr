@@ -45,6 +45,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('contact_us_pages')->insert(['id'  => 1]);
     }
 
     /**

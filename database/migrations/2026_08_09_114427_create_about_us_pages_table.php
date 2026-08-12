@@ -87,6 +87,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('about_us_pages')->insert(['id'  => 1]);
     }
 
     /**

@@ -16,7 +16,6 @@ return new class extends Migration
 
             //Data
             $table->text('card_image')->nullable();
-            $table->string('tag');
             $table->text('title');
             $table->string('level'); //enum
             $table->integer('duration'); //enum

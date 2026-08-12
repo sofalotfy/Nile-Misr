@@ -37,6 +37,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('media_pages')->insert(['id'  => 1]);
     }
 
     /**
