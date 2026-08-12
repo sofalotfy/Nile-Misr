@@ -9,7 +9,6 @@ use App\Models\Role;
 use Illuminate\Support\ServiceProvider;
 use App\Services\General\GetSiteData;
 use Illuminate\Support\Facades\Schema;
-use Spatie\Permission\PermissionRegistrar;
 use Spatie\Permission\Models\Permission;
 
 
