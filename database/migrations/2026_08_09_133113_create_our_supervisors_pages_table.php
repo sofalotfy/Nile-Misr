@@ -46,6 +46,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('our_supervisors_pages')->insert(['id'  => 1]);
     }
 
     /**

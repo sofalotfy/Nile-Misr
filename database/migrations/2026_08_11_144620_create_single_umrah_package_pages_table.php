@@ -19,6 +19,8 @@ return new class extends Migration
             
             $table->timestamps();
         });
+
+        DB::table('single_umrah_package_pages')->insert(['id'  => 1]);
     }
 
     /**

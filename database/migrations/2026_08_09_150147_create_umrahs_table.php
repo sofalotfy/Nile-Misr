@@ -18,10 +18,6 @@ return new class extends Migration
             $table->string('duration'); // enum
             $table->string('title');
             
-            $table->string('date');
-            $table->float('rating')->nullable();
-            $table->integer('Deposit')->nullable();
-            $table->integer('entrey-fee')->nullable();
 
             //MAKA
             $table->string('maka-hotel')->nullable();
@@ -45,13 +41,6 @@ return new class extends Migration
             $table->json('madina-images')->nullable(); // array of images
             $table->text('madina-location')->nullable();
 
-            //details
-            $table->string('description')->nullable();
-            $table->json('events');   //an array of events 
-            //each event has a type and a data array of attributes depending on hte type
-            //flight: data array only has key text holding string
-            //stay: data array has date, area, hotel, duration and meals all are strings
-
             //flight
             $table->string('flight-host')->nullable();
             $table->json('flight-stops')->nullable(); //just an array of strings
@@ -62,7 +51,7 @@ return new class extends Migration
             $table->json('cancelation_policy')->nullable();  //array of strings
             $table->json('external_visas')->nullable();  //array of strings
 
-            $table->json('notes')->nullable();  //array of strings
+            $table->text('notes')->nullable();  //array of strings
 
 
             $table->timestamps();

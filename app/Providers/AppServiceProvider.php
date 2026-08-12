@@ -3,8 +3,15 @@
 namespace App\Providers;
 
 use Illuminate\Support\Facades\View;
+use Spatie\Permission\PermissionRegistrar;
+use App\Models\Permission;
+use App\Models\Role;
 use Illuminate\Support\ServiceProvider;
 use App\Services\General\GetSiteData;
+use Illuminate\Support\Facades\Schema;
+use Spatie\Permission\PermissionRegistrar;
+use Spatie\Permission\Models\Permission;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //View::share('siteData', GetSiteData::execute());
+        app(PermissionRegistrar::class)
+            ->setPermissionClass(Permission::class)
+            ->setRoleClass(Role::class);
+
+        Schema::defaultStringLength(191);
+        // View::share('siteData', GetSiteData::execute());
     }
 }

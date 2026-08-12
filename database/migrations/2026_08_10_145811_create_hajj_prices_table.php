@@ -23,6 +23,8 @@ return new class extends Migration
             $table->integer('price');
             
             $table->timestamps();
+
+            $table->unique(['hajj_package_id', 'type']);
         });
     }
 

@@ -16,7 +16,7 @@ return new class extends Migration
             //Hero Section
             $table->string("hero-title")->nullable();
             $table->text("hero-text")->nullable();
-            $table->text("hero-image");
+            $table->text("hero-image")->nullable();
 
             //Hajj Service
             $table->text("hajj-service-right-image")->nullable();
@@ -46,6 +46,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('our_services_pages')->insert(['id'  => 1]);
     }
 
     /**

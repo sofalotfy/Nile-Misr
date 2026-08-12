@@ -56,6 +56,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('home_pages')->insert(['id'  => 1]);
     }
 
     /**

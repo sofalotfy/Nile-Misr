@@ -21,6 +21,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+        
+        DB::table('hajj_packages_pages')->insert(['id'  => 1]);
     }
 
     /**

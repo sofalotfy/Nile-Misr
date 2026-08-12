@@ -26,6 +26,8 @@ return new class extends Migration
 
             $table->timestamps();
         });
+
+        DB::table('reviews_pages')->insert(['id'  => 1]);
     }
 
     /**
