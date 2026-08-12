@@ -18,6 +18,10 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable, HasRoles;
 
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return true;
+    }
     /**
      * Get the attributes that should be cast.
      *
