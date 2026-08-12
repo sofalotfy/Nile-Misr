@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+@include('header.php'); ?>
 
 <?php
 // Hajj Packages extracted from PDF
@@ -117,42 +117,42 @@ $hajj_programs = [
 ];
 ?>
 <!-- start page title -->
-        <section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url(imgs/hijj-banner.jpg)">
-            <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-12 text-center position-relative page-title-extra-large">
-                        <div class="d-flex flex-column small-screen">
-                            <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                                <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">برامج الحج 1448هـ</h1>
-                                <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام.</p>
-                            </div>
-                            <!-- start breadcrumb -->
-                            <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
-                                <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                                    <li><a href="index.php" class="text-white">الرئيسية</a></li>
-                                    <li>برامج الحج 1448هـ</li>
-                                </ul>
-                            </div>
-                            <!-- end breadcrumb -->
-                        </div>
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url(imgs/hijj-banner.jpg)">
+    <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 text-center position-relative page-title-extra-large">
+                <div class="d-flex flex-column small-screen">
+                    <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">برامج الحج 1448هـ</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام.</p>
                     </div>
+                    <!-- start breadcrumb -->
+                    <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
+                        <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <li><a href="index.php" class="text-white">الرئيسية</a></li>
+                            <li>برامج الحج 1448هـ</li>
+                        </ul>
+                    </div>
+                    <!-- end breadcrumb -->
                 </div>
             </div>
-        </section>
-        <!-- end page title -->
-    <!-- start section --> 
-        <section class="bg-very-light-gray pb-0">
-            <div class="container overlap-gap-section">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-md-9 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <!-- <span class="fs-20 mb-15px text-base-color fw-500 d-block">Life around great food</span> -->
-                        <h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>
-                    </div>
-                </div>
+        </div>
+    </div>
+</section>
+<!-- end page title -->
+<!-- start section -->
+<section class="bg-very-light-gray pb-0">
+    <div class="container overlap-gap-section">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-md-9 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                <!-- <span class="fs-20 mb-15px text-base-color fw-500 d-block">Life around great food</span> -->
+                <h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>
             </div>
-        </section>
-        <!-- end section -->
+        </div>
+    </div>
+</section>
+<!-- end section -->
 <!-- start filters section -->
 <section class="pt-5 pb-5 bg-very-light-gray" id="hajj-programs">
     <div class="container">
@@ -227,7 +227,7 @@ $hajj_programs = [
                             <div class="position-absolute top-20px right-20px bg-tussock-yellow text-white fs-12 fw-600 border-radius-30px pt-5px pb-5px ps-15px pe-15px z-index-1">
                                 <?php echo $program['category']; ?>
                             </div>
-                            
+
                             <div class="position-absolute bottom-10px w-100 px-4 text-white fs-16 fw-600 z-index-1">
                                 <span class="fs-13 d-block"> تبدأ من</span>
                                 <div class="fs-24 fw-800 text-white"><?php echo $program['price']; ?> <span class="fs-14 fw-600 text-white">جنية</span></div>
@@ -236,7 +236,7 @@ $hajj_programs = [
                         </div>
                         <div class="card-body p-9 d-flex flex-column pt-10px">
                             <h3 class="fs-20 fw-700 text-dark-gray mb-15px"><?php echo $program['name']; ?></h3>
-                            
+
                             <ul class=" fs-14 fw-500 mb-20px px-0">
                                 <li class="pb-10px">
                                     <i class="feather icon-feather-clock text-tussock-yellow me-10px"></i>المدة: <?php echo $program['duration']; ?>
@@ -251,36 +251,38 @@ $hajj_programs = [
                                     <i class="feather icon-feather-map-pin text-tussock-yellow me-10px"></i> فندق المدينة: <?php echo $program['hotel_madinah']; ?>
                                 </li>
                             </ul>
-                            
-                                <div class="d-flex align-items-center gap-2 w-100 border-top border-color-extra-medium-gray pt-20px mt-auto">
-                                    <?php
-                                    $h_price_single = 0; $h_price_double = 0; $h_price_triple = 0; $h_price_quad = 0;
-                                    if (preg_match('/خماسي:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي.*?:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_quad = str_replace(',', '', $m[1]);
-                                    if (preg_match('/ثلاثي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_triple = str_replace(',', '', $m[1]);
-                                    if (preg_match('/ثنائي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_double = str_replace(',', '', $m[1]);
-                                    if (preg_match('/فردي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_single = str_replace(',', '', $m[1]);
-                                    ?>
-                                    <a href="javascript:void(0);" 
-                                       class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
-                                       data-type="hajj"
-                                       data-name="<?php echo htmlspecialchars($program['name']); ?>"
-                                       data-date="<?php echo htmlspecialchars($program['date']); ?>"
-                                       data-duration="<?php echo htmlspecialchars($program['duration']); ?>"
-                                       data-category="<?php echo htmlspecialchars($program['category']); ?>"
-                                       data-price-single="<?php echo $h_price_single; ?>"
-                                       data-price-double="<?php echo $h_price_double; ?>"
-                                       data-price-triple="<?php echo $h_price_triple; ?>"
-                                       data-price-quad="<?php echo $h_price_quad; ?>"
-                                    >احجز الآن</a>
-                                    <a href="hajj-details.php" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
-                                </div>
+
+                            <div class="d-flex align-items-center gap-2 w-100 border-top border-color-extra-medium-gray pt-20px mt-auto">
+                                <?php
+                                $h_price_single = 0;
+                                $h_price_double = 0;
+                                $h_price_triple = 0;
+                                $h_price_quad = 0;
+                                if (preg_match('/خماسي:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي.*?:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_quad = str_replace(',', '', $m[1]);
+                                if (preg_match('/ثلاثي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_triple = str_replace(',', '', $m[1]);
+                                if (preg_match('/ثنائي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_double = str_replace(',', '', $m[1]);
+                                if (preg_match('/فردي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_single = str_replace(',', '', $m[1]);
+                                ?>
+                                <a href="javascript:void(0);"
+                                    class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
+                                    data-type="hajj"
+                                    data-name="<?php echo htmlspecialchars($program['name']); ?>"
+                                    data-date="<?php echo htmlspecialchars($program['date']); ?>"
+                                    data-duration="<?php echo htmlspecialchars($program['duration']); ?>"
+                                    data-category="<?php echo htmlspecialchars($program['category']); ?>"
+                                    data-price-single="<?php echo $h_price_single; ?>"
+                                    data-price-double="<?php echo $h_price_double; ?>"
+                                    data-price-triple="<?php echo $h_price_triple; ?>"
+                                    data-price-quad="<?php echo $h_price_quad; ?>">احجز الآن</a>
+                                <a href="hajj-details.php" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
         <!-- end programs grid -->
-        
+
         <!-- No results message -->
         <div id="no-results" class="text-center mt-5 d-none">
             <h3 class="fs-24 fw-600 text-dark-gray">عفواً، لا توجد برامج مطابقة لبحثك.</h3>
@@ -355,8 +357,12 @@ $hajj_programs = [
             });
         }
 
-        initCustomSelect('filter-category', 'cs-category-label', function(val) { selectedCategory = val; });
-        initCustomSelect('filter-duration', 'cs-duration-label', function(val) { selectedDuration = val; });
+        initCustomSelect('filter-category', 'cs-category-label', function(val) {
+            selectedCategory = val;
+        });
+        initCustomSelect('filter-duration', 'cs-duration-label', function(val) {
+            selectedDuration = val;
+        });
 
         // Close dropdowns on outside click
         document.addEventListener('click', function() {
@@ -371,4 +377,4 @@ $hajj_programs = [
     });
 </script>
 
-<?php include 'footer.php'; ?>
+@include('footer.php'); ?>
