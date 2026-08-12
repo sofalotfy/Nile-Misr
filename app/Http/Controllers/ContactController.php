@@ -10,8 +10,9 @@ class ContactController extends Controller
 {
     public function index()
     {
-        //
-
+        return view('contact',[
+            "pageData"  => ContactUs::execute(),
+        ]);
     }
 
     public function store(Request $request)

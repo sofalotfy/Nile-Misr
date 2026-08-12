@@ -17,14 +17,12 @@ return new class extends Migration
             $table->foreignId('hajj_package_id')
                 ->constrained('hajj_packages')
                 ->cascadeOnDelete();
-                
 
             $table->string('type');  //enum
             $table->integer('price');
-            
-            $table->timestamps();
 
-            $table->unique(['hajj_package_id', 'type']);
+
+            $table->timestamps();
         });
     }
 
