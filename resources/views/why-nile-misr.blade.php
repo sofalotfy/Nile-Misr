@@ -1,14 +1,14 @@
 ﻿@include('header')
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background top-space-margin" style="background-image: url(imgs/why.jpg)">
+<section class="page-title-separate-breadcrumbs cover-background top-space-margin" style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/why.jpg")   }})">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">لماذا نيل مصر؟</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">ريادة اعترفت بها الدولة... وثقة منحها لنا عملاؤنا.</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData['hero-title']?? "لماذا نيل مصر؟" !!}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData['hero-sub-title']?? "ريادة اعترفت بها الدولة... وثقة منحها لنا عملاؤنا." !!}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
@@ -29,10 +29,12 @@
     <div class="container overlap-gap-section">
         <div class="row justify-content-center">
             <div class="col-xl-11 col-md-11 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <h2 class="text-dark-gray ls-minus-1px">الاعتمادات والتكريمات</h2>
+                <h2 class="text-dark-gray ls-minus-1px">{!! $pageData['achievements-title']?? "الاعتمادات والتكريمات" !!}</h2>
                 <!-- <span class="fs-20 mb-15px text-base-color fw-500 d-block">Life around great food</span> -->
+                {!! $pageData["achievements-text"]?? "
                 <p>على مدار سنوات خدمتنا لضيوف الرحمن، حظيت نيل مصر للسياحة بتقدير واحترام العديد من الجهات الرسمية والمؤسسات الكبرى، عرفانًًا بالتزامنا وجودة خدماتنا وتميزنا في تنظيم رحلات الحج والعمرة. فقد نلنا تكريمات وشهادات تقدير من جهات مرموقة، منها وزارة السياحة المصرية، وشركات طيران وفنادق كبرى، تقديرًًا لاحترافيتنا وحرصنا الدائم على تقديم أفضل تجربة لعملائنا. وفيما يلي نستعرض أبرز هذه التكريمات التي نفخر بها ونعدّّها وسام شرف ودافعًًا للاستمرار في العطاء.</p>
-                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px">والشركة أيضا حاصلة على المركز الأول فى المبيعات النقدية للخطوط الجوية السعودية بالقاهرة لمدة 5 سنوات متتالية.</span>
+                <span class='text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px'>والشركة أيضا حاصلة على المركز الأول فى المبيعات النقدية للخطوط الجوية السعودية بالقاهرة لمدة 5 سنوات متتالية.</span>
+                " !!}
             </div>
         </div>
     </div>

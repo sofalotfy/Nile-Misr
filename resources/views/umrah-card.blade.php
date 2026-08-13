@@ -1,11 +1,12 @@
-<?php
-function umrah_card($program) {
-    // Determine the lowest price to display on the image
-    $starting_price = $program['price_quad'];
-    if (empty($starting_price)) $starting_price = $program['price_triple'];
-    if (empty($starting_price)) $starting_price = $program['price_double'];
-    if (empty($starting_price)) $starting_price = $program['price_single'];
-?>
+<!-- <?php
+        function umrah_card($program)
+        {
+            // Determine the lowest price to display on the image
+            $starting_price = $program['price_quad'];
+            if (empty($starting_price)) $starting_price = $program['price_triple'];
+            if (empty($starting_price)) $starting_price = $program['price_double'];
+            if (empty($starting_price)) $starting_price = $program['price_single'];
+        ?>
 <div class="card border-0 border-radius-8px box-shadow-quadruple-large overflow-hidden h-100 w-100">
     <div class="position-relative">
         <img src="<?php echo $program['image']; ?>" class="w-100" alt="<?php echo $program['name']; ?>">
@@ -53,5 +54,5 @@ function umrah_card($program) {
     </div>
 </div>
 <?php
-}
-?>
+        }
+?> -->

@@ -8,8 +8,8 @@
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pagedata["title"] ?? 'مــن نحن؟' !!}</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pagedata["subtitle"] ?? '25 عامًا من الثقة والريادة في خدمة ضيوف الرحمن.' !!}</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData["title"] ?? 'مــن نحن؟' !!}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData["subtitle"] ?? '25 عامًا من الثقة والريادة في خدمة ضيوف الرحمن.' !!}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
@@ -35,20 +35,21 @@
         <div class="row">
             <div class="col-xxl-3 col-lg-4" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="position-relative z-index-1">
-                    <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pagedata['beginning-tag'] ?? 'النشأة والبداية' !!}</span>
-                    <h3 class="text-dark-gray ls-minus-2px mb-50px">{!! $pagedata['beginning-title'] ?? 'من مستقدمي السياحة إلى رائدي الحج والعمرة' !!}</h3>
+                    <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pageData['beginning-tag'] ?? 'النشأة والبداية' !!}</span>
+                    <h3 class="text-dark-gray ls-minus-2px mb-50px">{!! $pageData['beginning-title'] ?? 'من مستقدمي السياحة إلى رائدي الحج والعمرة' !!}</h3>
 
                     <div class="position-relative d-inline-block mt-3">
 
-                        <span class="fs-100 alt-font text-tussock-yellow fw-800 d-block lh-1 ls-minus-2px">{!! $pagedata['Beginnings-year'] ?? '2001' !!}</span>
-                        <span class="fs-22 alt-font text-base-color fw-600 d-block mt-2">{!! $pagedata['Beginnings-word'] ?? 'تأسست' !!}</span>
+                        <span class="fs-100 alt-font text-tussock-yellow fw-800 d-block lh-1 ls-minus-2px">{!! $pageData['Beginnings-year'] ?? '2001' !!}</span>
+                        <span class="fs-22 alt-font text-base-color fw-600 d-block mt-2">{!! $DageData['Beginnings-word'] ?? 'تأسست' !!}</span>
+
                     </div>
                 </div>
             </div>
             <div class="col-xxl-8 col-lg-8 offset-xxl-1" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="last-paragraph-no-margin">
-                    {!! !$pagedata["beginning-text"] ?? '
                     <p>
+                        {!! $pageData["Beginnings-text"] ?? '
                         تأسست نيل مصر للسياحة كشركة سياحة مستقدمين عام 2001 م، كشركة مساهمة مصرية، وحصلت على ترخيص وزارة السياحة رقم ١٢٦٢ كما حصلت على عضوية منظمة النقل الجوي العالمية IATA الآياتا بالإضافة إلى عضوية المنظمة الأمريكية لرابطة وكلاء السياحة والسفر ASTA الآساتا، و من خلال تلك التراخيص أصبحت الشركة مؤهلة قانونيا وعمليا لخوض العمل السياحي كشركة كبرى في مجال السياحة عموما في مصر
 
                         <br><br>
@@ -62,8 +63,8 @@
                         <br><br>
 
                         و كانت تلك الطفرة مؤذنة ببداية عهد جديد في قطاع السياحة الدينية و إنخفاض دور الوسيط العرفي وتأثيره على هذا القطاع .. و تحول نموذج العمل إلى شكل رسمي واضح و مؤتمن مؤذنا بتجارب فريدة و جديدة بفضل مجهودات نيل مصر للسياحة و إنعكس هذا الالإلتزام و تلك الرؤية بتفرد الشركة و تربعها على قمة تلك الخدمة بمصر .. فحازت على تكريم الدولة كأفضل شركة سياحة دينية عام ٢٠١ ٣ ومرة أخرى عام ٢٠١ ٥ في مجال الحج والعمرة في مصر من وزارة السياحة .. كما حصلت على العديد من التكريمات من جهات حكومية و قطاعات سياحية داخلية و خارجية كما سيأتي الذكر لاحقا.
+                        ' !!}
                     </p>
-                    ' !!}
                 </div>
             </div>
         </div>
@@ -76,16 +77,17 @@
         <div class="row align-items-center position-relative">
             <div class="position-absolute left-0px top-0px h-100 w-60px border-end border-color-extra-medium-gray d-none d-md-inline-block" data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="vertical-title-center align-items-center justify-content-end">
-                    <div class="title fs-24 text-tussock-yellow fw-500 text-uppercase">{!! $pagedata['our-vision-vertical-tag'] ?? 'لكل عمرة حكاية.. ولكل حاج قصة' !!}</div>
+                    <div class="title fs-24 text-tussock-yellow fw-500 text-uppercase">{!! $pageData['our-vision-vertical-tag'] ?? 'لكل عمرة حكاية.. ولكل حاج قصة' !!}</div>
+
                 </div>
             </div>
             <div class="col-lg-1 col-md-2 d-none d-md-inline-block">
                 <div class="divider-dot d-flex align-items-center w-100 h-200px"></div>
             </div>
             <div class="col-lg-6 col-md-9" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pagedata['our-vision-tag'] ?? 'رؤيتنــا' !!}</span>
-                <h3 class="alt-font text-dark-gray mb-5">{!! $pagedata['our-vision-tittle'] ?? 'تقديم نموذج واعد ورؤية نقية لهذا القطاع الحيوي والمقدس' !!}</h3>
-                <p class=" mb-35px xs-mb-10px">{!! $pagedata['our-vision-text'] ?? '
+                <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pageData['our-vision-tag'] ?? 'رؤيتنــا' !!}</span>
+                <h3 class="alt-font text-dark-gray mb-5">{!! $pageData['our-vision-tittle'] ?? 'تقديم نموذج واعد ورؤية نقية لهذا القطاع الحيوي والمقدس' !!}</h3>
+                <p class=" mb-35px xs-mb-10px">{!! $pageData['our-vision-text'] ?? '
                     تسعى شركة نيل مصر للسياحة عبر مسيرتها الناهضة في
                     قطاع السياحة الدينية بمصر إلى تقديم نموذج واعد ورؤية
                     نقية لهذا القطاع الحيوي والمقدس، وذلك من خلال تيسير
@@ -346,14 +348,14 @@
     <div class="container">
         <div class="row align-items-center justify-content-center text-center text-lg-start" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
             <div class="col-xxl-5 col-lg-6 col-md-10 md-mb-50px xs-mb-30px">
-                <h3 class="fw-500 text-base-color ls-minus-2px mb-0">{!! $pagedata["achievements-quote"]?? 'أعلام خافقة.. وأعمال منفردة لنيل مصر للسياحة' !!}</h3>
+                <h3 class="fw-500 text-base-color ls-minus-2px mb-0">{!! $pageData["achievements-quote"]?? 'أعلام خافقة.. وأعمال منفردة لنيل مصر للسياحة' !!}</h3>
             </div>
             <div class="col-xxl-2 offset-xxl-1 col-md-3 col-sm-4 text-center xs-mb-30px">
-                <span class="text-dark-gray fw-600 fs-100 ls-minus-2px text-highlight">{!! $pagedata["achievements-years-count"]?? '25' !!}<span class="fs-24 text-tussock-yellow top-140px">ســنــة</span></span>
+                <span class="text-dark-gray fw-600 fs-100 ls-minus-2px text-highlight">{!! $pageData["achievements-years-count"]?? '25' !!}<span class="fs-24 text-tussock-yellow top-140px">ســنــة</span></span>
             </div>
             <div class="col-lg-4 col-md-5 col-sm-6 last-paragraph-no-margin text-center text-sm-start">
-                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px">{!! $pagedata["achievements-title"]?? 'رحلة ربع قرن من الإنجازات' !!}</span>
-                {!! $pagedata["achievements-text"]?? '
+                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px">{!! $pageData["achievements-title"]?? 'رحلة ربع قرن من الإنجازات' !!}</span>
+                {!! $pageData["achievements-text"]?? '
                 <p class="">خلال مسيرة نيل مصر عبر العقود .. كان هناك وقفات تستحق
                     التقدير .. خطوات كان بها السبق لنيل مصر في هذا المجال
                     لكونها الشركة الرائدة في قطاع الحج والعمرة نستعرض منهم
@@ -471,8 +473,8 @@
         <!-- Header -->
         <div class="row justify-content-center mb-6 text-center">
             <div class="col-lg-7" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 0, "easing": "easeOutQuad" }'>
-                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block ">{!! $pagedata["tmeline-tag"] ?? 'ربع قرن من الإنجاز' !!}</span>
-                <h2 class="alt-font text-dark-gray fw-500 ls-minus-2px mb-0">{!! $pagedata["tmeline-title"] ?? 'الجدول الزمني للمسيرة المتفانية لنيل مصر للسياحة' !!}</h2>
+                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block ">{!! $pageData["tmeline-tag"] ?? 'ربع قرن من الإنجاز' !!}</span>
+                <h2 class="alt-font text-dark-gray fw-500 ls-minus-2px mb-0">{!! $pageData["tmeline-title"] ?? 'الجدول الزمني للمسيرة المتفانية لنيل مصر للسياحة' !!}</h2>
             </div>
         </div>
 
@@ -731,14 +733,15 @@
 <!-- end vertical timeline white section -->
 
 <!-- start section -->
-<section class="position-relative" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['team-image']?asset("storage/" . $pageData['team-image']):asset("imgs/team.jpg")   }}'imgs/team.jpg');">
-    <div class="opacity-medium bg-black"></div>
+<section class="position-relative" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['team-image']?asset("storage/" . $pageData['team-image']):asset("imgs/team.jpg")   }});>
+    <div class=" opacity-medium bg-black">
+    </div>
     <div class="container">
         <div class="row justify-content-center align-items-center min-h-500px">
             <div class="col-12 col-xl-8 col-lg-10 position-relative text-center parallax-scrolling-style-1">
-                <h1 class="text-white mx-auto alt-font fw-500 mb-40px ls-minus-2px">{!! $pagedata["team-tag"] ?? 'فريق عمل نيل مصر' !!}</h1>
-                <span class="fw-500 text-yellow mb-5px d-inline-block ls-1px">{!! $pagedata["team-title"] ?? 'فريق العمل المؤهل والمدرب هو حجر الأساس لأي' !!}</span>
-                {!! $pagedata["team-text"] ?? '
+                <h1 class="text-white mx-auto alt-font fw-500 mb-40px ls-minus-2px">{!! $pageData["team-tag"] ?? 'فريق عمل نيل مصر' !!}</h1>
+                <span class="fw-500 text-yellow mb-5px d-inline-block ls-1px">{!! $pageData["team-title"] ?? 'فريق العمل المؤهل والمدرب هو حجر الأساس لأي' !!}</span>
+                {!! $pageData["team-text"] ?? '
                 <p class="text-white">في نيل مصر للسياحة، يقف فريقنا المكوّّن من نحو
                     ٨٥ موظفًًا من المشرفين والمديرين ومجلس الإدارة
                     وكافة فرق العمل كتفًًا بكتف، بخبرة وكفاءة عالية،

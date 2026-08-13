@@ -13,9 +13,9 @@ class Home
         $company = Company::select(self::getSelects())->first();
 
         return array_merge(
-                $home?->toArray() ?? [],
-                $company?->toArray() ?? [],
-            );
+            $home?->toArray() ?? [],
+            $company?->toArray() ?? [],
+        );
     }
 
     private static function getSelects()

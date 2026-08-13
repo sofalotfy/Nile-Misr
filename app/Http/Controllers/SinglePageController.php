@@ -17,7 +17,7 @@ class SinglePageController extends Controller
 {
     public function index()
     {
-        return view("index",[
+        return view("index", [
             "pageData"  => Home::execute(),
             "packages"  => null, //to be continued
             "review" => null, //to be continued
@@ -26,35 +26,35 @@ class SinglePageController extends Controller
 
     public function about()
     {
-        return view("about",[
+        return view("about", [
             "pageData"  => About::execute(),
         ]);
     }
 
     public function services()
     {
-        return view("services",[
+        return view("services", [
             "pageData"  => Services::execute(),
         ]);
     }
 
     public function moderators()
     {
-        return view("moderators",[
+        return view("moderators", [
             "pageData"  => SuperVisors::execute(),
         ]);
     }
 
     public function whyus()
     {
-        return view("why-nile-misr",[
+        return view("why-nile-misr", [
             "pageData"  => WhyUs::execute(),
         ]);
     }
 
     public function reviews()
     {
-        return view("user-review",[
+        return view("user-review", [
             "pageData"  => Reviews::execute(),
             "reviews"   => null, //to be continued
         ]);
@@ -62,7 +62,7 @@ class SinglePageController extends Controller
 
     public function media()
     {
-        return view("media",[
+        return view("media", [
             "pageData"  => Media::execute(),
         ]);
     }
