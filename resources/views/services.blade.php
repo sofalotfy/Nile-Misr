@@ -93,10 +93,10 @@
     <div class="container">
         <div class="row align-items-center mb-8 md-mb-15 xs-mb-20">
             <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>
-                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-10px">{!! $pageData["omra-service-tag"]?? "خدمة العمرة" !!}</span>
-                <h3 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["omra-service-tittle"]?? "العمرة مع نيل مصر للسياحة" !!}</h3>
-                {!! $pageData["omra-service-text"]?? "
-                <p class="w-80 xl-w-100 mb-35px xs-mb-10px">
+                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-10px">{!! $pageData["umrah-service-tag"]?? "خدمة العمرة" !!}</span>
+                <h3 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["umrah-service-tittle"]?? "العمرة مع نيل مصر للسياحة" !!}</h3>
+                {!! $pageData["umrah-service-text"]?? "
+                <p class='w-80 xl-w-100 mb-35px xs-mb-10px'>
                     رحلة العمرة مع نيل مصر هي فسحة روح ولقاء مع
                     أطهر البقاع. نوفر برامج متنوعة تناسب جميع الميزانيات
                     والمواعيد، تبدأ من استخراج التأشيرات بسرعة وسهولة،
@@ -110,10 +110,10 @@
             </div>
             <div class="col-lg-7 position-relative">
                 <div class="overflow-hidden position-relative xs-w-80 float-end" data-anime='{ "effect": "slide", "color": "#A0875B", "direction":"rl", "easing": "easeOutQuad", "duration": 600, "delay":400}'>
-                    <img class="w-100" src=" {{  $pageData['umrah-service-left-image']?asset("storage/" . $pageData['umrah-service-left-image']):asset("imgs/omra-1.jpg")   }}" alt="">
+                    <img class="w-100" src=" {{  $pageData['umrah-service-left-image']?asset("storage/" . $pageData['umrah-service-left-image']):asset("imgs/umrah-1.jpg")   }}" alt="">
                 </div>
                 <div class="position-absolute left-minus-70px md-left-15px bottom-minus-50px w-55 overflow-hidden" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)" data-anime='{ "effect": "slide", "color": "#ffffff", "direction":"lr", "easing": "easeOutQuad", "duration": 600, "delay":500}'>
-                    <img class="w-100" src=" {{  $pageData['umrah-service-right-image']?asset("storage/" . $pageData['umrah-service-right-image']):asset("imgs/omra-2.jpg")   }}" alt="">
+                    <img class="w-100" src=" {{  $pageData['umrah-service-right-image']?asset("storage/" . $pageData['umrah-service-right-image']):asset("imgs/umrah-2.jpg")   }}" alt="">
                 </div>
             </div>
         </div>
@@ -164,7 +164,7 @@
                                 <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-10px">{!! $pageData['residents-abroad-tag'] ?? "نقرّب إليكم رحلة الحج أينما كنتم في دول الخليج."!!}</span>
                                 <h3 class="alt-font fw-500 text-dark-gray">{!! $pageData['residents-abroad-title'] ?? "خدمات الحج للمصريين المقيمين بدول الخليج"!!}</h3>
                                 {!! $pageData['residents-abroad-text'] ?? "}
-                                <p class="mb-30px">من خلال مكتبنا في دبي بدولة الإمارات، نوفر للمغتربين في
+                                <p class='mb-30px'>من خلال مكتبنا في دبي بدولة الإمارات، نوفر للمغتربين في
                                     دول الخليج العربي إمكانية حجز رحلات الحج بسهولة ويسر،
                                     دون الحاجة للسفر إلى مصر لاستكمال الإجراءات. نحرص على
                                     تيسير كل الخطوات من حيث الإجراءات الحكومية وحجز الرحلات

@@ -597,13 +597,15 @@ $umrah_programs = [
             <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>
                 <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pageData["section1-tag"] ?? 'نحمل قلوبكم لبيت الله' !!}</span>
                 <h2 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["section1-tittle"] ?? 'رحلة نيل مصر عبر ربع قرن من الإنجاز' !!}</h2>
-                <p class="mb-35px xs-mb-10px">{!! $pageData["section1-description"] ?? '
+                {!! $pageData["section1-description"] ?? '
+                <p class="mb-35px xs-mb-10px">
                     مسيرة الشركة الكبيرة منذ عام ٢٠٠١ بداية من سياحة المستقدمين الأجانب إلى معالم ومدن مصر السياحية و البدأ في
                     السياحة الدينية للمملكة العربية السعودية لخدمة حجاج و معتمري بيت الله الحرام عام ٢٠٠ ٨ و تقديم أعلى خدمة و أرقى
                     خدمة للعملاء و حتى تكريم الشركة كأفضل شركة حج و عمرة بجمهورية مصر العربية من وزارة السياحة المصرية وتقديم نيل
                     مصر الدعم الكامل والخدمة المتفانية لأكثر من 25 0 ألف حاج ومعتمر .. محطات كثيرة يمكننا الوقوف فيها لعرض النجاحات
-                    والتميز الخالص نتيجة العمل المتفاني في خلال ٢٥ عام نستعرض منها القمم القليلة و المحطات المميزة' !!}
+                    والتميز الخالص نتيجة العمل المتفاني في خلال ٢٥ عام نستعرض منها القمم القليلة و المحطات المميزة
                 </p>
+                '!!}
                 <a href="about.php" class="btn btn-large btn-yellow btn-hover-animation-switch btn-box-shadow btn-rounded me-25px xs-me-0">
                     <span>
                         <span class="btn-text">{!! $pageData["btn-text"] ?? 'من نــحــن؟' !!}</span>
