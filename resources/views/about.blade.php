@@ -118,11 +118,11 @@
 <!-- start section -->
 <section class=" position-relative overlap-height mb-3">
     <div class="position-absolute right-0px d-none d-lg-inline-block">
-        <img src="{{  $pageData['our-mission-floating-image']?asset("storage/" . $pageData['our-mission-floating-image']):asset("our-imgs/pattern/patt11.png")   }}" alt="" />
+        <img src="{{asset("our-imgs/pattern/patt11.png")}}" alt="" />
     </div>
     <!-- <img src="imgs/pattern/patt2.png" class="position-absolute bottom-minus-50px right-minus-50px z-index-minus-1" data-bottom-top="transform: rotate(0deg) translateY(0)" data-top-bottom="transform:rotate(-15deg) translateY(0)" alt=""/> -->
 
-    <img src="imgs/pattern/patt2.png" class="position-absolute d-none d-xl-block" style="top: 358px; right: 147px; width: 35vw; max-width: 390px; z-index: 0;" alt="">
+    <img src="{{  $pageData['our-mission-floating-image']?asset("storage/" . $pageData['our-mission-floating-image']):asset("imgs/pattern/patt2.png")   }}" class="position-absolute d-none d-xl-block" style="top: 358px; right: 147px; width: 35vw; max-width: 390px; z-index: 0;" alt="">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5  md-mb-50px xs-mb-30px">
