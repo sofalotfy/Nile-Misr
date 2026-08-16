@@ -1,5 +1,5 @@
-﻿@include('header');
-
+﻿@include('header', ["siteData" => $siteData]);
+  
 <!-- start page title -->
 <section class="page-title-separate-breadcrumbs cover-background  top-space-margin " style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/about-banner-2.jpg")   }}" )>
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
@@ -14,8 +14,8 @@
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <li><a href="index.php" class="text-white">الرئيسية</a></li>
-                            <li>مــن نحن؟</li>
+                            <li><a href="/" class="text-white">الرئيسية</a></li>
+                            <li>{!! $pageData["title"] ?? 'مــن نحن؟' !!}</li>
                         </ul>
                     </div>
                     <!-- end breadcrumb -->
@@ -43,13 +43,14 @@
                         <span class="fs-100 alt-font text-tussock-yellow fw-800 d-block lh-1 ls-minus-2px">{!! $pageData['Beginnings-year'] ?? '2001' !!}</span>
                         <span class="fs-22 alt-font text-base-color fw-600 d-block mt-2">{!! $DageData['Beginnings-word'] ?? 'تأسست' !!}</span>
 
+
                     </div>
                 </div>
             </div>
             <div class="col-xxl-8 col-lg-8 offset-xxl-1" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="last-paragraph-no-margin">
                     <p>
-                        {!! $pageData["Beginnings-text"] ?? '
+                        {!! $pageData["beginning-text"] ?? '
                         تأسست نيل مصر للسياحة كشركة سياحة مستقدمين عام 2001 م، كشركة مساهمة مصرية، وحصلت على ترخيص وزارة السياحة رقم ١٢٦٢ كما حصلت على عضوية منظمة النقل الجوي العالمية IATA الآياتا بالإضافة إلى عضوية المنظمة الأمريكية لرابطة وكلاء السياحة والسفر ASTA الآساتا، و من خلال تلك التراخيص أصبحت الشركة مؤهلة قانونيا وعمليا لخوض العمل السياحي كشركة كبرى في مجال السياحة عموما في مصر
 
                         <br><br>
@@ -86,7 +87,7 @@
             </div>
             <div class="col-lg-6 col-md-9" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pageData['our-vision-tag'] ?? 'رؤيتنــا' !!}</span>
-                <h3 class="alt-font text-dark-gray mb-5">{!! $pageData['our-vision-tittle'] ?? 'تقديم نموذج واعد ورؤية نقية لهذا القطاع الحيوي والمقدس' !!}</h3>
+                <h3 class="alt-font text-dark-gray mb-5">{!! $pageData['our-vision-title'] ?? 'تقديم نموذج واعد ورؤية نقية لهذا القطاع الحيوي والمقدس' !!}</h3>
                 <p class=" mb-35px xs-mb-10px">{!! $pageData['our-vision-text'] ?? '
                     تسعى شركة نيل مصر للسياحة عبر مسيرتها الناهضة في
                     قطاع السياحة الدينية بمصر إلى تقديم نموذج واعد ورؤية
@@ -165,7 +166,7 @@
             <div class="col-xl-8 col-lg-6 col-md-10 md-mb-20px text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <!-- <span class="mb-10px text-base-color fw-600 d-block">رؤيتنا</span> -->
                 <h1 class="text-tussock-yellow mb-5 fw-500">{!! $pageData["values-tag"]??'القــيــم' !!}</h1>
-                {!! $pageData["values-tittle"]??'
+                {!! $pageData["values-title"]??'
                 <p class="text-very-light-gray">
                     لعل القيم الدافعة لهذا العمل في نيل مصر للسياحة تختلف عن أي عمل آخر في مجال آخر..
                     بذلك الفهم وتلك الرؤية نستعرض القيم الأساسية لنا خلال مسيرتنا ..
@@ -366,102 +367,19 @@
         </div>
         <div class="row sm-mb-30px mt-5">
             <div class="col-12" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                @foreach($pageData['achievements'] as $achievment)
                 <div class="row align-items-center pt-40px g-0 pb-40px border-top border-color-transparent-base-color position-relative">
                     <div class="col-md-1 text-start text-md-center sm-mb-20px">
-                        <span class="fs-18 alt-font text-dark-gray">01</span>
+                        <span class="fs-18 alt-font text-dark-gray">{{$loop->iteration}}</span>
                     </div>
                     <div class="col-md-3 d-flex align-items-center sm-mb-20px">
-                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">الحجز الإلكتروني لرحلة الحج والعمرة</span>
+                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">{{ $achievment['title'] }}</span>
                     </div>
                     <div class="col-md-7 offset-md-1 last-paragraph-no-margin">
-                        <p>تتميز الشركة بانها من اوائل الشركات المصرية التى أدخلت نظام الحجز الإلكتروني لحفظ تفاصيل الحجز الخاصة بالمعتمرين بنظام آمن لتفعيل الحجز من خلال الموقع الالكتروني ليسهل على العميل البحث عن افضل الاسعار والعروض لحجز الطيران والفنادق داخل او خارج مصر والرحلات الداخليه ، وكذلك حجز البرامج السياحية الكاملة Packages من خلال نظام محترف.</p>
+                        {!! $achievment['text'] !!}
                     </div>
                 </div>
-                <div class="row align-items-center pt-40px g-0 pb-40px border-top border-color-transparent-base-color position-relative">
-                    <div class="col-md-1 text-start text-md-center sm-mb-20px">
-                        <span class="fs-18 alt-font text-dark-gray">02</span>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center sm-mb-20px">
-                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">أول شركة حج وعمرة توفر خط ساخن لخدمة عملائها</span>
-                    </div>
-                    <div class="col-md-7 offset-md-1 last-paragraph-no-margin">
-                        <p>
-                            كما توفر الشركة بخاصية الرقم المختصر الساخن
-                            19740 بسعر المكالمة العادية.
-                        </p>
-                    </div>
-                </div>
-                <div class="row align-items-center pt-40px g-0 pb-40px border-top border-color-transparent-base-color position-relative">
-                    <div class="col-md-1 text-start text-md-center sm-mb-20px">
-                        <span class="fs-18 alt-font text-dark-gray">03</span>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center sm-mb-20px">
-                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">عمرة
-                            الدعاة</span>
-                    </div>
-                    <div class="col-md-7 offset-md-1 last-paragraph-no-margin">
-                        <p>
-                            حيث انفردت الشركة بتقديم برامج عمرة يصاحبها أحد
-                            الدعاة أو الشيوخ لتقديم المعلومات الوافيه للمعتمرين
-                            من خلال ندوات تنظمها الشركة لعملائها بمصر أو أثناء
-                            تواجدهم بالأراضي المقدسة تحت مسمى )عمرة الدعاة (
-                            المملوك فكريا للشركة.
-                        </p>
-                    </div>
-                </div>
-                <div class="row align-items-center pt-40px g-0 pb-40px border-top border-color-transparent-base-color position-relative">
-                    <div class="col-md-1 text-start text-md-center sm-mb-20px">
-                        <span class="fs-18 alt-font text-dark-gray">04</span>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center sm-mb-20px">
-                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">عمرة
-                            الاحتياجات الخاصة</span>
-                    </div>
-                    <div class="col-md-7 offset-md-1 last-paragraph-no-margin">
-                        <p>
-                            انفردت الشركة بتقديم برنامج عمرة موجه فقط لذوي
-                            الاحتياجات الخاصة من فاقدي السمع وذويهم، يصاحبهم
-                            بها مترجم للغة الاشارة ليقدم الدعم للعملاء لتوفير سبل
-                            الراحة والتمتع بأداء العمرة.
-                        </p>
-                    </div>
-                </div>
-                <div class="row align-items-center pt-40px g-0 pb-40px border-top border-color-transparent-base-color position-relative">
-                    <div class="col-md-1 text-start text-md-center sm-mb-20px">
-                        <span class="fs-18 alt-font text-dark-gray">05</span>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center sm-mb-20px">
-                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">مبادرة مصر في قلوبنا</span>
-                    </div>
-                    <div class="col-md-7 offset-md-1 last-paragraph-no-margin">
-                        <p>
-                            الشركة كانت اول شركة سياحة خاصة تنفرد بتنفيذ
-                            فعاليات مبادرة مصر في قلوبنا، من خلال كونها رأسا
-                            لتحالف ضم أكثر من 180 من الشركات السياحية العاملة
-                            في مصر ومنفذا لأنشطة مبادرة مصر في قلوبنا التي
-                            ترعاها هيئة تنشيط السياحة بهدف دعم وتنشيط السياحة
-                            الداخلية للمصريين لرواج السياحه في كل من شرم الشيخ
-                            والاقصر واسوان ودهب وطابا ونويبع ورحلات اليوم
-                            الواحد، حيث خدمت المبادرة أكثر من 80 ألف عميل خلال
-                            موسم 2015 / 2016 .
-                        </p>
-                    </div>
-                </div>
-                <div class="row align-items-center pt-40px g-0 pb-40px border-top border-color-transparent-base-color position-relative">
-                    <div class="col-md-1 text-start text-md-center sm-mb-20px">
-                        <span class="fs-18 alt-font text-dark-gray">06</span>
-                    </div>
-                    <div class="col-md-3 d-flex align-items-center sm-mb-20px">
-                        <span class="text-tussock-yellow fw-500 fs-30 alt-font">خدمة الحج للمصريين المغتربين</span>
-                    </div>
-                    <div class="col-md-7 offset-md-1 last-paragraph-no-margin">
-                        <p>
-                            من خلال مكتبنا في دبي بدولة الإمارات، نوفر للمغتربين
-                            في دول الخليج العربي إمكانية حجز رحلات الحج بسهولة
-                            ويسر، دون الحاجة للسفر إلى مصر لاستكمال الإجراءات.
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -480,253 +398,72 @@
 
         <!-- Timeline items -->
         <div class="row" data-anime='{ "el": "childs", "translateY": [25, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+
+
+           @php
+                $timeline = $pageData['tmeline'];
+                $halves = array_chunk($timeline, ceil(count($timeline) / 2));
+            @endphp
+
             <!-- First Half -->
             <div class="col-lg-6 md-mb-40px">
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تأسيس نيل مصر للسياحة كشركة سياحة مستقدمين.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2001</span>
-                    </div>
-                </div>
+                @foreach($halves[0] ?? [] as $activity)
+                    <div class="vtl-item {{ $loop->last ? 'vtl-last' : '' }}">
+                        <div class="vtl-content">
+                            <ul class="vtl-list">
+                                @foreach($activity['events'] as $event)
+                                    <li>{{ $event['event'] }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>بداية تقديم خدمة الحج والعمرة.</li>
-                            <li>أول Hot Line Call Center.</li>
-                            <li>أول صفحة على Facebook.</li>
-                            <li>تكريم من الخطوط السعودية (أكبر عشر شركات في الحجوزات).</li>
-                            <li>عمرة الدعاة.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2008</span>
-                    </div>
-                </div>
+                        <div class="vtl-line-col">
+                            <div class="vtl-dot"></div>
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من الخطوط السعودية (أكبر عشر شركات في الحجوزات).</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2009</span>
-                    </div>
-                </div>
+                            @if(!$loop->last)
+                                <div class="vtl-bar"></div>
+                            @endif
+                        </div>
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من فندق فيرمونت برج الساعة مكة.</li>
-                        </ul>
+                        <div class="vtl-year-col">
+                            <span class="vtl-year">{{ $activity['year'] }}</span>
+                        </div>
                     </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2010</span>
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من الخطوط السعودية (أكبر عشر شركات في الحجوزات).</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2011</span>
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>أول عمرة نسائية (الصحبة الآمنة).</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2012</span>
-                    </div>
-                </div>
-
-                <!-- Item (last of first half) -->
-                <div class="vtl-item vtl-last">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>أفضل شركة حج وعمرة بجمهورية مصر العربية من وزارة السياحة المصرية.</li>
-                            <li>تكريم من الخطوط السعودية (أكبر عشر شركات في الحجوزات) موسم حج ١٤٣٧هـ.</li>
-                            <li>تكريم من فندق فلسطين مكة.</li>
-                            <li>تكريم من مجموعة 2 مصريين.</li>
-                            <li>تكريم من Accor, موفنبيك, هيلتون, دار الايمان.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2013</span>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
+
 
             <!-- Second Half -->
             <div class="col-lg-6">
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>مبادرة مصر في قلوبنا.</li>
-                            <li>التعاقد مع البريد المصري لتسويق العمرة مع نيل مصر.</li>
-                            <li>التعاقد مع جمعية الصم والبكم وتنفيذ عمرة لهم.</li>
-                            <li>أفضل شركة حج وعمرة بجمهورية مصر العربية من وزارة السياحة المصرية.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2015</span>
-                    </div>
-                </div>
+                @foreach($halves[1] ?? [] as $activity)
+                    <div class="vtl-item {{ $loop->last ? 'vtl-last' : '' }}">
+                        <div class="vtl-content">
+                            <ul class="vtl-list">
+                                @foreach($activity['events'] as $event)
+                                    <li>{{ $event['event'] }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من الخطوط السعودية (أكبر عشر شركات في الحجوزات).</li>
-                            <li>تكريم من فندق موفنبيك أنوار المدينة موسم حج ١٤٣٧هـ.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2016</span>
-                    </div>
-                </div>
+                        <div class="vtl-line-col">
+                            <div class="vtl-dot"></div>
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من فندق موفنبيك أنوار المدينة موسم حج ١٤٣٨هـ.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2017</span>
-                    </div>
-                </div>
+                            @if(!$loop->last)
+                                <div class="vtl-bar"></div>
+                            @endif
+                        </div>
 
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من فندق ايلاف.</li>
-                            <li>تكريم من شركة دار الايمان للسياحة موسم حج ١٤٤٠هـ.</li>
-                        </ul>
+                        <div class="vtl-year-col">
+                            <span class="vtl-year">{{ $activity['year'] }}</span>
+                        </div>
                     </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2018</span>
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من فندق موفنبيك أنوار المدينة موسم حج ١٤٤٤هـ.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2023</span>
-                    </div>
-                </div>
-
-                <!-- Item -->
-                <div class="vtl-item">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>افتتاح فرع في مدينة دبي بدولة الإمارات لخدمة المصريين المغتربين.</li>
-                            <li>تكريم من شركة نسمات الذهبية لموسم عمرة ١٤٤٥هـ.</li>
-                            <li>تكريم من شركة إعمار الضيافة الفندقية لموسم حج ١٤٤٥هـ.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                        <div class="vtl-bar"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2024</span>
-                    </div>
-                </div>
-
-                <!-- Item (last - no bar) -->
-                <div class="vtl-item vtl-last">
-                    <div class="vtl-content">
-                        <ul class="vtl-list">
-                            <li>تكريم من مجموعة ميسان الدولية.</li>
-                            <li>شراكة مع منتدى العمرة والزيارة.</li>
-                        </ul>
-                    </div>
-                    <div class="vtl-line-col">
-                        <div class="vtl-dot"></div>
-                    </div>
-                    <div class="vtl-year-col">
-                        <span class="vtl-year">2025</span>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
+
         </div>
     </div>
 </section>
@@ -788,4 +525,4 @@
         </div>
     </div>
 </section>
-@include('footer');
+@include('footer', ["siteData" => $siteData]);

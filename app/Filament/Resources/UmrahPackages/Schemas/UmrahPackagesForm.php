@@ -26,6 +26,17 @@ class UmrahPackagesForm
 
                 Section::make('Basic Information')
                     ->schema([
+                        FileUpload::make('card_image')
+                            ->label('Card Image')
+                            ->image()
+                            ->disk('public')
+                            ->directory('UmrahPackages')
+                            ->columnSpanFull(),
+
+                        TextInput::make('title')
+                            ->required()
+                            ->maxLength(255),
+
                         Select::make('duration')
                             ->options([
                                 collect(StayDuration::cases())
@@ -41,131 +52,34 @@ class UmrahPackagesForm
                             ->required()
                             ->native(false),
 
-                        TextInput::make('title')
-                            ->required()
-                            ->maxLength(255),
+                        Repeater::make('dates')
+                            ->simple(
+                                TextInput::make('date')
+                                    ->required()
+                            )
+                            ->addActionLabel('Add Date')
+                            ->reorderable(),
+                        
+                        TextInput::make('category')
+                            ->required(),
+
+                        Select::make('maka_hotel_id')
+                            ->label('Makkah Hotel')
+                            ->relationship('makaHotel', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->required(),
+
+                        Select::make('madina_hotel_id')
+                            ->label('Madinah Hotel')
+                            ->relationship('madinaHotel', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->required(),
+
                     ])
                     ->columns(2),
 
-                // ─────────────────────────────────────────────
-                // Makkah
-                // ─────────────────────────────────────────────
-
-                Section::make('Makkah Hotel')
-                    ->schema([
-                        TextInput::make('maka-hotel')
-                            ->label('Hotel')
-                            ->maxLength(255),
-
-                        TextInput::make('maka-address')
-                            ->label('Address')
-                            ->maxLength(255),
-
-                        TextInput::make('maka-rating')
-                            ->label('Rating')
-                            ->numeric()
-                            ->minValue(0)
-                            ->maxValue(5)
-                            ->step(0.1),
-
-                        TextInput::make('maka-rating_count')
-                            ->label('Rating Count')
-                            ->numeric()
-                            ->minValue(0),
-
-                        TextInput::make('maka-distance')
-                            ->label('Distance from Al-Masjid an-Nabawi')
-                            ->maxLength(255),
-
-                        TextInput::make('maka-duration')
-                            ->label('Duration')
-                            ->maxLength(255),
-
-                        Select::make('maka-includes-iftar')
-                            ->label('Includes Iftar')
-                            ->options([
-                                true => 'Yes',
-                                false => 'No',
-                            ])
-                            ->required()
-                            ->native(false),
-
-                        FileUpload::make('maka-images')
-                            ->label('Hotel Images')
-                            ->image()
-                            ->multiple()
-                            ->disk('public')
-                            ->directory('umrah-packages/makkah/images')
-                            ->imageEditor()
-                            ->reorderable()
-                            ->columnSpanFull(),
-
-                        Textarea::make('maka-location')
-                            ->label('Location')
-                            ->rows(3)
-                            ->columnSpanFull(),
-                    ])
-                    ->columns(2),
-
-                // ─────────────────────────────────────────────
-                // Madinah
-                // ─────────────────────────────────────────────
-
-                Section::make('Madinah Hotel')
-                    ->schema([
-                        TextInput::make('madina-hotel')
-                            ->label('Hotel')
-                            ->maxLength(255),
-
-                        TextInput::make('madina-address')
-                            ->label('Address')
-                            ->maxLength(255),
-
-                        TextInput::make('madina-rating')
-                            ->label('Rating')
-                            ->numeric()
-                            ->minValue(0)
-                            ->maxValue(5)
-                            ->step(0.1),
-
-                        TextInput::make('madina-rating_count')
-                            ->label('Rating Count')
-                            ->numeric()
-                            ->minValue(0),
-
-                        TextInput::make('madina-distance')
-                            ->label('Distance from Al-Masjid an-Nabawi')
-                            ->maxLength(255),
-
-                        TextInput::make('madina-duration')
-                            ->label('Duration')
-                            ->maxLength(255),
-
-                        Select::make('madina-includes-iftar')
-                            ->label('Includes Iftar')
-                            ->options([
-                                true => 'Yes',
-                                false => 'No',
-                            ])
-                            ->required()
-                            ->native(false),
-
-                        FileUpload::make('madina-images')
-                            ->label('Hotel Images')
-                            ->image()
-                            ->multiple()
-                            ->disk('public')
-                            ->directory('umrah-packages/madinah/images')
-                            ->imageEditor()
-                            ->reorderable()
-                            ->columnSpanFull(),
-
-                        Textarea::make('madina-location')
-                            ->label('Location')
-                            ->rows(3)
-                            ->columnSpanFull(),
-                    ])
-                    ->columns(2),
 
                 // ─────────────────────────────────────────────
                 // Flight

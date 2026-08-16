@@ -10,6 +10,7 @@ class HomePage extends Model
 
     protected $casts = [
         'images' => 'array',
-        'Our Services' => 'array',
+        'our-services' => 'array',
     ];
 }
+    

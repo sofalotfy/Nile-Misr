@@ -74,15 +74,19 @@ class HajjPackagesForm
                             ->step(0.1)
                             ->required(),
 
-                        TextInput::make('maka-hotel')
+                        Select::make('maka_hotel_id')
                             ->label('Makkah Hotel')
-                            ->required()
-                            ->maxLength(255),
+                            ->relationship('makaHotel', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->required(),
 
-                        TextInput::make('madina-hotel')
+                        Select::make('madina_hotel_id')
                             ->label('Madinah Hotel')
-                            ->required()
-                            ->maxLength(255),
+                            ->relationship('madinaHotel', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->required(),
 
                         TextInput::make('Deposit')
                             ->label('Deposit')

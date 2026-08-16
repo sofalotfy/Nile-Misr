@@ -27,6 +27,10 @@ class CompanyForm
 
                         TextInput::make('review-count')
                             ->label('Review Count'),
+
+                        TextInput::make('hotline')
+                            ->label('Hot Line')
+                            ->numeric(),
                     ])
                     ->columns(3),
 

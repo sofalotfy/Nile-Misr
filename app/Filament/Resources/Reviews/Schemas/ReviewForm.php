@@ -14,11 +14,9 @@ class ReviewForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->disabled()
                     ->maxLength(255),
 
                 Textarea::make('review')
-                    ->disabled()
                     ->rows(6)
                     ->columnSpanFull(),
 

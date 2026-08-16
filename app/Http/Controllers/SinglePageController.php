@@ -11,7 +11,8 @@ use App\Services\Pages\SuperVisors;
 use App\Services\Pages\WhyUs;
 use App\Services\Pages\Reviews;
 use App\Services\Pages\Media;
-
+use App\Services\Umrah\ListPackages;
+use App\Services\Reviews\ListReviews;
 
 class SinglePageController extends Controller
 {
@@ -19,8 +20,8 @@ class SinglePageController extends Controller
     {
         return view("index", [
             "pageData"  => Home::execute(),
-            "packages"  => null, //to be continued
-            "review" => null, //to be continued
+            "umrah_programs"  => ListPackages::execute(),
+            "reviews" => ListReviews::execute(),
         ]);
     }
 
@@ -56,7 +57,7 @@ class SinglePageController extends Controller
     {
         return view("user-review", [
             "pageData"  => Reviews::execute(),
-            "reviews"   => null, //to be continued
+            "reviews" => ListReviews::execute(),
         ]);
     }
 

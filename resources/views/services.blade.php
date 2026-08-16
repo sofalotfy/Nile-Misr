@@ -7,14 +7,14 @@
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pagedata["hero-title"] ?? 'خدماتنا' !!}</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pagedata["hero-text"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' !!}</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData["hero-title"] ?? 'خدماتنا' !!}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData["hero-text"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' !!}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <li><a href="index.php" class="text-white">الرئيسية</a></li>
-                            <li>خدماتنا</li>
+                            <li><a href="/" class="text-white">الرئيسية</a></li>
+                            <li>{!! $pageData["hero-title"] ?? 'خدماتنا' !!}</li>
                         </ul>
                     </div>
                     <!-- end breadcrumb -->
@@ -94,7 +94,7 @@
         <div class="row align-items-center mb-8 md-mb-15 xs-mb-20">
             <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>
                 <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-10px">{!! $pageData["umrah-service-tag"]?? "خدمة العمرة" !!}</span>
-                <h3 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["umrah-service-tittle"]?? "العمرة مع نيل مصر للسياحة" !!}</h3>
+                <h3 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["umrah-service-title"]?? "العمرة مع نيل مصر للسياحة" !!}</h3>
                 {!! $pageData["umrah-service-text"]?? "
                 <p class='w-80 xl-w-100 mb-35px xs-mb-10px'>
                     رحلة العمرة مع نيل مصر هي فسحة روح ولقاء مع

@@ -28,6 +28,7 @@ class GetSiteData
             "facebook",
             "phones",
             "emails",
+            "hotline",
         ];
     }
 }

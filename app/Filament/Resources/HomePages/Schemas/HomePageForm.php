@@ -97,10 +97,6 @@ class HomePageForm
                         RichEditor::make('section1-description')
                             ->label('Description')
                             ->columnSpanFull(),
-
-                        TextInput::make('hotline')
-                            ->label('Hotline')
-                            ->numeric(),
                     ])
                     ->columns(2),
 
@@ -133,7 +129,7 @@ class HomePageForm
 
                 Section::make('Our Services')
                     ->schema([
-                        Repeater::make('Our Services')
+                        Repeater::make('our-services')
                             ->label('Services')
                             ->schema([
                                 FileUpload::make('image')

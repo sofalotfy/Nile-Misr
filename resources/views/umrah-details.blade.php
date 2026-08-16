@@ -11,8 +11,8 @@
                 </div>
                 <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 fs-14 text-dark-gray">
                     <ul>
-                        <li><a href="index.php" class="text-dark-gray text-dark-gray-hover">الرئيسية</a></li>
-                        <li><a href="umrah.php" class="text-dark-gray text-dark-gray-hover">برامج العمرة</a></li>
+                        <li><a href="/" class="text-dark-gray text-dark-gray-hover">الرئيسية</a></li>
+                        <li><a href="/umrah" class="text-dark-gray text-dark-gray-hover">برامج العمرة</a></li>
                         <li>برامج العمرة 1447 هـ</li>
                     </ul>
                 </div>

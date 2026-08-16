@@ -7,14 +7,14 @@
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pagedata['hero-title']?? 'مشرفين نيل مصر' !!}</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData["hero-text"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' !!}</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData['hero-title']?? 'مشرفين نيل مصر' !!}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData["hero-sub-title"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' !!}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <li><a href="index.php" class="text-white">الرئيسية</a></li>
-                            <li>المشرفين</li>
+                            <li><a href="/" class="text-white">الرئيسية</a></li>
+                            <li>{!! $pageData["hero-title"] ?? 'المشرفين' !!}</li>
                         </ul>
                     </div>
                     <!-- end breadcrumb -->
@@ -33,13 +33,13 @@
         <div class="row">
             <div class="col-lg-4 md-mb-20px sm-mb-0" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <h2 class="text-dark-gray fw-500 ls-minus-2px alt-font">{!! $pageData["our-supervisors-tag"]?? "مشرفين نيل مصر" !!}</h2>
-                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px">{!! $pageData["our-supervisors-title"]?? "علم مضيء في سماء السياحة الدينية" !!}</span>
+                <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-5px">{!! $pageData["our-supervisors-quote"]?? "علم مضيء في سماء السياحة الدينية" !!}</span>
                 <img src="imgs/arrow.png" class="position-relative mt-5" alt="" data-bottom-top="transform: rotate(120deg);" data-top-bottom="transform: rotate(0);" />
             </div>
             <div class="col-lg-8" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <div class="row">
                     <div class="last-paragraph-no-margin">
-                        {!! $pageData["our-supervisors-description"]?? "
+                        {!! $pageData["our-supervisors-text"]?? "
                         <p>تعد خدمة الإشراف خلال تأدية الحاج و المعتمر لرحلته المقدسة
                             خارج أرض الوطن هي العمل الأسمى على الإطلاق لنيل
                             مصر للسياحة .. و هو العنصر الأساسي لنجاح الشركة و إتمام
@@ -53,7 +53,7 @@
                             سواء بسواء لجميع العملاء.
                         </p>
                         " !!}
-                        <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mt-30px">وتشمل الخدمة ما يلي :</span>
+                        <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mt-30px">{!!$pageData['our-supervisors-include-text']??"وتشمل الخدمة ما يلي"!!} :</span>
                     </div>
                 </div>
             </div>

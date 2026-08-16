@@ -31,4 +31,14 @@ class HajjPackages extends Model
     {
         return $this->hasMany(HajjBooking::class, 'hajj_package_id');
     }
+
+    public function makaHotel()
+    {
+        return $this->belongsTo(Hotel::class, 'maka_hotel_id');
+    }
+
+    public function madinaHotel()
+    {
+        return $this->belongsTo(Hotel::class, 'madina_hotel_id');
+    }
 }

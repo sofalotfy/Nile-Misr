@@ -10,10 +10,9 @@ class HajjController extends Controller
 {
     public function index()
     {
-        $packages = ListPackages::execute();
         return view('hajj', [
-            'pageData' => HajjPackages::first(),
-            'packages' => $packages,
+            'pageData' => HajjPackagesPage::first(),
+            'hajj_programs' => ListPackages::execute(),
         ]);
     }
 

@@ -1,137 +1,24 @@
 @include('header'); ?>
-
-<?php
-// Hajj Packages extracted from PDF
-$hajj_programs = [
-    [
-        'id' => 1,
-        'name' => 'برنامج الحج الاقتصادي تحسين 5 نجوم',
-        'duration' => '17 يوم',
-        'duration_value' => 17,
-        'date' => '01 ذي الحجة - 17 ذي الحجة',
-        'category' => 'اقتصادي',
-        'hotel_makkah' => 'فندق زمزم أو ما يماثله',
-        'hotel_madinah' => 'مجموعة ارجوان أو ما يماثلها',
-        'price' => '250,000',
-        'price_details' => 'رباعي أو خماسي: 250,000 ج | ثلاثي: 265,000 ج | ثنائي: 335,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['شامل 4 أيام ساحة الحرم', 'الانتقال بقطار الحرمين', 'مخيمات ألماني مجهزة بمنى وعرفات']
-    ],
-    [
-        'id' => 2,
-        'name' => 'برنامج الحج الاقتصادي',
-        'duration' => '15 يوم',
-        'duration_value' => 15,
-        'date' => '03 ذي الحجة - 17 ذي الحجة',
-        'category' => 'اقتصادي',
-        'hotel_makkah' => 'عمارة سكنية بالعزيزية',
-        'hotel_madinah' => 'مجموعة ارجوان أو ما يماثلها',
-        'price' => '240,000',
-        'price_details' => 'رباعي أو خماسي: 240,000 ج | ثلاثي: 279,000 ج | ثنائي: 320,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['الانتقال بقطار الحرمين', 'مخيمات ألماني مجهزة', 'إفطار وغداء وعشاء']
-    ],
-    [
-        'id' => 3,
-        'name' => 'برنامج الحج الاقتصادي تحسين 5 نجوم',
-        'duration' => '22 يوم',
-        'duration_value' => 22,
-        'date' => '25 ذي القعدة - 17 ذي الحجة',
-        'category' => 'اقتصادي',
-        'hotel_makkah' => 'فندق زمزم أو ما يماثله',
-        'hotel_madinah' => 'مجموعة ارجوان أو ما يماثلها',
-        'price' => '270,000',
-        'price_details' => 'رباعي أو خماسي: 270,000 ج | ثلاثي: 310,000 ج | ثنائي: 360,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['9 أيام ساحة الحرم', 'الانتقال بقطار الحرمين', 'مخيمات ألماني']
-    ],
-    [
-        'id' => 4,
-        'name' => 'برنامج الحج الاقتصادي موسم كامل (صف أول)',
-        'duration' => '22 يوم',
-        'duration_value' => 22,
-        'date' => '01 ذي الحجة - 17 ذي الحجة',
-        'category' => 'اقتصادي',
-        'hotel_makkah' => 'فندق بتول أجياد أو ما يماثله',
-        'hotel_madinah' => 'مجموعة ارجوان أو ما يماثلها',
-        'price' => '285,000',
-        'price_details' => 'رباعي أو خماسي: 285,000 ج | ثلاثي: 320,000 ج | ثنائي: 380,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['موسم كامل صف أول', 'الانتقال بقطار الحرمين', 'وجبات كاملة']
-    ],
-    [
-        'id' => 5,
-        'name' => 'برنامج الحج الفاخر 5 نجوم ساحة الحرم',
-        'duration' => '11 يوم',
-        'duration_value' => 11,
-        'date' => '04 ذي الحجة - 14 ذي الحجة',
-        'category' => '5 نجوم',
-        'hotel_makkah' => 'موفنبيك هاجر',
-        'hotel_madinah' => 'الحارثية / موفنبيك أنوار المدينة',
-        'price' => '550,000',
-        'price_details' => 'رباعي أو خماسي: 550,000 ج | ثلاثي: 645,000 ج | ثنائي: 770,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['مستوى سريع 5 نجوم', 'فنادق ساحة الحرم', 'بوفيه مفتوح']
-    ],
-    [
-        'id' => 6,
-        'name' => 'برنامج الحج 5 نجوم ساحة الحرم',
-        'duration' => '14 يوم',
-        'duration_value' => 14,
-        'date' => '01 ذي الحجة - 14 ذي الحجة',
-        'category' => '5 نجوم',
-        'hotel_makkah' => 'أبراج الساعة أو الصفوة',
-        'hotel_madinah' => 'موفنبيك أنوار المدينة / الحارثية',
-        'price' => '565,000',
-        'price_details' => 'رباعي أو خماسي: 565,000 ج | ثلاثي: 675,000 ج | ثنائي: 830,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['14 يوم / 13 ليلة', 'فنادق ساحة الحرم', 'بوفيه مفتوح']
-    ],
-    [
-        'id' => 7,
-        'name' => 'برنامج الحج 5 نجوم صف ثاني',
-        'duration' => '14 يوم',
-        'duration_value' => 14,
-        'date' => '01 ذي الحجة - 14 ذي الحجة',
-        'category' => '5 نجوم',
-        'hotel_makkah' => 'أنجم أو الشهداء ما يماثلها',
-        'hotel_madinah' => 'سجي أو ما يماثلها',
-        'price' => '520,000',
-        'price_details' => 'رباعي أو خماسي: 520,000 ج | ثلاثي: 565,000 ج | ثنائي: 670,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-        'features' => ['صف ثاني 5 نجوم', 'بوفيه مفتوح', 'مخيمات ألماني']
-    ],
-    [
-        'id' => 8,
-        'name' => 'برنامج الحج 5 نجوم VIP',
-        'duration' => '11 يوم',
-        'duration_value' => 11,
-        'date' => '04 ذي الحجة - 14 ذي الحجة',
-        'category' => 'VIP',
-        'hotel_makkah' => 'موفنبيك هاجر',
-        'hotel_madinah' => 'الحارثية أو موفنبيك أنوار المدينة',
-        'price' => '645,000',
-        'price_details' => 'رباعي أو خماسي: 645,000 ج | ثلاثي: 725,000 ج | ثنائي: 845,000 ج',
-        'image' => 'imgs/haj-5.jpg',
-    ]
-];
-?>
+@php
+    use App\Enums\HajjPackageLevel;
+    use App\Enums\HajjPackageDuration;
+@endphp
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url(imgs/hijj-banner.jpg)">
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url({{$pageData['hero-image']?asset('storage/' . $pageData['hero-image']):asset('imgs/hijj-banner.jpg')}})">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">برامج الحج 1448هـ</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام.</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{{$pageData['hero-title']??"برامج الحج 1448هـ"}}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{{$pageData['hero-sub-title']??"رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام."}}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <li><a href="index.php" class="text-white">الرئيسية</a></li>
-                            <li>برامج الحج 1448هـ</li>
+                            <li><a href="/" class="text-white">الرئيسية</a></li>
+                            <li>{{$pageData['hero-title']??"برامج الحج 1448هـ"}}</li>
                         </ul>
                     </div>
                     <!-- end breadcrumb -->
@@ -147,7 +34,7 @@ $hajj_programs = [
         <div class="row justify-content-center">
             <div class="col-xl-10 col-md-9 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <!-- <span class="fs-20 mb-15px text-base-color fw-500 d-block">Life around great food</span> -->
-                <h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>
+                {!!$pageData['description']??'<h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>'!!}
             </div>
         </div>
     </div>
@@ -185,9 +72,13 @@ $hajj_programs = [
                         <div class="custom-select-dropdown">
                             <ul>
                                 <li><a class="selected" data-value="all">جميع المستويات</a></li>
-                                <li><a data-value="اقتصادي">اقتصادي</a></li>
-                                <li><a data-value="5 نجوم">5 نجوم</a></li>
-                                <li><a data-value="VIP">VIP</a></li>
+                                @foreach (HajjPackageLevel::cases() as $level)
+                                    <li>
+                                        <a data-value="{{ $level->value }}">
+                                            {{ $level->label() }}
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -202,11 +93,13 @@ $hajj_programs = [
                         <div class="custom-select-dropdown">
                             <ul>
                                 <li><a class="selected" data-value="all">جميع المدد</a></li>
-                                <li><a data-value="11">11 يوم</a></li>
-                                <li><a data-value="14">14 يوم</a></li>
-                                <li><a data-value="15">15 يوم</a></li>
-                                <li><a data-value="17">17 يوم</a></li>
-                                <li><a data-value="22">22 يوم</a></li>
+                                @foreach (HajjPackageDuration::cases() as $duration)
+                                    <li>
+                                        <a data-value="{{ $duration->value }}">
+                                            {{ $duration->value }} يوم
+                                        </a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -221,7 +114,7 @@ $hajj_programs = [
                 <div class="col program-item" data-category="<?php echo $program['category']; ?>" data-duration="<?php echo $program['duration_value']; ?>" data-name="<?php echo $program['name']; ?>">
                     <div class="card border-0 border-radius-8px box-shadow-quadruple-large overflow-hidden h-100">
                         <div class="position-relative">
-                            <img src="<?php echo $program['image']; ?>" class="w-100" alt="<?php echo $program['name']; ?>">
+                            <img src="<?php echo "storage/" . $program['image']; ?>" class="w-100" alt="<?php echo $program['name']; ?>">
                             <!-- <div class="position-absolute top-0 left-0 w-100 h-100" style="background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.8) 100%);"></div> -->
                             <div class="opacity-medium bg-black"></div>
                             <div class="position-absolute top-20px right-20px bg-tussock-yellow text-white fs-12 fw-600 border-radius-30px pt-5px pb-5px ps-15px pe-15px z-index-1">
@@ -274,7 +167,7 @@ $hajj_programs = [
                                     data-price-double="<?php echo $h_price_double; ?>"
                                     data-price-triple="<?php echo $h_price_triple; ?>"
                                     data-price-quad="<?php echo $h_price_quad; ?>">احجز الآن</a>
-                                <a href="hajj-details.php" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
+                                <a href="/hajj/<?php $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
                             </div>
                         </div>
                     </div>

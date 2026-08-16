@@ -42,9 +42,6 @@ class ContactUsPageForm
                         TextInput::make('card-sub-title')
                             ->label('Subtitle'),
 
-                        TextInput::make('card-hotline')
-                            ->label('Hotline'),
-
                         TextInput::make('card-whatsapp')
                             ->label('WhatsApp'),
 

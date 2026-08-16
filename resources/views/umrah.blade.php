@@ -1,23 +1,81 @@
 @include('header');
+@php
+    use App\Enums\StayDuration;
+@endphp
+<?php
+function umrah_card($program)
+        {
+            // Determine the lowest price to display on the image
+            $starting_price = $program['price_quad'];
+            if (empty($starting_price)) $starting_price = $program['price_triple'];
+            if (empty($starting_price)) $starting_price = $program['price_double'];
+            if (empty($starting_price)) $starting_price = $program['price_single'];
+        ?>
+<div class="card border-0 border-radius-8px box-shadow-quadruple-large overflow-hidden h-100 w-100">
+    <div class="position-relative">
+        <img src="<?php echo "storage/" . $program['image']; ?>" class="w-100" alt="<?php echo $program['name']; ?>">
+        <div class="opacity-medium bg-black"></div>
+        
+        <div class="position-absolute bottom-10px w-100 px-4 text-white fs-16 fw-600 z-index-1">
+            <span class="fs-13 d-block"> تبدأ من</span>
+            <div class="fs-24 fw-800 text-white"><?php echo $starting_price; ?> <span class="fs-14 fw-600 text-white">جنية</span></div>
+        </div>
+    </div>
+    <div class="card-body p-9 d-flex flex-column flex-grow-1">
+        <div class="d-flex justify-content-between align-items-start mb-15px">
+            <h3 class="fs-19 fw-700 text-dark-gray mb-0 lh-sm"><?php echo $program['name']; ?></h3>
+        </div>
+        
+        <ul class="fs-14 fw-500 mb-15px px-0">
+            <li class="pb-5px">
+                <i class="feather icon-feather-clock text-tussock-yellow me-10px"></i><?php echo $program['duration']; ?>
+            </li>
+            <li class="pb-5px">
+                <i class="feather icon-feather-map-pin text-tussock-yellow me-10px"></i> مكة: <?php echo $program['hotel_makkah']; ?></span>
+            </li>
+            <li class="pb-5px">
+                <i class="feather icon-feather-map-pin text-tussock-yellow me-10px"></i> المدينة: <?php echo $program['hotel_madinah']; ?>  </span>
+            </li>
+        </ul>
 
-@include('umrah-data.php');
-
+        <div class="fs-14 fw-500 px-0 pt-15px mt-auto border-top border-color-extra-medium-gray pt-20px">
+            <div class="d-flex align-items-center gap-2 w-100">
+                <a href="javascript:void(0);" 
+                   class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
+                   data-type="umrah"
+                   data-name="<?php echo htmlspecialchars($program['name']); ?>"
+                   data-date="<?php echo htmlspecialchars(implode(' , ', $program['dates'])); ?>"
+                   data-duration="<?php echo htmlspecialchars($program['duration']); ?>"
+                   data-category="<?php echo htmlspecialchars($program['category']); ?>"
+                   data-price-single="<?php echo $program['price_single'] ?? 0; ?>"
+                   data-price-double="<?php echo $program['price_double'] ?? 0; ?>"
+                   data-price-triple="<?php echo $program['price_triple'] ?? 0; ?>"
+                   data-price-quad="<?php echo $program['price_quad'] ?? 0; ?>"
+                >احجز الآن</a>
+                <a href="/umrah/<?php $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
+            </div>
+        </div>
+    </div>
+</div>
+<?php
+        }
+    ?>
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background top-space-margin position-relative" style="background-image: url(imgs/umrah.jpg)">
+<section class="page-title-separate-breadcrumbs cover-background top-space-margin position-relative" style="background-image: url({{$pageData['hero-image']?asset('storage/' . $pageData['hero-image']):asset('imgs/umrah.jpg')}})">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">برامج العمرة 1447 هـ</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">رحلة روحانية تبدأ بالنية... وتكتمل بخدمة تليق بضيوف الرحمن.</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{{$pageData['hero-title']??"برامج العمرة 1447 هـ"}}</h1>
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{{$pageData['hero-sub-title']??"رحلة روحانية تبدأ بالنية... وتكتمل بخدمة تليق بضيوف الرحمن."}}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <li><a href="index.php" class="text-white">الرئيسية</a></li>
-                            <li>برامج العمرة 1447 هـ</li>
+                            <li><a href="/" class="text-white">الرئيسية</a></li>
+                            <li>{{$pageData['hero-title']??"برامج العمرة 1447 هـ"}}</li>
                         </ul>
                     </div>
                     <!-- end breadcrumb -->
@@ -55,10 +113,9 @@
                         <div class="duration-filter-wrapper">
                             <div class="d-flex flex-wrap gap-3" id="filter-duration-cards">
                                 <button class="duration-card active" data-value="all">جميع المدد</button>
-                                <button class="duration-card" data-value="6">6 أيام / 5 ليالي</button>
-                                <button class="duration-card" data-value="8">8 أيام / 7 ليالي</button>
-                                <button class="duration-card" data-value="10">10 أيام / 9 ليالي</button>
-                                <button class="duration-card" data-value="15">15 يوم / 14 ليلة</button>
+                                @foreach (StayDuration::cases() as $duration)
+                                    <button class="duration-card" data-value="{{ $duration->integer() }}">{{ $duration->value }}</button>
+                                @endforeach
                             </div>
                         </div>
 
@@ -74,7 +131,7 @@
 
                     </div>
                     <div class="text-center">
-                        <p class="text-base-color fw-600 fs-20 ls-minus-1px mb-0">جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة</p>
+                        {!!  $pageData['note']??'<p class="text-base-color fw-600 fs-20 ls-minus-1px mb-0">جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة</p>'!!}
                     </div>
                 </div>
             </div>
@@ -92,21 +149,21 @@
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">6 أيام</span> / 5 ليالي</h2>
-                        <p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>
+                        {!!$pageData['six-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
                     </div>
                 </div>
                 <div class="umrah-section-line mt-3"></div>
             </div>
             <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4">
-                <?php include_once 'umrah-card.php'; ?>
                 <?php foreach ($umrah_programs as $program): if ($program['duration_days'] !== 6) continue; ?>
                     <div class="col program-item" data-duration="<?php echo $program['duration_days']; ?>" data-name="<?php echo $program['name']; ?>">
                         <?php umrah_card($program); ?>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> <span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
-                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>
+            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> 
+                {!! $pageData['footer-six-days-note']??'<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
+                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>' !!}
             </div>
         </div>
 
@@ -122,7 +179,7 @@
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">8 أيام</span> / 7 ليالي</h2>
-                        <p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>
+                        {!!$pageData['eight-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
                     </div>
                 </div>
                 <div class="umrah-section-line mt-3"></div>
@@ -134,8 +191,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> <span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
-                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>
+            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                {!! $pageData['footer-six-days-note']??'<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
+                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>' !!}
             </div>
         </div>
 
@@ -151,7 +209,8 @@
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">10 أيام</span> / 9 ليالي</h2>
-                        <p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>
+                        {!!$pageData['eight-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
+                        
                     </div>
                 </div>
                 <div class="umrah-section-line mt-3"></div>
@@ -163,8 +222,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> <span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
-                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>
+            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                {!! $pageData['footer-six-days-note']??'<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
+                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>' !!}
             </div>
         </div>
 
@@ -180,7 +240,7 @@
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">15 يوم</span> / 14 ليلة</h2>
-                        <p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>
+                        {!!$pageData['eight-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
                     </div>
                 </div>
                 <div class="umrah-section-line mt-3"></div>
@@ -192,8 +252,9 @@
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> <span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
-                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>
+            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                {!! $pageData['footer-six-days-note']??'<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
+                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>' !!}
             </div>
         </div>
 

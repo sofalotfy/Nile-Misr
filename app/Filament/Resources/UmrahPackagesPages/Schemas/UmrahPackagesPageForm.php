@@ -29,10 +29,46 @@ class UmrahPackagesPageForm
                             ->directory('umrah-packages-pages/hero'),
 
                         RichEditor::make('note')
-                            ->label('Note')
+                            ->label('General Note')
                             ->columnSpanFull(),
+
+                                            
                     ])
                     ->columns(2),
-            ]);
+                Section::make('Categories')
+                    ->schema([
+                        RichEditor::make('six-days-note')
+                            ->label('Note at 6 Days Category Header')
+                            ->columnSpanFull(),
+
+                        RichEditor::make('footer-six-days-note')
+                            ->label('Note at 6 Days Category Footer')
+                            ->columnSpanFull(),
+
+                        RichEditor::make('eight-days-note')
+                            ->label('Note at 8 Days Category Header')
+                            ->columnSpanFull(),
+
+                        RichEditor::make('footer-six-days-note')
+                            ->label('Note at 6 Days Category Footer')
+                            ->columnSpanFull(),
+
+                        RichEditor::make('ten-days-note')
+                            ->label('Note at 10 Days Categor Headery')
+                            ->columnSpanFull(),
+
+                        RichEditor::make('footer-six-days-note')
+                            ->label('Note at 6 Days Category Footer')
+                            ->columnSpanFull(),
+                        
+                        RichEditor::make('fifteen-days-note')
+                            ->label('Note at 15 Days Categor Headery')
+                            ->columnSpanFull(),
+
+                        RichEditor::make('footer-six-days-note')
+                            ->label('Note at 6 Days Category Footer')
+                            ->columnSpanFull(),
+                    ])->columns(1),
+            ])->columns(1);
     }
 }

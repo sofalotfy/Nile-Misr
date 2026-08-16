@@ -11,7 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('hotels', function (Blueprint $table) {
+            $table->id();
+            $table->text('name');
+            $table->text('address');
+            $table->float('rating');
+            $table->integer('rating_count');
+            $table->string('distance'); 
+            $table->integer('duration'); //in nights
+            $table->boolean('iftar-included')->default(false);
+            $table->json('images'); // array of images
+            $table->text('location');
+            $table->timestamps();
+        });
+        
     }
 
     /**
@@ -19,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('hotels');
     }
 };

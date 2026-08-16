@@ -48,7 +48,7 @@ return new class extends Migration
             $table->text("section3-image")->nullable();
             $table->text("section3-floating-image")->nullable();
             //Our services 
-            $table->json("Our Services")->nullable(); // Incude image,title,description,button_text
+            $table->json("our-services")->nullable(); // Incude image,title,description,button_text
 
             // Experiences
             $table->string("experiences-title")->nullable();
