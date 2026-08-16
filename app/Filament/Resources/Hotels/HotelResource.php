@@ -20,6 +20,21 @@ class HotelResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    public static function getNavigationGroup(): ?string
+    {
+        return 'Models';
+    }
+
+    public static function getNavigationSort(): ?int
+    {
+        return 3;
+    }
+
+    public static function getPluralLabel(): string
+    {
+        return 'Hotels';
+    }
+
     public static function form(Schema $schema): Schema
     {
         return HotelForm::configure($schema);
