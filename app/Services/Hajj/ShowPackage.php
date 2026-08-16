@@ -8,20 +8,10 @@ class ShowPackage
 {
     public static function execute(HajjPackages $package)
     {
-        return $package
-    }
-
-    private static function getSelects(): array
-    {
-        return [
-            'id',
-            'card_image',
-            'title',
-            'level',
-            'duration',
-            'date',
-            'maka_hotel_id',
-            'madina_hotel_id',
-        ];
+        return $package->load([
+            'makaHotel:id,name,address,rating,rating_count,distance,duration,iftar-included,images,location',
+            'madinaHotel:id,name,address,rating,rating_count,distance,duration,iftar-included,images,location',
+            'hajjPrices:id,hajj_package_id,type,price',
+        ]);
     }
 }
