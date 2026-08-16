@@ -165,7 +165,7 @@ function umrah_card($program)
                 <div
                     class="d-flex flex-column flex-lg-row align-items-center justify-content-center text-center text-lg-start">
                     <div class="flex-shrink-0 me-15px md-me-0">
-                        <h2 class="mb-0 fw-800"><sup class="fs-24">+</sup>">{!! $pageData["review-count"] ?? '3.5k' !!}</h2>
+                        <h2 class="mb-0 fw-800"><sup class="fs-24">+</sup>"{!! $pageData["review-count"] ?? '3.5k' !!}</h2>
                     </div>
                     <div>
                         <span class="lh-24 fw-600 d-block">{!! $pageData["review-text"] ?? '+3500 ريفيو ع جوجل' !!}</span>
