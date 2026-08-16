@@ -31,6 +31,6 @@ class AppServiceProvider extends ServiceProvider
             ->setRoleClass(Role::class);
 
         Schema::defaultStringLength(191);
-        View::share('siteData', GetSiteData::execute());
+        // View::share('siteData', GetSiteData::execute());
     }
 }
