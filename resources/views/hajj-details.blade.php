@@ -2,8 +2,8 @@
 {{$data= [
         "pageData" => $pageData,
         "package"  => $package,
-    ]
-    dd($data)
+    ];
+    dd($data);
 }}
 <!-- start page title -->
 <section class="ipad-top-space-margin md-pt-0">
