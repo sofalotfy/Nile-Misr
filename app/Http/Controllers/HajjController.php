@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HajjPackagesPage;
 use App\Models\SingleHijjPackagePage;
+use App\Models\HajjPackages;
 use Illuminate\Http\Request;
 use App\Services\Hajj\ListPackages;
 use App\Services\Hajj\ShowPackage;
@@ -18,7 +19,7 @@ class HajjController extends Controller
         ]);
     }
 
-    public function show($hajj_package)
+    public function show(HajjPackages $hajj_package)
     {
         return view('hajj-details', [
             'pageData'=> SingleHijjPackagePage::first(),
