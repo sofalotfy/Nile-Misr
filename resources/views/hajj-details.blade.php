@@ -1,10 +1,13 @@
-@include('header'); ?>
-{{$data= [
-        "pageData" => $pageData,
-        "package"  => $package,
+@include('header');
+
+@php
+    $data = [
+        'pageData' => $pageData,
+        'package'  => $package,
     ];
+
     dd($data);
-}}
+@endphp
 <!-- start page title -->
 <section class="ipad-top-space-margin md-pt-0">
     <div class="container">
