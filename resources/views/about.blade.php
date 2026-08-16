@@ -118,7 +118,7 @@
 <!-- start section -->
 <section class=" position-relative overlap-height mb-3">
     <div class="position-absolute right-0px d-none d-lg-inline-block">
-        <img src="{{asset("our-imgs/pattern/patt11.png")}}" alt="" />
+        <img src="{{asset("imgs/pattern//patt11.png")}}" alt="" />
     </div>
     <!-- <img src="imgs/pattern/patt2.png" class="position-absolute bottom-minus-50px right-minus-50px z-index-minus-1" data-bottom-top="transform: rotate(0deg) translateY(0)" data-top-bottom="transform:rotate(-15deg) translateY(0)" alt=""/> -->
 
