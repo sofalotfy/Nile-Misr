@@ -256,10 +256,10 @@
                         <div class="col last-paragraph-no-margin mb-25px">
 
                             <p>
-                                {{ $pageData['card-whatsapp'] }}
+                                تواصل معنا عبر what's app
                             </p>
 
-                            @foreach(explode('-', $pageData['card-whatsapp'] ?? '') as $whatsapp)
+                            @foreach(explode('-', $siteData['card-whatsapp'] ?? '') as $whatsapp)
 
                                 @if(trim($whatsapp))
 
@@ -288,7 +288,7 @@
                         <div class="col last-paragraph-no-margin sm-mb-25px">
 
                             <p>
-                                {{ $pageData['card-sales-contact'] }}
+                                تواصل مع فريق المبيعات
                             </p>
 
                             <a

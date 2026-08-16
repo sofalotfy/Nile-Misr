@@ -53,7 +53,7 @@
                             سواء بسواء لجميع العملاء.
                         </p>
                         " !!}
-                        <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mt-30px">{!!$pageData['our-supervisors-include-text']??"وتشمل الخدمة ما يلي"!!} :</span>
+                        <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mt-30px">{!!$pageData['our-supervisors-include-text']??"وتشمل الخدمة ما يلي"!!}</span>
                     </div>
                 </div>
             </div>
