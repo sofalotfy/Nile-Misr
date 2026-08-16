@@ -70,11 +70,25 @@ class UmrahPackagesForm
                             ->preload()
                             ->required(),
 
+                        TextInput::make('maka-duration')
+                            ->label('Maka Duration')
+                            ->numeric()
+                            ->minValue(1)
+                            ->suffix('nights')
+                            ->required(),
+
                         Select::make('madina_hotel_id')
                             ->label('Madinah Hotel')
                             ->relationship('madinaHotel', 'name')
                             ->searchable()
                             ->preload()
+                            ->required(),
+
+                        TextInput::make('madina-duration')
+                            ->label('Madina Duration')
+                            ->numeric()
+                            ->minValue(1)
+                            ->suffix('nights')
                             ->required(),
 
                     ])

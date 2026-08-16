@@ -314,10 +314,11 @@
                     {{ $pageData['form-title'] }}
                 </h3>
 
-                <form action="email-templates/contact-form.php" method="post" class="contact-form-style-03">
+                <form action="{{ route('contact.store') }}" method="POST" class="contact-form-style-03">
+                    @csrf
 
-                    <label for="exampleInputEmail1"
-                           class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">
+                    <label for="name"
+                        class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">
                         {{ $pageData['form-name-title'] }}
                     </label>
 
@@ -329,17 +330,19 @@
 
                         <input
                             class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
-                            id="exampleInputEmail1"
+                            id="name"
                             type="text"
                             name="name"
+                            value="{{ old('name') }}"
                             placeholder="{{ $pageData['form-name-place-holder'] }}"
+                            required
                         />
 
                     </div>
 
 
-                    <label for="exampleInputEmail1"
-                           class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">
+                    <label for="email"
+                        class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">
                         {{ $pageData['form-email-title'] }}
                     </label>
 
@@ -351,28 +354,32 @@
 
                         <input
                             class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
-                            id="exampleInputEmail2"
+                            id="email"
                             type="email"
                             name="email"
+                            value="{{ old('email') }}"
                             placeholder="{{ $pageData['form-email-place-holder'] }}"
+                            required
                         />
 
                     </div>
 
 
-                    <label for="exampleInputEmail1"
-                           class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">
+                    <label for="message"
+                        class="form-label fs-13 text-uppercase text-dark-gray fw-700 mb-0">
                         {{ $pageData['form-message-title'] }}
                     </label>
 
                     <div class="position-relative form-group form-textarea mb-0">
 
                         <textarea
-                            class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control"
-                            name="comment"
+                            class="fs-15 ps-0 border-radius-0px border-color-dark-gray bg-transparent form-control required"
+                            id="message"
+                            name="message"
                             placeholder="{{ $pageData['form-message-place-holder'] }}"
                             rows="3"
-                        ></textarea>
+                            required
+                        >{{ old('message') }}</textarea>
 
                         <span class="form-icon">
                             <i class="bi bi-chat-square-dots text-dark-gray"></i>
@@ -394,10 +401,8 @@
 
                         <div class="col-xl-5 col-lg-12 col-sm-5 text-center text-sm-end text-lg-start text-xl-end xs-mt-25px">
 
-                            <input id="exampleInputEmail3" type="hidden" name="redirect" value="">
-
                             <button
-                                class="btn btn-dark-gray btn-medium btn-round-edge btn-box-shadow submit"
+                                class="btn btn-dark-gray btn-medium btn-round-edge btn-box-shadow"
                                 type="submit"
                             >
                                 {{ $pageData['form-button-text'] }}
@@ -408,7 +413,26 @@
 
                         <div class="col-12 mt-20px mb-0 text-center text-md-start">
 
-                            <div class="form-results d-none"></div>
+                            @if($errors->any())
+
+                                <div class="text-danger mb-3">
+
+                                    @foreach($errors->all() as $error)
+                                        <div>{{ $error }}</div>
+                                    @endforeach
+
+                                </div>
+
+                            @endif
+
+
+                            @if(session('success'))
+
+                                <div class="text-success mb-3">
+                                    {{ session('success') }}
+                                </div>
+
+                            @endif
 
                         </div>
 

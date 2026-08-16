@@ -15,45 +15,28 @@ class UmrahPackagesTable
     {
         return $table
             ->columns([
-                ImageColumn::make('maka-images')
-                    ->label('Makkah')
-                    ->disk('public')
-                    ->square(),
-
                 TextColumn::make('title')
                     ->searchable()
                     ->sortable(),
 
                 TextColumn::make('duration')
                     ->label('Duration')
+                    ->badge()
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('date')
+                TextColumn::make('category')
+                    ->badge()
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('maka-hotel')
+                TextColumn::make('makaHotel.name')
                     ->label('Makkah Hotel')
                     ->searchable(),
 
-                TextColumn::make('madina-hotel')
+                TextColumn::make('madinaHotel.name')
                     ->label('Madinah Hotel')
                     ->searchable(),
-
-                TextColumn::make('rating')
-                    ->numeric(decimalPlaces: 1)
-                    ->sortable(),
-
-                TextColumn::make('Deposit')
-                    ->label('Deposit')
-                    ->numeric()
-                    ->sortable(),
-
-                TextColumn::make('entrey-fee')
-                    ->label('Entry Fee')
-                    ->numeric()
-                    ->sortable(),
 
                 TextColumn::make('created_at')
                     ->dateTime()

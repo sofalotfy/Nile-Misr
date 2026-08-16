@@ -7,6 +7,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Table;
+use App\Enums\RoomTypes;
 
 class UmrahBookingsTable
 {
@@ -21,26 +22,24 @@ class UmrahBookingsTable
                 TextColumn::make('phone')
                     ->searchable(),
 
-                TextColumn::make('umrah_package_id')
+                TextColumn::make('umrahPackage.title')
                     ->label('Package')
-                    ->sortable(),
+                    ->searchable(),
 
-                TextColumn::make('umrah_price_id')
-                    ->label('Price')
-                    ->sortable(),
-
-                TextColumn::make('count')
-                    ->numeric()
+                TextColumn::make('umrahPrice.type')
+                    ->label("Room Type")
+                      ->formatStateUsing(fn (RoomTypes $state) => $state->value)
+                      ->badge()
                     ->sortable(),
 
                 TextColumn::make('price')
+                    ->label('Total Price')
                     ->numeric()
                     ->sortable(),
 
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
-
             ])
             ->filters([
                 //

@@ -41,11 +41,11 @@ class HajjPackagesTable
                     ->searchable()
                     ->sortable(),
 
-                TextColumn::make('maka-hotel')
+                TextColumn::make('makaHotel.name')
                     ->label('Makkah Hotel')
                     ->searchable(),
 
-                TextColumn::make('madina-hotel')
+                TextColumn::make('madinaHotel.name')
                     ->label('Madinah Hotel')
                     ->searchable(),
 

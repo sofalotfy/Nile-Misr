@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\HajjBookings\Tables;
 
+use App\Enums\RoomTypes;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -22,19 +23,18 @@ class HajjBookingsTable
                 TextColumn::make('phone')
                     ->searchable(),
 
-                TextColumn::make('hajjPackage.name')
+                TextColumn::make('hajjPackage.title')
                     ->label('Package')
                     ->searchable(),
 
-                TextColumn::make('hajjPrice.name')
-                    ->label('Price')
-                    ->searchable(),
-
-                TextColumn::make('count')
-                    ->numeric()
+                TextColumn::make('hajjPrice.type')
+                    ->label("Room Type")
+                      ->formatStateUsing(fn (RoomTypes $state) => $state->value)
+                      ->badge()
                     ->sortable(),
 
                 TextColumn::make('price')
+                    ->label('Total Price')
                     ->numeric()
                     ->sortable(),
 

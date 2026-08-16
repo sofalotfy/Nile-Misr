@@ -399,6 +399,419 @@
 
         <!-- Premium Booking Modal -->
         <div class="modal fade"
+     id="bookingModal"
+     tabindex="-1"
+     aria-labelledby="bookingModalLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+
+        <div class="modal-content border-0 border-radius-10px box-shadow-extra-large">
+
+            <div class="modal-header bg-base-color border-0 border-radius-10px-top p-4">
+
+                <h5 class="modal-title text-white fw-700 fs-22"
+                    id="bookingModalLabel">
+
+                    طلب حجز
+                    <span id="bm-program-type"></span>
+
+                </h5>
+
+            </div>
+
+
+            <div class="modal-body p-4 p-md-5">
+
+                <div class="booking-summary-header mb-4 pb-4 border-bottom border-color-extra-medium-gray">
+
+                    <h4 class="text-dark-gray fw-700 fs-20 mb-2"
+                        id="bm-package-name">
+                    </h4>
+
+                    <div class="d-flex flex-wrap gap-3 fs-14 fw-500 text-medium-gray">
+
+                        <div class="text-nowrap">
+                            <i class="feather icon-feather-calendar text-tussock-yellow me-1"></i>
+                            <span id="bm-date"></span>
+                        </div>
+
+                        <div class="text-nowrap">
+                            <i class="feather icon-feather-clock text-tussock-yellow me-1"></i>
+                            <span id="bm-duration"></span>
+                        </div>
+
+                        <div class="text-nowrap">
+                            <i class="feather icon-feather-star text-tussock-yellow me-1"></i>
+                            <span id="bm-category"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <form id="premiumBookingForm"
+                      action="{{ route('hajj.store') }}"
+                      method="POST">
+
+                    @csrf
+                    <input type="hidden"
+                           name="package_id"
+                           id="bm-package-id">
+
+                    <input type="hidden"
+                           name="price_id"
+                           id="bm-price-id">
+
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label class="form-label fw-600 text-dark-gray fs-15">
+                                الاسم بالكامل
+                            </label>
+
+                            <input type="text"
+                                   name="name"
+                                   id="bm-name"
+                                   placeholder="أدخل اسمك بالكامل"
+                                   class="form-control border-radius-50px bg-very-light-gray border-1 border-color-extra-medium-gray px-4"
+                                   required>
+
+                        </div>
+
+
+                        <div class="col-md-6 mb-4">
+
+                            <label class="form-label fw-600 text-dark-gray fs-15">
+                                رقم الهاتف (واتساب)
+                            </label>
+
+                            <input type="tel"
+                                   name="phone"
+                                   id="bm-phone"
+                                   placeholder="أدخل رقم هاتفك"
+                                   class="form-control border-radius-50px bg-very-light-gray border-1 border-color-extra-medium-gray px-4"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mb-4">
+
+                        <label class="form-label fw-600 text-dark-gray fs-16 mb-3 d-block">
+                            سعر الفرد في الغرفة
+                        </label>
+
+                        <div class="row room-type-selector gap-3 gap-md-0">
+
+                            <div class="col-md-3 mb-2"
+                                 id="bm-room-single-wrapper">
+
+                                <input type="radio"
+                                       name="room-type"
+                                       id="bm-room-single"
+                                       value="single"
+                                       class="btn-check"
+                                       autocomplete="off">
+
+                                <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
+                                       for="bm-room-single">
+
+                                    <span class="fs-15">فردي</span>
+
+                                    <span class="fs-12 opacity-7 bm-room-price"
+                                          id="bm-price-single"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="col-md-3 mb-2"
+                                 id="bm-room-double-wrapper">
+
+                                <input type="radio"
+                                       name="room-type"
+                                       id="bm-room-double"
+                                       value="double"
+                                       class="btn-check"
+                                       autocomplete="off"
+                                       checked>
+
+                                <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
+                                       for="bm-room-double">
+
+                                    <span class="fs-15">ثنائـــــــــي</span>
+
+                                    <span class="fs-12 opacity-7 bm-room-price"
+                                          id="bm-price-double"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="col-md-3 mb-2"
+                                 id="bm-room-triple-wrapper">
+
+                                <input type="radio"
+                                       name="room-type"
+                                       id="bm-room-triple"
+                                       value="triple"
+                                       class="btn-check"
+                                       autocomplete="off">
+
+                                <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
+                                       for="bm-room-triple">
+
+                                    <span class="fs-15">ثلاثــــــــي</span>
+
+                                    <span class="fs-12 opacity-7 bm-room-price"
+                                          id="bm-price-triple"></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="col-md-3 mb-2"
+                                 id="bm-room-quad-wrapper">
+
+                                <input type="radio"
+                                       name="room-type"
+                                       id="bm-room-quad"
+                                       value="quad"
+                                       class="btn-check"
+                                       autocomplete="off">
+
+                                <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
+                                       for="bm-room-quad">
+
+                                    <span class="fs-15">رباعي/خماسي</span>
+
+                                    <span class="fs-12 opacity-7 bm-room-price"
+                                          id="bm-price-quad"></span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+
+                        <div class="mb-4 col-3">
+
+                            <label class="form-label fw-600 text-dark-gray fs-16 mb-2">
+                                عدد الأفراد (المسافرين)
+                            </label>
+
+                            <div class="d-flex align-items-center">
+
+                                <button type="button"
+                                        class="btn btn-light border border-color-extra-medium-gray fs-20 w-40px h-40px p-0 d-flex align-items-center justify-content-center border-radius-5px"
+                                        id="bm-qty-minus">
+                                    -
+                                </button>
+
+                                <input type="number"
+                                       name="count"
+                                       id="bm-travelers-qty"
+                                       class="form-control text-center fw-700 fs-18 mx-2 border-0 bg-transparent w-100px"
+                                       value="1"
+                                       min="1"
+                                       readonly>
+
+                                <button type="button"
+                                        class="btn btn-light border border-color-extra-medium-gray fs-20 w-40px h-40px p-0 d-flex align-items-center justify-content-center border-radius-5px"
+                                        id="bm-qty-plus">
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-8 p-4 border-radius-5px">
+
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+
+                                <span class="fs-15 text-dark-gray fw-600">
+                                    سعر الفرد
+                                </span>
+
+                                <span class="fs-16 fw-700 text-base-color"
+                                      id="bm-summary-pp">
+                                    0 جنية
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top border-color-extra-medium-gray">
+
+                                <span class="fs-18 text-dark-gray fw-700">
+                                    الإجمالي التقديري
+                                </span>
+
+                                <span class="fs-24 fw-800 text-dark-gray">
+
+                                    <span id="bm-summary-total">
+                                        0
+                                    </span>
+
+                                    <span class="fs-14 fw-600">
+                                        جنية
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <div class="modal-footer border-0 pt-0 px-4 pb-4">
+
+                <button type="button"
+                        class="btn btn-transparent-dark-gray btn-rounded border-1 flex-grow-1 mx-1 py-3"
+                        data-bs-dismiss="modal">
+                    إلغاء
+                </button>
+
+                <button type="submit"
+                        form="premiumBookingForm"
+                        class="btn btn-yellow btn-rounded flex-grow-1 mx-1 fw-700 py-3"
+                        id="bm-confirm-btn">
+                    تأكيد الحجز
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Booking Modal Script -->
+<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
+                <!-- end footer -->
+
+        <!-- Quick Booking Modal -->
+        <div class="modal fade" id="quickBookingModal" tabindex="-1"
+             aria-labelledby="quickBookingModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0 bg-transparent box-shadow-none">
+
+                    <div class="position-relative w-100"
+                         style="height: 220px; background-image: url('{{ asset('imgs/saa1.jpg') }}'); background-size: cover; background-position: center; border-radius: 30px;">
+
+                        <div class="opacity-extra-medium bg-black overflow-hidden border-radius-30px"></div>
+
+                        <h3 class="position-absolute fs-30 top-50 start-50 text-center flex justify-content-center align-items-center translate-middle text-white fw-500">
+                            سجل بياناتك للتواصل
+                        </h3>
+
+                    </div>
+
+                    <div class="bg-white position-relative"
+                         style="margin-top: -50px; border-radius: 30px; padding: 40px 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.1); z-index: 5;">
+
+                        <form action="#" method="POST">
+
+                            <div class="mb-4 mt-3">
+                                <div class="d-flex gap-3 booking-type-selector justify-content-center">
+
+                                    <div class="w-50">
+                                        <input type="radio"
+                                               name="bookingType"
+                                               id="bookingTypeUmrah"
+                                               value="umrah"
+                                               class="btn-check"
+                                               autocomplete="off"
+                                               checked>
+
+                                        <label class="btn btn-outline-dark-gray border-radius-50px fw-700 px-5 py-3 fs-15 w-100 text-center"
+                                               for="bookingTypeUmrah">
+                                            عمرة
+                                        </label>
+                                    </div>
+
+                                    <div class="w-50">
+                                        <input type="radio"
+                                               name="bookingType"
+                                               id="bookingTypeHajj"
+                                               value="hajj"
+                                               class="btn-check"
+                                               autocomplete="off">
+
+                                        <label class="btn btn-outline-dark-gray border-radius-50px fw-700 px-5 py-3 fs-15 w-100 text-center"
+                                               for="bookingTypeHajj">
+                                            حج
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="position-relative mb-4 mt-4 custom-input-wrap">
+                                <input type="text"
+                                       class="form-control bg-very-light-gray text-dark-gray border-radius-50px"
+                                       id="userName"
+                                       name="userName"
+                                       required
+                                       placeholder="الاسم بالكامل">
+                            </div>
+
+                            <div class="position-relative mb-4 mt-4 custom-input-wrap">
+                                <input type="tel"
+                                       class="form-control bg-very-light-gray text-dark-gray border-radius-50px"
+                                       id="userPhone"
+                                       name="userPhone"
+                                       required
+                                       placeholder="رقم التليفون الخاص بك">
+                            </div>
+
+                            <div class="position-relative mb-5 mt-4 custom-input-wrap">
+                                <input type="email"
+                                       class="form-control bg-very-light-gray text-dark-gray border-radius-50px"
+                                       id="userEmail"
+                                       name="userEmail"
+                                       placeholder="البريد الإلكتروني">
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-large btn-yellow border-radius-50px w-100 fw-700 fs-18">
+                                احجز الأن
+                            </button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Premium Booking Modal -->
+        <div class="modal fade"
              id="bookingModal"
              tabindex="-1"
              aria-labelledby="bookingModalLabel"
@@ -497,7 +910,7 @@
                                          id="bm-room-single-wrapper">
 
                                         <input type="radio"
-                                               name="bm-room-type"
+                                               name="room-type"
                                                id="bm-room-single"
                                                value="single"
                                                class="btn-check"
@@ -519,7 +932,7 @@
                                          id="bm-room-double-wrapper">
 
                                         <input type="radio"
-                                               name="bm-room-type"
+                                               name="room-type"
                                                id="bm-room-double"
                                                value="double"
                                                class="btn-check"
@@ -529,7 +942,7 @@
                                         <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                                for="bm-room-double">
 
-                                            <span class="fs-15">ثنائي</span>
+                                            <span class="fs-15">ثنائـــــــــي</span>
                                             <span class="fs-12 opacity-7 bm-room-price"
                                                   id="bm-price-double"></span>
 
@@ -542,7 +955,7 @@
                                          id="bm-room-triple-wrapper">
 
                                         <input type="radio"
-                                               name="bm-room-type"
+                                               name="room-type"
                                                id="bm-room-triple"
                                                value="triple"
                                                class="btn-check"
@@ -551,7 +964,7 @@
                                         <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                                for="bm-room-triple">
 
-                                            <span class="fs-15">ثلاثي</span>
+                                            <span class="fs-15">ثلاثــــــــي</span>
                                             <span class="fs-12 opacity-7 bm-room-price"
                                                   id="bm-price-triple"></span>
 
@@ -564,7 +977,7 @@
                                          id="bm-room-quad-wrapper">
 
                                         <input type="radio"
-                                               name="bm-room-type"
+                                               name="room-type"
                                                id="bm-room-quad"
                                                value="quad"
                                                class="btn-check"
@@ -721,7 +1134,7 @@
             function calculateTotal() {
 
                 let selectedRoom =
-                    $('input[name="bm-room-type"]:checked').val();
+                    $('input[name="room-type"]:checked').val();
 
                 let pp = currentPrices[selectedRoom] || 0;
 
@@ -744,6 +1157,8 @@
 
                 let btn = $(this);
 
+                $('#bm-package-id').val(btn.data('package-id'));
+
                 $('#bm-package-name')
                     .text(btn.data('name'));
 
@@ -753,6 +1168,14 @@
                             ? 'الحج'
                             : 'العمرة'
                     );
+
+                
+                $('#premiumBookingForm').attr(
+                    'action',
+                    btn.data('type') === 'hajj'
+                        ? "{{ route('hajj.store') }}"
+                        : "{{ route('umrah.store') }}"
+                );
 
                 $('#bm-date')
                     .text(btn.data('date'));
@@ -849,7 +1272,7 @@
                 }
 
 
-                $('input[name="bm-room-type"]:checked')
+                $('input[name="room-type"]:checked')
                     .trigger('change');
 
                 $('#bm-travelers-qty')
@@ -874,7 +1297,7 @@
             });
 
 
-            $('input[name="bm-room-type"]').on(
+            $('input[name="room-type"]').on(
                 'change',
                 function() {
 
@@ -944,34 +1367,15 @@
             });
 
 
-            $('#bm-confirm-btn').on('click', function() {
-
-                let form =
-                    $('#premiumBookingForm')[0];
-
-                if (form.checkValidity()) {
-
-                    alert(
-                        'تم ارسال طلب الحجز بنجاح!'
-                    );
-
-                    bootstrap.Modal
-                        .getInstance(
-                            document.getElementById(
-                                'bookingModal'
-                            )
-                        )
-                        .hide();
-
-                } else {
-
-                    form.reportValidity();
-
-                }
-
-            });
+            
 
         });
+        @if(session()->has('success'))    
+            alert("تم إرسال طلب الحجز بنجاح");
+        @endif
+        @if($errors->any())
+            alert(@json($errors->first()));
+        @endif
         </script>
 
     </body>

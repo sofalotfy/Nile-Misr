@@ -57,17 +57,15 @@ class MediaPageForm
 
                 Section::make('Video')
                     ->schema([
-                        FileUpload::make('vidoe')
-                            ->label('Video')
+                        FileUpload::make('video_poster')
+                            ->label('Video Poster')
                             ->disk('public')
-                            ->directory('media-pages/video')
-                            ->acceptedFileTypes([
-                                'video/mp4',
-                                'video/webm',
-                                'video/ogg',
-                                'video/quicktime',
-                            ])
-                            ->maxSize(102400)
+                            ->directory('media-pages')
+                            ->image()
+                            ->columnSpanFull(),
+
+                        TextInput::make('vidoe')
+                            ->label('Video Link')
                             ->columnSpanFull(),
                     ]),
 

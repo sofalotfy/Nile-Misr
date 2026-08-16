@@ -40,13 +40,6 @@ class HotelForm
                     ->label('Distance')
                     ->required(),
 
-                TextInput::make('duration')
-                    ->label('Duration')
-                    ->numeric()
-                    ->minValue(1)
-                    ->suffix('nights')
-                    ->required(),
-
                 Toggle::make('iftar-included')
                     ->label('Iftar Included')
                     ->default(false)

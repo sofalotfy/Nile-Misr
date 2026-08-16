@@ -290,17 +290,15 @@ class AboutUsPageForm
 
                 Section::make('Video')
                     ->schema([
-                        FileUpload::make('video')
-                            ->label('Video')
+                        FileUpload::make('video_poster')
+                            ->label('Video Poster')
                             ->disk('public')
-                            ->directory('about-us-pages/video')
-                            ->acceptedFileTypes([
-                                'video/mp4',
-                                'video/webm',
-                                'video/ogg',
-                                'video/quicktime',
-                            ])
-                            ->maxSize(102400)
+                            ->directory('about-us-pages')
+                            ->image()
+                            ->columnSpanFull(),
+
+                        TextInput::make('video')
+                            ->label('Video Link')
                             ->columnSpanFull(),
                     ]),
             ])->columns(1);

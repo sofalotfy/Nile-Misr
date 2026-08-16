@@ -46,7 +46,7 @@ class ListPackages
 
                     'price_details' => $prices
                         ->map(function ($price) {
-                            return $price->type->value
+                            return self::formatPriceType($price->type->value)
                                 . ': '
                                 . number_format($price->price)
                                 . ' ج';

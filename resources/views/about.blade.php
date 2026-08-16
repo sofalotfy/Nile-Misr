@@ -503,11 +503,11 @@
     <div class="container">
         <div class="row position-relative z-index-1 m-0">
             <div class="col-12 position-relative overflow-hidden border-radius-6px h-700px lg-h-550px md-h-400px d-flex align-items-center justify-content-center">
-                <video muted class="video-bg html-video border-radius-6px video-play-icon" poster="imgs/banner-1.jpg">
+                <video muted class="video-bg html-video border-radius-6px video-play-icon" poster="{{$pageData['video_poster']?asset("storage/" . $pageData['video_poster']):asset("imgs/banner-1.jpg")}}">
                     <source type="video/mp4" src="video/video2.mp4" />
                     <source type="video/webm" src="video/video2.webm" />
                 </video>
-                <a href="javascript:void(0);" class="html-video-play video-icon-box video-icon-extra-large position-relative">
+                <a href="{{$pageData['video']}}" class="html-video-play video-icon-box video-icon-extra-large position-relative">
                     <span>
                         <span class="video-icon bg-white">
                             <i class="play-icon feather icon-feather-play text-dark-gray ms-0" aria-hidden="true"></i>

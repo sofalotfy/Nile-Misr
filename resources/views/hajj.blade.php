@@ -2,27 +2,50 @@
 @php
     use App\Enums\HajjPackageLevel;
     use App\Enums\HajjPackageDuration;
+
+    
 @endphp
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" style="background-image: url({{$pageData['hero-image']?asset('storage/' . $pageData['hero-image']):asset('imgs/hijj-banner.jpg')}})">
+<section
+    class="page-title-separate-breadcrumbs cover-background top-space-margin position-relative"
+    style="background-image: url({{ !empty($pageData['hero-image'])
+        ? asset('storage/' . $pageData['hero-image'])
+        : asset('imgs/hijj-banner.jpg') }})"
+>
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
+
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center position-relative page-title-extra-large">
+
                 <div class="d-flex flex-column small-screen">
-                    <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{{$pageData['hero-title']??"برامج الحج 1448هـ"}}</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{{$pageData['hero-sub-title']??"رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام."}}</p>
+
+                    <div class="mt-auto">
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">
+                            {!! $pageData['hero-title'] ?? 'برامج الحج 1448هـ' !!}
+                        </h1>
+
+                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">
+                            {!! $pageData['hero-sub-title'] ?? 'رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام.' !!}
+                        </p>
                     </div>
-                    <!-- start breadcrumb -->
+
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
-                        <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                            <li><a href="/" class="text-white">الرئيسية</a></li>
-                            <li>{{$pageData['hero-title']??"برامج الحج 1448هـ"}}</li>
+                        <ul>
+                            <li>
+                                <a href="{{ url('/') }}" class="text-white">
+                                    الرئيسية
+                                </a>
+                            </li>
+
+                            <li>
+                                {!! $pageData['hero-title'] ?? 'برامج الحج 1448هـ' !!}
+                            </li>
                         </ul>
                     </div>
-                    <!-- end breadcrumb -->
+
                 </div>
+
             </div>
         </div>
     </div>
@@ -152,12 +175,13 @@
                                 $h_price_triple = 0;
                                 $h_price_quad = 0;
                                 if (preg_match('/خماسي:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي.*?:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_quad = str_replace(',', '', $m[1]);
-                                if (preg_match('/ثلاثي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_triple = str_replace(',', '', $m[1]);
-                                if (preg_match('/ثنائي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_double = str_replace(',', '', $m[1]);
+                                if (preg_match('/ثلاثــــــــي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_triple = str_replace(',', '', $m[1]);
+                                if (preg_match('/ثنائـــــــــي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_double = str_replace(',', '', $m[1]);
                                 if (preg_match('/فردي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_single = str_replace(',', '', $m[1]);
                                 ?>
                                 <a href="javascript:void(0);"
                                     class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
+                                    data-package-id="<?php echo $program['id']; ?>"
                                     data-type="hajj"
                                     data-name="<?php echo htmlspecialchars($program['name']); ?>"
                                     data-date="<?php echo htmlspecialchars($program['date']); ?>"
@@ -167,7 +191,7 @@
                                     data-price-double="<?php echo $h_price_double; ?>"
                                     data-price-triple="<?php echo $h_price_triple; ?>"
                                     data-price-quad="<?php echo $h_price_quad; ?>">احجز الآن</a>
-                                <a href="/hajj/1" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
+                                <a href="/hajj/<?php $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
                             </div>
                         </div>
                     </div>

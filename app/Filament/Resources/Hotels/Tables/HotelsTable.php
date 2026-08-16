@@ -38,18 +38,9 @@ class HotelsTable
                     ->label('Distance')
                     ->sortable(),
 
-                TextColumn::make('duration')
-                    ->label('Duration')
-                    ->suffix(' nights')
-                    ->sortable(),
-
                 IconColumn::make('iftar-included')
                     ->label('Iftar')
                     ->boolean(),
-
-                TextColumn::make('maka-location')
-                    ->label('Location')
-                    ->limit(30),
 
                 TextColumn::make('created_at')
                     ->dateTime()
