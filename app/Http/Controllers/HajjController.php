@@ -6,7 +6,7 @@ use App\Models\HajjPackagesPage;
 use App\Models\SingleHijjPackagePage;
 use Illuminate\Http\Request;
 use App\Services\Hajj\ListPackages;
-use App\Services\Hajj\ShowPackages;
+use App\Services\Hajj\ShowPackage;
 
 class HajjController extends Controller
 {
@@ -22,7 +22,7 @@ class HajjController extends Controller
     {
         return view('hajj-details', [
             'pageData'=> SingleHijjPackagePage::first(),
-            'package' => ShowPackages::execute($hajj_package),
+            'package' => ShowPackage::execute($hajj_package),
         ]);
     }
 
