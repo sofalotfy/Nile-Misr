@@ -8,6 +8,7 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Table;
 use App\Enums\RoomTypes;
+use Filament\Support\Enums\FontWeight;
 
 class UmrahBookingsTable
 {
@@ -16,30 +17,47 @@ class UmrahBookingsTable
         return $table
             ->columns([
                 TextColumn::make('name')
+                    ->label('Customer')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->weight(FontWeight::SemiBold),
 
                 TextColumn::make('phone')
-                    ->searchable(),
+                    ->label('Phone')
+                    ->searchable()
+                    ->copyable()
+                    ->copyMessage('Phone number copied')
+                    ->color('info'),
 
                 TextColumn::make('umrahPackage.title')
                     ->label('Package')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable()
+                    ->wrap(),
 
                 TextColumn::make('umrahPrice.type')
-                    ->label("Room Type")
-                      ->formatStateUsing(fn (RoomTypes $state) => $state->value)
-                      ->badge()
+                    ->label('Room Type')
+                    ->formatStateUsing(
+                        fn (RoomTypes $state) => str($state->name)
+                            ->replace('_', ' ')
+                            ->title()
+                    )
+                    ->badge()
+                    ->color('info')
                     ->sortable(),
 
                 TextColumn::make('price')
                     ->label('Total Price')
-                    ->numeric()
+                    ->money('EGP', decimalPlaces: 0)
+                    ->color('success')
+                    ->weight(FontWeight::SemiBold)
                     ->sortable(),
 
                 TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable(),
+                    ->label('Created')
+                    ->dateTime('M d, Y')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //

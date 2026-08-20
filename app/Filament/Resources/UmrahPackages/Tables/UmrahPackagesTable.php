@@ -8,6 +8,7 @@ use Filament\Actions\EditAction;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Filament\Support\Enums\FontWeight;
 
 class UmrahPackagesTable
 {
@@ -17,33 +18,48 @@ class UmrahPackagesTable
             ->reorderable('order')
             ->columns([
                 TextColumn::make('title')
+                    ->label('Package')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->weight(FontWeight::SemiBold)
+                    ->wrap(),
 
                 TextColumn::make('duration')
                     ->label('Duration')
                     ->badge()
-                    ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->color('info'),
 
                 TextColumn::make('category')
+                    ->label('Category')
                     ->badge()
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->color('success'),
 
                 TextColumn::make('makaHotel.name')
                     ->label('Makkah Hotel')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable()
+                    ->limit(25)
+                    ->tooltip(fn ($record) => $record->makaHotel?->name),
 
                 TextColumn::make('madinaHotel.name')
                     ->label('Madinah Hotel')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable()
+                    ->limit(25)
+                    ->tooltip(fn ($record) => $record->madinaHotel?->name),
 
                 TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable(),
+                    ->label('Created')
+                    ->dateTime('M d, Y')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
-                TextColumn::make('order')->sortable()->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('order')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->defaultSort('order')
             ->filters([

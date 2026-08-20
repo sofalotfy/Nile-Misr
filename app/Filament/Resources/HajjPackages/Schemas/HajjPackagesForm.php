@@ -11,7 +11,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
-
+use Filament\Forms\Components\DatePicker;
 use Filament\Schemas\Components\Group;
 
 class HajjPackagesForm
@@ -21,13 +21,16 @@ class HajjPackagesForm
         return $schema
             ->components([
                 Section::make('Basic Information')
+                    ->description('General information about the Hajj package.')
                     ->schema([
                         FileUpload::make('card_image')
                             ->label('Card Image')
                             ->image()
                             ->disk('public')
                             ->directory('hajj-packages/images')
-                            ->imageEditor(),
+                            ->imageEditor()
+                            ->imagePreviewHeight('200')
+                            ->columnSpanFull(),
 
                         TextInput::make('title')
                             ->required()
@@ -63,17 +66,25 @@ class HajjPackagesForm
                             ->required()
                             ->native(false),
 
-                        TextInput::make('date')
+                        DatePicker::make('date')
+                            ->label('Package Date')
                             ->required()
-                            ->maxLength(255),
+                            ->native(false),
 
                         TextInput::make('rating')
+                            ->label('Rating')
                             ->numeric()
                             ->minValue(0)
                             ->maxValue(5)
                             ->step(0.1)
+                            ->suffix('/ 5')
                             ->required(),
+                    ])
+                    ->columns(2),
 
+                Section::make('Accommodation')
+                    ->description('Hotels and duration of stay in Makkah and Madinah.')
+                    ->schema([
                         Select::make('maka_hotel_id')
                             ->label('Makkah Hotel')
                             ->relationship('makaHotel', 'name')
@@ -82,7 +93,7 @@ class HajjPackagesForm
                             ->required(),
 
                         TextInput::make('maka-duration')
-                            ->label('Maka Duration')
+                            ->label('Makkah Duration')
                             ->numeric()
                             ->minValue(1)
                             ->suffix('nights')
@@ -96,22 +107,29 @@ class HajjPackagesForm
                             ->required(),
 
                         TextInput::make('madina-duration')
-                            ->label('Madina Duration')
+                            ->label('Madinah Duration')
                             ->numeric()
                             ->minValue(1)
                             ->suffix('nights')
                             ->required(),
+                    ])
+                    ->columns(2),
 
+                Section::make('Financial Information')
+                    ->description('Package fees and payment information.')
+                    ->schema([
                         TextInput::make('Deposit')
                             ->label('Deposit')
                             ->numeric()
                             ->minValue(0)
+                            ->prefix('EGP')
                             ->required(),
 
                         TextInput::make('entrey-fee')
                             ->label('Entry Fee')
                             ->numeric()
                             ->minValue(0)
+                            ->prefix('EGP')
                             ->required(),
                     ])
                     ->columns(2),
@@ -124,6 +142,7 @@ class HajjPackagesForm
                     ]),
 
                 Section::make('Prices')
+                    ->description('Define the price for each room type.')
                     ->schema([
                         Repeater::make('hajjPrices')
                             ->relationship()
@@ -149,10 +168,11 @@ class HajjPackagesForm
                                     ->label('Price')
                                     ->numeric()
                                     ->minValue(0)
+                                    ->prefix('EGP')
                                     ->required(),
                             ])
                             ->columns(2)
-                            ->addActionLabel('Add Price')
+                            ->addActionLabel('Add Room Price')
                             ->reorderable(false)
                             ->collapsible()
                             ->itemLabel(
@@ -161,18 +181,19 @@ class HajjPackagesForm
                                         ? str($state['type'])
                                             ->replace('_', ' ')
                                             ->title()
-                                        : 'New Price'
+                                        : 'New Room Price'
                             )
                             ->columnSpanFull(),
                     ]),
 
-
                 Section::make('Events')
+                    ->description('Add flights, stays, and other package events.')
                     ->schema([
                         Repeater::make('events')
                             ->label('Package Events')
                             ->schema([
                                 Select::make('type')
+                                    ->label('Event Type')
                                     ->options([
                                         'flight' => 'Flight',
                                         'stay' => 'Stay',
@@ -184,20 +205,23 @@ class HajjPackagesForm
                                 Group::make()
                                     ->schema([
                                         TextInput::make('date')
+                                            ->label('Date')
                                             ->required(),
 
                                         TextInput::make('text')
-                                            ->label('Text')
+                                            ->label('Description')
                                             ->required(),
                                     ])
                                     ->visible(
                                         fn ($get) => $get('type') === 'flight'
                                     )
-                                    ->statePath('data'),
+                                    ->statePath('data')
+                                    ->columns(2),
 
                                 Group::make()
                                     ->schema([
                                         TextInput::make('date')
+                                            ->label('Date')
                                             ->required(),
 
                                         TextInput::make('area')
@@ -207,6 +231,8 @@ class HajjPackagesForm
                                             ->required(),
 
                                         TextInput::make('duration')
+                                            ->label('Duration')
+                                            ->suffix('nights')
                                             ->required(),
 
                                         TextInput::make('meals')
@@ -215,20 +241,23 @@ class HajjPackagesForm
                                     ->visible(
                                         fn ($get) => $get('type') === 'stay'
                                     )
-                                    ->statePath('data'),
+                                    ->statePath('data')
+                                    ->columns(2),
                             ])
                             ->addActionLabel('Add Event')
                             ->reorderable()
                             ->collapsible()
                             ->itemLabel(
-                                fn (array $state): ?string => isset($state['type'])
-                                    ? str($state['type'])->title() . ' Event'
-                                    : null
+                                fn (array $state): ?string =>
+                                    isset($state['type'])
+                                        ? str($state['type'])->title() . ' Event'
+                                        : 'New Event'
                             )
                             ->columnSpanFull(),
                     ]),
 
                 Section::make('Flight Information')
+                    ->description('Information about the flights included in the package.')
                     ->schema([
                         TextInput::make('flight-host')
                             ->label('Flight Host')

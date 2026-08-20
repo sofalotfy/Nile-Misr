@@ -9,6 +9,8 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use App\Enums\HajjPackageDuration;
+use App\Enums\HajjPackageLevel;
+use Filament\Support\Enums\FontWeight;
 
 class HajjPackagesTable
 {
@@ -20,14 +22,26 @@ class HajjPackagesTable
                 ImageColumn::make('card_image')
                     ->label('Image')
                     ->disk('public')
-                    ->square(),
+                    ->square()
+                    ->size(50),
 
                 TextColumn::make('title')
+                    ->label('Package')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->weight(FontWeight::SemiBold)
+                    ->wrap(),
 
                 TextColumn::make('level')
-                    ->badge(),
+                    ->label('Level')
+                    ->badge()
+                    ->color(fn ($state) => match ($state) {
+                        HajjPackageLevel::VIP => 'warning',
+                        HajjPackageLevel::FIVE_STARS => 'success',
+                        HajjPackageLevel::ECONOMIC => 'gray',
+                        default => 'gray',
+                    })
+                    ->sortable(),
 
                 TextColumn::make('duration')
                     ->label('Duration')
@@ -36,39 +50,40 @@ class HajjPackagesTable
                             ? 'All'
                             : "{$state->value} Days"
                     )
+                    ->badge()
+                    ->color('info')
                     ->sortable(),
 
                 TextColumn::make('date')
-                    ->searchable()
+                    ->label('Date')
+                    ->date('M d, Y')
                     ->sortable(),
 
-                TextColumn::make('makaHotel.name')
-                    ->label('Makkah Hotel')
-                    ->searchable(),
-
-                TextColumn::make('madinaHotel.name')
-                    ->label('Madinah Hotel')
-                    ->searchable(),
-
                 TextColumn::make('rating')
+                    ->label('Rating')
                     ->numeric(decimalPlaces: 1)
+                    ->icon('heroicon-m-star')
                     ->sortable(),
 
                 TextColumn::make('Deposit')
                     ->label('Deposit')
-                    ->numeric()
+                    ->money('EGP', decimalPlaces: 0)
                     ->sortable(),
 
                 TextColumn::make('entrey-fee')
                     ->label('Entry Fee')
-                    ->numeric()
+                    ->money('EGP', decimalPlaces: 0)
                     ->sortable(),
 
                 TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable(),
+                    ->label('Created')
+                    ->dateTime('M d, Y')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
 
-                TextColumn::make('order')->sortable()->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('order')
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->defaultSort('order')
             ->filters([
