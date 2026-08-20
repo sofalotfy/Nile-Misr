@@ -68,8 +68,7 @@ class HajjPackagesForm
 
                         TextInput::make('date')
                             ->label('Package Date')
-                            ->required()
-                            ->native(false),
+                            ->required(),
 
                         TextInput::make('rating')
                             ->label('Rating')
