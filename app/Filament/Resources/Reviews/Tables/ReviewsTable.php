@@ -13,6 +13,7 @@ class ReviewsTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->reorderable('order')
             ->columns([
                 TextColumn::make('name')
                     ->searchable()
@@ -26,7 +27,10 @@ class ReviewsTable
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
+
+                TextColumn::make('order')->sortable()->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('order')
             ->filters([
                 //
             ])

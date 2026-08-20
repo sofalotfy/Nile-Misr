@@ -14,6 +14,7 @@ class UmrahPackagesTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->reorderable('order')
             ->columns([
                 TextColumn::make('title')
                     ->searchable()
@@ -41,7 +42,10 @@ class UmrahPackagesTable
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
+
+                TextColumn::make('order')->sortable()->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('order')
             ->filters([
                 //
             ])

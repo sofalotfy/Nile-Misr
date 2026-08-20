@@ -15,6 +15,7 @@ class ListPackages
                 'makaHotel:id,name',
                 'madinaHotel:id,name',
             ])
+            ->orderBy('order')
             ->get()
             ->map(function ($package) {
                 $prices = $package->hajjPrices

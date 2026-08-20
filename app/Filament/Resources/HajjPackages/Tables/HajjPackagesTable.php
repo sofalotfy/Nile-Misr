@@ -15,6 +15,7 @@ class HajjPackagesTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->reorderable('order')
             ->columns([
                 ImageColumn::make('card_image')
                     ->label('Image')
@@ -66,7 +67,10 @@ class HajjPackagesTable
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
+
+                TextColumn::make('order')->sortable()->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('order')
             ->filters([
                 //
             ])

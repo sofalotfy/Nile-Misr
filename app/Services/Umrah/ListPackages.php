@@ -16,6 +16,7 @@ class ListPackages
                 'makaHotel:id,name',
                 'madinaHotel:id,name',
             ])
+            ->orderBy('order')
             ->get()
             ->map(function (UmrahPackages $package) {
                 return [

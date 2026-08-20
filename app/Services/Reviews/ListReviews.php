@@ -8,6 +8,6 @@ class ListReviews
 {
     public static function execute()
     {
-        return Review::select('id','name','review')->get();
+        return Review::select('id','name','review')->orderBy('order')->get();
     }
 }
