@@ -56,7 +56,6 @@ class HajjPackagesTable
 
                 TextColumn::make('date')
                     ->label('Date')
-                    ->date('M d, Y')
                     ->sortable(),
 
                 TextColumn::make('rating')

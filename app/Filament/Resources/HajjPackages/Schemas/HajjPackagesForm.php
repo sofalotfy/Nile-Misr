@@ -66,7 +66,7 @@ class HajjPackagesForm
                             ->required()
                             ->native(false),
 
-                        DatePicker::make('date')
+                        TextInput::make('date')
                             ->label('Package Date')
                             ->required()
                             ->native(false),

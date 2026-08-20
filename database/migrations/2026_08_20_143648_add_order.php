@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('order')->default(1);
         });
         
-        Schema::table('hotels', function (Blueprint $table) {
+        Schema::table('hajj_packages', function (Blueprint $table) {
             $table->integer('order')->default(1);
         });
 
@@ -33,7 +33,7 @@ return new class extends Migration
             $table->dropColumn('order');
         });
         
-        Schema::table('hotels', function (Blueprint $table) {
+        Schema::table('hajj_packages', function (Blueprint $table) {
             $table->dropColumn('order');
         });
 
