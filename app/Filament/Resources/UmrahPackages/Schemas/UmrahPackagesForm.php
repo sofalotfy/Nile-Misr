@@ -4,7 +4,6 @@ namespace App\Filament\Resources\UmrahPackages\Schemas;
 
 use App\Enums\RoomTypes;
 use App\Enums\StayDuration;
-use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
@@ -65,9 +64,8 @@ class UmrahPackagesForm
                         Repeater::make('dates')
                             ->label('Available Dates')
                             ->simple(
-                                DatePicker::make('date')
-                                    ->required()
-                                    ->native(false)
+                                TextInput::make('date')
+                                    ->required(),
                             )
                             ->addActionLabel('Add Date')
                             ->reorderable()
