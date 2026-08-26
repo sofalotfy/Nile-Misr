@@ -92,7 +92,9 @@ function umrah_card($program)
                         <div class="text-tussock-yellow fs-20 fw-600 text-uppercase" style="color: #dda947ff;">{!! $pageData['hero-tag'] ?? 'نحمل قلوبكم لبيت الله' !!}</div>
                     </div>
                     <h1 class="fw-600 ls-minus-1px text-white mb-20px" data-fancy-text='{ "scale": [1.1, 1], "rotateX": [20, 0], "opacity": [0, 1], "translateX": [-20, 0], "translateY": [20, 0], "delay": 0, "speed": 40, "easing": "easeOutQuad" }'>{!! $pageData["hero-title"] ?? 'نيل مصر للسياحة' !!}</h1>
-                    <p class="w-50 fs-20 mb-30px md-w-80 sm-w-100 text-very-light-gray" data-anime='{ "el": "lines", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay":500, "staggervalue": 300, "easing": "easeOutQuad" }'>{!! $pageData["sub-title"] ?? 'الشركة الرائدة للحج والعمرة في مصر أكثر من عشرين عاما في خدمة زوار بيت الله' !!}</p>
+                    
+                    <p class="w-50 fs-20 mb-30px md-w-80 sm-w-100 text-very-light-gray" data-anime='{ "el": "lines", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay":500, "staggervalue": 300, "easing": "easeOutQuad" }'>{{ $pageData["sub-title"] ?? 'الشركة الرائدة للحج والعمرة في مصر أكثر من عشرين عاما في خدمة زوار بيت الله' }}</p>
+
                     <div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start pointer-events-auto" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay":600, "staggervalue": 600, "easing": "easeOutQuad" }'>
                         <a href="javascript:void(0);" class="btn btn-yellow btn-large btn-rounded btn-box-shadow me-15px xs-ms-15px sm-mb-15px left-icon" data-bs-toggle="modal" data-bs-target="#quickBookingModal">إحجز الأن</a>
                         <div class="btn btn-large btn-base-color-2 btn-rounded btn-box-shadow sm-mb-15px" style="color: #ffc251ff; background-color: #2e2006ff;">{!! $pageData["hajj-season"] ?? 'موسم حج 1448هـ' !!}</div>

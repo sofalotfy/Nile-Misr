@@ -38,7 +38,7 @@ class HomePageForm
                         TextInput::make('hero-title')
                             ->label('Title'),
 
-                        RichEditor::make('sub-title')
+                        TextInput::make('sub-title')
                             ->label('Subtitle')
                             ->columnSpanFull(),
 
