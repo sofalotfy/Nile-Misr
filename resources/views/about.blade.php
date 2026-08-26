@@ -1,7 +1,7 @@
 ﻿@include('header', ["siteData" => $siteData]);
   
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background  top-space-margin " style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/about-banner-2.jpg")   }}" )>
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin " style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/about-banner-2.jpg")   }}" ) style="margin-top: 0px;">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
@@ -26,7 +26,7 @@
 </section>
 <!-- end page title -->
 <!-- start section -->
-<section class="" style="margin-top: 0px;">
+<section class="pb-0 position-relative overflow-hidden">
     <!-- Pattern image absolute positioned to the right edge of the screen -->
     <img src="imgs/pattern/patt1.png" class="position-absolute d-none d-xl-block" style="top: 390px; right: 0; width: 40vw; max-width: 550px; z-index: 0;" alt="">
 
