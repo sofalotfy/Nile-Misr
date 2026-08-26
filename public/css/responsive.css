@@ -25243,6 +25243,19 @@
     display: flex !important;
   }
 
+  /* Override Bootstrap navbar-expand-lg → collapse until 1150px */
+  .navbar-expand-lg .navbar-collapse:not(.show):not(.collapsing) {
+    display: none !important;
+  }
+
+  .navbar-expand-lg .navbar-toggler {
+    display: block !important;
+  }
+
+  .navbar-expand-lg {
+    flex-wrap: wrap !important;
+  }
+
   .header-demo.navbar .navbar-nav .premium-element {
     background-image: none !important;
   }
