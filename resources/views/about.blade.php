@@ -26,7 +26,7 @@
 </section>
 <!-- end page title -->
 <!-- start section -->
-<section class="pb-0 position-relative overflow-hidden">
+<section class="pb-0 position-relative overflow-hidden" style="margin-top:0px;">
     <!-- Pattern image absolute positioned to the right edge of the screen -->
     <img src="imgs/pattern/patt1.png" class="position-absolute d-none d-xl-block" style="top: 390px; right: 0; width: 40vw; max-width: 550px; z-index: 0;" alt="">
 
