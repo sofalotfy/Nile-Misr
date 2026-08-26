@@ -1,4 +1,4 @@
-@include('header');
+@include('header')
 
 @php
 /*
@@ -504,4 +504,4 @@ data-category="{{ $package->level }}"
 
 </a>
 
-@include('footer');
+@include('footer')

@@ -1,4 +1,4 @@
-@include('header');
+@include('header')
 @php
     use App\Enums\StayDuration;
 @endphp
@@ -478,4 +478,4 @@ function umrah_card($program)
     });
 </script>
 
-@include('footer');
+@include('footer')

@@ -1,4 +1,4 @@
-@include('header'); ?>
+@include('header') ?>
 @php
     use App\Enums\HajjPackageLevel;
     use App\Enums\HajjPackageDuration;
@@ -294,4 +294,4 @@
     });
 </script>
 
-@include('footer'); ?>
+@include('footer') ?>
