@@ -1,7 +1,7 @@
 ﻿@include('header', ["siteData" => $siteData]);
   
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background  top-space-margin " style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/about-banner-2.jpg")   }}" ) style="margin-top: 0px;">
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin " style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/about-banner-2.jpg")   }}" )>
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
