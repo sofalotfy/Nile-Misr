@@ -53,7 +53,7 @@ function umrah_card($program)
                    data-price-triple="<?php echo $program['price_triple'] ?? 0; ?>"
                    data-price-quad="<?php echo $program['price_quad'] ?? 0; ?>"
                 >احجز الآن</a>
-                <a href="/umrah/<?php $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
+                <a href="/umrah/<?= $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
             </div>
         </div>
     </div>

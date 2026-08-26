@@ -191,7 +191,7 @@
                                     data-price-double="<?php echo $h_price_double; ?>"
                                     data-price-triple="<?php echo $h_price_triple; ?>"
                                     data-price-quad="<?php echo $h_price_quad; ?>">احجز الآن</a>
-                                <a href="/hajj/<?php $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
+                                <a href="/hajj/<?= $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
                             </div>
                         </div>
                     </div>
