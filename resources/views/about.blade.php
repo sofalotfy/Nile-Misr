@@ -525,4 +525,4 @@
         </div>
     </div>
 </section>
-@include('footer', ["siteData" => $siteData]);
+@include('footer', ["siteData" => $siteData])

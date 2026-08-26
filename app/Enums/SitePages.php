@@ -24,7 +24,7 @@ enum SitePages: string
             self::Moderators => 'المشرفون',
             self::WhyUs => 'لماذا نحن',
             self::Reviews => 'آراء العملاء',
-            self::Media => 'الوسائط',
+            self::Media => 'المركز الإعلامي',
             self::Contact => 'تواصل معنا',
             self::Hajj => 'الحج',
             self::Umrah => 'العمرة',
