@@ -64,7 +64,7 @@ function umrah_card($program)
 <!-- start banner slider -->
 <section class="p-0 bg-dark-gray position-relative">
     <!-- Static Overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100 z-index-9">
+    <div class="position-absolute top-0 start-0 w-100 h-100 z-index-9 pointer-events-none">
         <div class="opacity-extra-medium bg-black"></div>
         <div class="container h-100">
             <div class="row justify-content-center h-100">
@@ -92,7 +92,7 @@ function umrah_card($program)
                         <div class="text-tussock-yellow fs-20 fw-600 text-uppercase" style="color: #dda947ff;">{!! $pageData['hero-tag'] ?? 'نحمل قلوبكم لبيت الله' !!}</div>
                     </div>
                     <h1 class="fw-600 ls-minus-1px text-white mb-20px" data-fancy-text='{ "scale": [1.1, 1], "rotateX": [20, 0], "opacity": [0, 1], "translateX": [-20, 0], "translateY": [20, 0], "delay": 0, "speed": 40, "easing": "easeOutQuad" }'>{!! $pageData["hero-title"] ?? 'نيل مصر للسياحة' !!}</h1>
-                    
+
                     <p class="w-50 fs-20 mb-30px md-w-80 sm-w-100 text-very-light-gray" data-anime='{ "el": "lines", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay":500, "staggervalue": 300, "easing": "easeOutQuad" }'>{{ $pageData["sub-title"] ?? 'الشركة الرائدة للحج والعمرة في مصر أكثر من عشرين عاما في خدمة زوار بيت الله' }}</p>
 
                     <div class="d-sm-flex align-items-center justify-content-center justify-content-lg-start pointer-events-auto" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay":600, "staggervalue": 600, "easing": "easeOutQuad" }'>
@@ -105,27 +105,22 @@ function umrah_card($program)
     </div>
 
     <div class="swiper full-screen ipad-top-space-margin md-h-600px sm-h-500px swiper-number-pagination-style-01 base-color" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 5000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "fade" }' data-number-pagination="1" data-anime-text='{ "translateY": [50,0], "opacity": [0,1], "easing": "easeOutQuad", "duration": 500, "delay": { "staggervalue": 20 } }'>
-
         <div class="swiper-wrapper">
             @foreach($pageData['images'] as $image)
-
             <div class="swiper-slide">
                 <div class="position-absolute left-0px top-0px w-100 h-100 cover-background" style="background-image:url('{{$image['image']?asset('storage/' . $image['image']):asset('imgs/pattern/patt6.png')}}');" data-anime='{ "translateY": [0, 0], "opacity": [1,1], "scale": [1,1.1], "duration": 7000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'></div>
                 <div class="opacity-light bg-gradient-nero-grey-brown"></div>
             </div>
-
             @endforeach
         </div>
-        <!-- start slider pagination -->
-        <div class="swiper-pagination container right-0px text-center swiper-pagination-clickable swiper-number fs-14 xs-w-100 z-index-9 pointer-events-auto"></div>
-        <!-- end slider pagination -->
-        <!-- start slider navigation -->
-        <div class="slider-one-slide-next-1 icon-very-small text-white swiper-button-prev slider-navigation-style-06 bg-black-transparent-light h-55px w-55px d-none d-sm-flex border-radius-100 z-index-9 pointer-events-auto "><i class="fa-solid fa-chevron-right"></i></div>
-        <div class="slider-one-slide-prev-1 icon-very-small text-white swiper-button-next slider-navigation-style-06 bg-black-transparent-light h-55px w-55px d-none d-sm-flex border-radius-100 z-index-9 pointer-events-auto"><i class="fa-solid fa-chevron-left"></i></div>
-        <!-- end slider navigation -->
     </div>
+
+    <div class="slider-one-slide-next-1 icon-very-small text-white swiper-button-prev slider-navigation-style-06 bg-black-transparent-light h-55px w-55px d-none d-sm-flex border-radius-100 z-index-9 pointer-events-auto"><i class="fa-solid fa-chevron-left"></i></div>
+    <div class="slider-one-slide-prev-1 icon-very-small text-white swiper-button-next slider-navigation-style-06 bg-black-transparent-light h-55px w-55px d-none d-sm-flex border-radius-100 z-index-9 pointer-events-auto"><i class="fa-solid fa-chevron-right"></i></div>
+    <!-- end slider navigation -->
 </section>
 <!-- end banner slider -->
+
 <!-- start section -->
 <section class="p-0 border-bottom border-color-extra-medium-gray">
     <div class="container">
