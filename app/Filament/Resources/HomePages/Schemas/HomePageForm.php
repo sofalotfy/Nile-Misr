@@ -9,6 +9,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use App\Enums\SitePages;
 
 class HomePageForm
 {
@@ -147,6 +148,15 @@ class HomePageForm
 
                                 TextInput::make('button_text')
                                     ->label('Button Text'),
+
+                                Select::make('link')
+                                    ->label('Link')
+                                    ->options(
+                                        collect(SitePages::cases())
+                                            ->mapWithKeys(fn (SitePages $page) => [
+                                                $page->value => $page->label(),
+                                            ])
+                                    ),
                             ])
                             ->collapsible()
                             ->reorderable()
