@@ -471,15 +471,15 @@
 
 <!-- start section -->
 <section class="position-relative" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['team-image']?asset("storage/" . $pageData['team-image']):asset("imgs/team.jpg")   }});>
-    <div class=" opacity-medium bg-black">
-    </div>
+    <div class=" opacity-medium bg-black"></div>
     <div class="container">
         <div class="row justify-content-center align-items-center min-h-500px">
             <div class="col-12 col-xl-8 col-lg-10 position-relative text-center parallax-scrolling-style-1">
                 <h1 class="text-white mx-auto alt-font fw-500 mb-40px ls-minus-2px">{!! $pageData["team-tag"] ?? 'فريق عمل نيل مصر' !!}</h1>
                 <span class="fw-500 text-yellow mb-5px d-inline-block ls-1px">{!! $pageData["team-title"] ?? 'فريق العمل المؤهل والمدرب هو حجر الأساس لأي' !!}</span>
+                <div class="text-white">
                 {!! $pageData["team-text"] ?? '
-                <p class="text-white">في نيل مصر للسياحة، يقف فريقنا المكوّّن من نحو
+                في نيل مصر للسياحة، يقف فريقنا المكوّّن من نحو
                     ٨٥ موظفًًا من المشرفين والمديرين ومجلس الإدارة
                     وكافة فرق العمل كتفًًا بكتف، بخبرة وكفاءة عالية،
                     لتقديم الخدمة اللائقة والدعم الكامل لكل قلب
@@ -491,7 +491,7 @@
                     الوظيفي والإداري المؤهل والمدرب بخبرة أكثر من
                     ٢٤ عام.
                     ' !!}
-                </p>
+                </div>
             </div>
         </div>
     </div>
