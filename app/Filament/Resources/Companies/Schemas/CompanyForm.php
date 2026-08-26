@@ -31,8 +31,6 @@ class CompanyForm
 
                         TextInput::make('review-count')
                             ->label('Review Count')
-                            ->numeric()
-                            ->minValue(0)
                             ->suffix('reviews'),
 
                         TextInput::make('hotline')
