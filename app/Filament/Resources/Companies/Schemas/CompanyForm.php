@@ -19,8 +19,6 @@ class CompanyForm
                     ->schema([
                         TextInput::make('pilgrim-count')
                             ->label('Pilgrim Count')
-                            ->numeric()
-                            ->minValue(0)
                             ->suffix('pilgrims'),
 
                         TextInput::make('rating')
