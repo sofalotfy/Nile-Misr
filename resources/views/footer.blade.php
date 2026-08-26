@@ -32,7 +32,7 @@
                 >
                     <ul class="small-icon light">
 
-                        @if(!empty($siteData['tiktok']))
+                        
                             <li class="m-0">
                                 <a
                                     class="tiktok"
@@ -44,7 +44,7 @@
                                     <span></span>
                                 </a>
                             </li>
-                        @endif
+                        
 
                         @if(!empty($siteData['twitter']))
                             <li class="m-0">
