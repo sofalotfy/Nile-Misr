@@ -470,7 +470,7 @@
 <!-- end vertical timeline white section -->
 
 <!-- start section -->
-<section class="position-relative" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['team-image']?asset("storage/" . $pageData['team-image']):asset("imgs/team.jpg")   }})>
+<section class="position-relative" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['team-image']?asset("storage/" . $pageData['team-image']):asset("imgs/team.jpg") }});">
     <div class="opacity-medium bg-black"></div>
     <div class="container">
         <div class="row justify-content-center align-items-center min-h-500px">
