@@ -205,17 +205,38 @@ $getPrice = function ($type) use ($prices) {
 
 <!-- start section -->
 
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #c59b46;
+        border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #a07830;
+    }
+    /* For Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #c59b46 #f1f1f1;
+    }
+</style>
+
 <section class="position-relative pt-0">
     <div class="container">
 
 
     <!-- Itinerary -->
-    <!-- Itinerary -->
         <div class="row mb-5">
             <div class="col-12">
-                <div class="table-responsive box-shadow-quadruple-large border-radius-8px">
+                <div class="table-responsive box-shadow-quadruple-large border-radius-8px custom-scrollbar">
 
-                    <table class="table table-bordered text-center align-middle mb-0 umrah-table">
+                    <table class="table table-bordered text-center align-middle mb-0 umrah-table" style="min-width: 700px;">
 
                         <thead>
                             <tr>
@@ -316,9 +337,9 @@ $getPrice = function ($type) use ($prices) {
     <div class="row mb-5">
         <div class="col-12">
 
-            <div class="table-responsive border-0 box-shadow-none">
+            <div class="table-responsive border-0 box-shadow-none custom-scrollbar pb-3">
 
-                <table class="custom-pricing-table mb-0 w-100">
+                <table class="custom-pricing-table mb-0 w-100" style="min-width: 800px;">
 
                     <tbody>
 
