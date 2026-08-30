@@ -100,7 +100,7 @@ class OurServicesPageForm
                         TextInput::make('umrah-service-title')
                             ->label('Title'),
 
-                        RichEditor::make('umrah-service-text')
+                        TextInput::make('umrah-service-text')
                             ->label('Text')
                             ->columnSpanFull(),
 
