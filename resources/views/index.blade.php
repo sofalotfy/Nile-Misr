@@ -373,7 +373,7 @@ function umrah_card($program)
 <!-- end section -->
 
 <!-- start contact form section -->
-<section class="pb-0 position-relative overflow-hidden mb-5 mt-5">
+<!-- <section class="pb-0 position-relative overflow-hidden mb-5 mt-5">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6 col-md-10 md-mb-50px">
@@ -423,7 +423,7 @@ function umrah_card($program)
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- end contact form section -->
 
 @include('footer')
