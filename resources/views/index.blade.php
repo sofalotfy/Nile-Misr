@@ -285,7 +285,7 @@ function umrah_card($program)
                                         <a href="/{!! $service['link']??'#' !!}" class="btn btn-yellow btn-box-shadow fw-500 btn-large btn-rounded right-icon btn-switch-text left-icon mt-auto" aria-label="link">
                                             <span>
                                                 <!-- <span><i class="feather icon-feather-briefcase"></i></span> -->
-                                                <span class="btn-double-text" data-text="برامج الحج">{{$service['button_text']??"برامج الحج"}}</span>
+                                                <span class="btn-double-text" data-text="{{$service['button_text']}}">{{$service['button_text']}}</span>
                                             </span>
                                         </a>
                                     </div>
