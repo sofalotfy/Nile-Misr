@@ -139,29 +139,28 @@ $getPrice = function ($type) use ($prices) {
 
 
                         <!-- Route -->
-                        @if(count($flightStops))
-                            <div class="d-flex align-items-center flex-wrap gap-2 fs-13 fw-600 text-dark-gray bg-very-light-gray border-radius-30px px-3 py-2">
+                        @if($package['flight-stops'])
 
-                                @foreach($flightStops as $index => $stop)
+                                <div class="d-flex align-items-center flex-wrap gap-2 fs-13 fw-600 text-dark-gray bg-very-light-gray border-radius-30px px-3 py-2">
 
-                                    @if(is_array($stop))
-                                        <span>
-                                            {{ $stop['stop'] ?? '' }}
-                                        </span>
-                                    @else
+                                    @foreach($package['flight-stops'] as $stop)
+
+
                                         <span>
                                             {{ $stop }}
                                         </span>
-                                    @endif
 
-                                    @if(!$loop->last)
-                                        <i class="bi bi-arrow-left text-medium-gray fs-12 mx-1"></i>
-                                    @endif
+                                        @if(!$loop->last)
 
-                                @endforeach
+                                            <i class="bi bi-arrow-left text-medium-gray fs-12 mx-1"></i>
 
-                            </div>
-                        @endif
+                                        @endif
+
+                                    @endforeach
+
+                                </div>
+
+                            @endif
 
                     </div>
 
