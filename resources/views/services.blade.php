@@ -95,7 +95,7 @@
             <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>
                 <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-10px">{!! $pageData["umrah-service-tag"]?? "خدمة العمرة" !!}</span>
                 <h3 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["umrah-service-title"]?? "العمرة مع نيل مصر للسياحة" !!}</h3>
-                <p class="w-80 xl-w-100 mb-35px xs-mb-10px">{{ $pageData["umrah-service-text"]?? 
+                <p class="w-80 xl-w-100 mb-35px xs-mb-10px">{{ $pageData["umrah-service-text"]??
                 "
                     رحلة العمرة مع نيل مصر هي فسحة روح ولقاء مع
                     أطهر البقاع. نوفر برامج متنوعة تناسب جميع الميزانيات
@@ -106,7 +106,7 @@
                     لكل خطوة، حتى يكون تركيزكم على الخشوع في الطواف
                     والسعي، لا على التفاصيل اللوجستية.
                 "
-                 }}</p>
+                }}</p>
             </div>
             <div class="col-lg-7 position-relative">
                 <div class="overflow-hidden position-relative xs-w-80 float-end" data-anime='{ "effect": "slide", "color": "#A0875B", "direction":"rl", "easing": "easeOutQuad", "duration": 600, "delay":400}'>
