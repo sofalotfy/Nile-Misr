@@ -86,19 +86,6 @@ function umrah_card($program)
     </div>
 </section>
 <!-- end page title -->
-<!-- start section -->
-<!-- <section class="bg-very-light-gray pb-0">
-            <div class="container overlap-gap-section">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-md-9 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة</h4>
-                        <span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
-                        <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-<!-- end section -->
 <!-- start filters section -->
 <section class="pt-5 pb-5 bg-very-light-gray" id="umrah-programs">
     <div class="container">

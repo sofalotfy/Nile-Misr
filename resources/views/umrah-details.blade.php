@@ -760,15 +760,13 @@
 
             <div class="col-12">
 
-                <div class="table-responsive border-0 box-shadow-none">
-
                     <div class="text-dark-gray fw-600 fs-24 text-center mb-2">
                         سعر الفرد في الغرفة
                     </div>
 
-
                     @if($package['umrahPrices'])
-                        <table class="custom-pricing-table mb-0 w-100">
+                        <div class="table-responsive border-0 box-shadow-none">
+                            <table class="custom-pricing-table mb-0 w-100" style="min-width: 500px;">
 
                             <tbody>
 
@@ -809,10 +807,8 @@
                             </tbody>
 
                         </table>
-
+                        </div>
                     @endif
-
-                </div>
 
             </div>
 
