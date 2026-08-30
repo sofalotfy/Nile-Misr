@@ -1154,7 +1154,7 @@
 
 @if($package->notes)
 
-    <section class="pt-2 pb-0">
+    <section class="pt-2">
 
         <div class="container overlap-gap-section">
 
