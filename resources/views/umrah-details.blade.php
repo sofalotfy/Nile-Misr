@@ -1,4 +1,4 @@
-@include('header');
+@include('header')
 
 @php
 
@@ -7,8 +7,6 @@
     | Dynamic package data
     |--------------------------------------------------------------------------
     */
-
-    $flightStops = $package->{'flight-stops'} ?? [];
 
     $programIncludes = $package->program_includes ?? [];
     $generalNotes = $package->general_notes ?? [];
@@ -68,7 +66,6 @@
     $requiredPapers = $normalizeList($requiredPapers);
     $cancelationPolicy = $normalizeList($cancelationPolicy);
     $externalVisas = $normalizeList($externalVisas);
-    $flightStops = $normalizeList($flightStops);
 
 @endphp
 
@@ -204,20 +201,15 @@
 
                             <!-- Route -->
 
-                            @if(count($flightStops))
+                            @if($pageData['flight-stops'])
 
                                 <div class="d-flex align-items-center flex-wrap gap-2 fs-13 fw-600 text-dark-gray bg-very-light-gray border-radius-30px px-3 py-2">
 
-                                    @foreach($flightStops as $stop)
+                                    @foreach($pageData['flight-stops'] as $stop)
 
-                                        @php
-                                            $stopName = is_array($stop)
-                                                ? ($stop['stop'] ?? '')
-                                                : $stop;
-                                        @endphp
 
                                         <span>
-                                            {{ $stopName }}
+                                            {{ $stop['stop'] }}
                                         </span>
 
                                         @if(!$loop->last)
@@ -1231,4 +1223,4 @@
 </a>
 
 
-@include('footer');
+@include('footer')
