@@ -147,7 +147,7 @@ $getPrice = function ($type) use ($prices) {
 
 
                                         <span>
-                                            {{ $stop }}
+                                            {{ $stop['stop'] }}
                                         </span>
 
                                         @if(!$loop->last)
