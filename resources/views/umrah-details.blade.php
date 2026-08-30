@@ -767,7 +767,7 @@
                     </div>
 
 
-                    @if($prices->count())
+                    @if($package['prices'])
 
                         <table class="custom-pricing-table mb-0 w-100">
 
@@ -775,7 +775,7 @@
 
                                 <tr>
 
-                                    @foreach($prices as $price)
+                                    @foreach($package['prices'] as $price)
 
                                         <td class="cpt-header fs-24
                                             {{ $loop->first ? 'cpt-rounded-tr' : '' }}
@@ -793,7 +793,7 @@
 
                                 <tr>
 
-                                    @foreach($prices as $price)
+                                    @foreach($package['prices'] as $price)
 
                                         <td class="cpt-price fs-24">
 
