@@ -74,7 +74,7 @@
 
 
 <!-- start page title -->
-<section class="ipad-top-space-margin md-pt-0">
+<section class="ipad-top-space-margin">
 
     <div class="container">
 
@@ -89,7 +89,7 @@
                     </h1>
 
                     <p class="text-dark-gray fs-20">
-                        {!! $pageData->quote !!}
+                        {{ $pageData->quote }}
                     </p>
 
                 </div>
