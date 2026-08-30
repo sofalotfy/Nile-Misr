@@ -295,7 +295,7 @@
 <!-- end footer -->
 
         <!-- javascript libraries -->
-        
+
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
                 <!-- end footer -->
@@ -419,7 +419,7 @@
         <div class="modal-content border-0 border-radius-10px box-shadow-extra-large">
 
             <div class="modal-header bg-base-color border-0 border-radius-10px-top p-4">
-
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="modal-title text-white fw-700 fs-22"
                     id="bookingModalLabel">
 
@@ -428,7 +428,6 @@
 
                 </h5>
 
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 
             </div>
 
@@ -1076,7 +1075,7 @@
                             : 'العمرة'
                     );
 
-                
+
                 $('#premiumBookingForm').attr(
                     'action',
                     btn.data('type') === 'hajj'
@@ -1274,10 +1273,10 @@
             });
 
 
-            
+
 
         });
-        @if(session()->has('success'))    
+        @if(session()->has('success'))
             alert("تم إرسال طلب الحجز بنجاح");
         @endif
         @if($errors->any())
