@@ -76,7 +76,7 @@ $getPrice = function ($type) use ($prices) {
         </div>
     </div>
 </div>
-```
+
 
 </section>
 <!-- end page title -->
@@ -89,29 +89,17 @@ $getPrice = function ($type) use ($prices) {
             <div class="col-12 text-center"
                  data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
-```
+
             <h5 class="alt-font text-base-color ls-minus-1px mb-0 fs-30">
 
-                {{ $package->title }}
-
-                @if($package->duration)
-                    - {{ $package->duration }} يوم
-                @endif
-
-                @if($package->level)
-                    - {{ $package->level }}
-                @endif
-
-                @if($package->date)
-                    - {{ $package->date }}
-                @endif
+                {{ $package['description'] }}
 
             </h5>
 
         </div>
     </div>
 </div>
-```
+
 
 </section>
 <!-- end section -->
@@ -121,7 +109,7 @@ $getPrice = function ($type) use ($prices) {
 <section class="position-relative pb-4">
     <div class="container">
 
-```
+
     <div class="row list-style-02 d-flex flex-wrap border-bottom border-color-extra-medium-gray pt-20px">
 
         <div class="col-lg-12 md-mb-50px sm-mb-35px">
@@ -211,7 +199,7 @@ $getPrice = function ($type) use ($prices) {
     </div>
 
 </div>
-```
+
 
 </section>
 <!-- end section -->
@@ -221,7 +209,7 @@ $getPrice = function ($type) use ($prices) {
 <section class="position-relative pt-0">
     <div class="container">
 
-```
+
     <!-- Itinerary -->
     <!-- Itinerary -->
         <div class="row mb-5">
@@ -461,7 +449,7 @@ $getPrice = function ($type) use ($prices) {
     </div>
 
 </div>
-```
+
 
 </section>
 <!-- end section -->
@@ -483,7 +471,7 @@ data-category="{{ $package->level }}"
 
 @foreach($prices as $price)
 
-```
+
    @if($loop->first)
        data-price-double="{{ $price->price }}"
    @elseif($loop->iteration === 2)
@@ -491,19 +479,19 @@ data-category="{{ $package->level }}"
    @elseif($loop->iteration === 3)
        data-price-quad="{{ $price->price }}"
    @endif
-```
+
 
 @endforeach
 
 >
 
-```
+
 <i class="feather icon-feather-calendar"></i>
 
 <span>
     احجز الآن
 </span>
-```
+
 
 </a>
 
