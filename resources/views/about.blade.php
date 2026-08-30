@@ -9,7 +9,7 @@
                 <div class="d-flex flex-column small-screen">
                     <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
                         <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData["title"] ?? 'مــن نحن؟' !!}</h1>
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">{!! $pageData["subtitle"] ?? '25 عامًا من الثقة والريادة في خدمة ضيوف الرحمن.' !!}</p>
+                        <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">{!! $pageData["subtitle"] ?? '25 عامًا من الثقة والريادة في خدمة ضيوف الرحمن.' !!}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">

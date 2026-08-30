@@ -458,6 +458,8 @@ $getPrice = function ($type) use ($prices) {
 <a href="javascript:void(0);"
 class="floating-book-btn open-booking-modal"
 
+data-package-id="{{ $package->id }}"
+
 data-name="{{ $package->title }}"
 
 data-type="hajj"
