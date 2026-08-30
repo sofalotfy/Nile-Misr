@@ -37,7 +37,7 @@ class UmrahPackagesPageForm
                     ->columns(2),
                 Section::make('Categories')
                     ->schema([
-                        TextInput::make('six-days-note')
+                        RichEditor::make('six-days-note')
                             ->label('Note at 6 Days Category Header')
                             ->columnSpanFull(),
 
@@ -45,7 +45,7 @@ class UmrahPackagesPageForm
                             ->label('Note at 6 Days Category Footer')
                             ->columnSpanFull(),
 
-                        TextInput::make('eight-days-note')
+                        RichEditor::make('eight-days-note')
                             ->label('Note at 8 Days Category Header')
                             ->columnSpanFull(),
 
@@ -53,7 +53,7 @@ class UmrahPackagesPageForm
                             ->label('Note at 8 Days Category Footer')
                             ->columnSpanFull(),
 
-                        TextInput::make('ten-days-note')
+                        RichEditor::make('ten-days-note')
                             ->label('Note at 10 Days Categor Headery')
                             ->columnSpanFull(),
 
@@ -61,7 +61,7 @@ class UmrahPackagesPageForm
                             ->label('Note at 10 Days Category Footer')
                             ->columnSpanFull(),
                         
-                        TextInput::make('fifteen-days-note')
+                        RichEditor::make('fifteen-days-note')
                             ->label('Note at 15 Days Categor Headery')
                             ->columnSpanFull(),
 
