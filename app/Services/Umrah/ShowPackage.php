@@ -12,7 +12,7 @@ class ShowPackage
         return $package->load([
             'makaHotel:id,name,address,rating,rating_count,distance,iftar-included,images,location',
             'madinaHotel:id,name,address,rating,rating_count,distance,iftar-included,images,location',
-            'umrahPrices:id,type,price',
+            'umrahPrices:id,umrah_package_id,type,price',
         ]);
     }
 }
