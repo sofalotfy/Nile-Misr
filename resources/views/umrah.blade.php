@@ -15,7 +15,7 @@ function umrah_card($program)
     <div class="position-relative">
         <img src="<?php echo "storage/" . $program['image']; ?>" class="w-100" alt="<?php echo $program['name']; ?>">
         <div class="opacity-medium bg-black"></div>
-        
+
         <div class="position-absolute bottom-10px w-100 px-4 text-white fs-16 fw-600 z-index-1">
             <span class="fs-13 d-block"> تبدأ من</span>
             <div class="fs-24 fw-800 text-white"><?php echo $starting_price; ?> <span class="fs-14 fw-600 text-white">جنية</span></div>
@@ -25,7 +25,7 @@ function umrah_card($program)
         <div class="d-flex justify-content-between align-items-start mb-15px">
             <h3 class="fs-19 fw-700 text-dark-gray mb-0 lh-sm"><?php echo $program['name']; ?></h3>
         </div>
-        
+
         <ul class="fs-14 fw-500 mb-15px px-0">
             <li class="pb-5px">
                 <i class="feather icon-feather-clock text-tussock-yellow me-10px"></i><?php echo $program['duration']; ?>
@@ -40,7 +40,7 @@ function umrah_card($program)
 
         <div class="fs-14 fw-500 px-0 pt-15px mt-auto border-top border-color-extra-medium-gray pt-20px">
             <div class="d-flex align-items-center gap-2 w-100">
-                <a href="javascript:void(0);" 
+                <a href="javascript:void(0);"
                    class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
                    data-package-id="<?php echo $program['id']; ?>"
                    data-type="umrah"
@@ -132,7 +132,7 @@ function umrah_card($program)
 
                     </div>
                     <div class="text-center">
-                        {!!  $pageData['note']??'<p class="text-base-color fw-600 fs-20 ls-minus-1px mb-0">جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة</p>'!!}
+                        {{  $pageData['note']??'<p class="text-base-color fw-600 fs-20 ls-minus-1px mb-0">جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة</p>' }}
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@ function umrah_card($program)
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> 
+            <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 {!! $pageData['footer-six-days-note']??'<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
                 <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>' !!}
             </div>
@@ -211,7 +211,7 @@ function umrah_card($program)
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">10 أيام</span> / 9 ليالي</h2>
                         {!!$pageData['eight-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
-                        
+
                     </div>
                 </div>
                 <div class="umrah-section-line mt-3"></div>
@@ -460,7 +460,7 @@ function umrah_card($program)
                 if (searchInput.value.trim() === '') {
                     expandableSearch.classList.remove('active');
                 } else {
-                    // If it has text, maybe clear it on button click? 
+                    // If it has text, maybe clear it on button click?
                     // Or just keep it. Let's just focus again.
                     searchInput.focus();
                 }
