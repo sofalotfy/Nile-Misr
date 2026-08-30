@@ -323,6 +323,8 @@
                             سجل بياناتك للتواصل
                         </h3>
 
+                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-4 z-index-9" data-bs-dismiss="modal" aria-label="Close"></button>
+
                     </div>
 
                     <div class="bg-white position-relative"
@@ -425,6 +427,8 @@
                     <span id="bm-program-type"></span>
 
                 </h5>
+
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 
             </div>
 
@@ -731,6 +735,8 @@
                             <span id="bm-program-type"></span>
 
                         </h5>
+
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 
                     </div>
 
