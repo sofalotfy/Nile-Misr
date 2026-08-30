@@ -144,7 +144,7 @@ function umrah_card($program)
         <div class="umrah-section" id="section-6" data-section-duration="6">
             <div class="umrah-section-header mb-4">
                 <div class="d-flex align-items-center gap-3">
-                    <div class="umrah-section-badge">
+                    <div class="umrah-section-badge d-none d-md-flex">
                         <span class="fs-28 fw-800 text-white lh-1">6</span>
                         <span class="fs-11 fw-600 text-white opacity-8 d-block">أيام</span>
                     </div>
@@ -174,7 +174,7 @@ function umrah_card($program)
         <div class="umrah-section mt-70px" id="section-8" data-section-duration="8">
             <div class="umrah-section-header mb-4">
                 <div class="d-flex align-items-center gap-3">
-                    <div class="umrah-section-badge">
+                    <div class="umrah-section-badge d-none d-md-flex">
                         <span class="fs-28 fw-800 text-white lh-1">8</span>
                         <span class="fs-11 fw-600 text-white opacity-8 d-block">أيام</span>
                     </div>
@@ -204,7 +204,7 @@ function umrah_card($program)
         <div class="umrah-section mt-70px" id="section-10" data-section-duration="10">
             <div class="umrah-section-header mb-4">
                 <div class="d-flex align-items-center gap-3">
-                    <div class="umrah-section-badge">
+                    <div class="umrah-section-badge d-none d-md-flex">
                         <span class="fs-28 fw-800 text-white lh-1">10</span>
                         <span class="fs-11 fw-600 text-white opacity-8 d-block">أيام</span>
                     </div>
@@ -235,7 +235,7 @@ function umrah_card($program)
         <div class="umrah-section mt-70px" id="section-15" data-section-duration="15">
             <div class="umrah-section-header mb-4">
                 <div class="d-flex align-items-center gap-3">
-                    <div class="umrah-section-badge">
+                    <div class="umrah-section-badge d-none d-md-flex">
                         <span class="fs-28 fw-800 text-white lh-1">15</span>
                         <span class="fs-11 fw-600 text-white opacity-8 d-block">يوم</span>
                     </div>
