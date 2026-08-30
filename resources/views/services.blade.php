@@ -96,7 +96,7 @@
                 <span class="text-tussock-yellow fs-20 fw-600 d-inline-block mb-10px">{!! $pageData["umrah-service-tag"]?? "خدمة العمرة" !!}</span>
                 <h3 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["umrah-service-title"]?? "العمرة مع نيل مصر للسياحة" !!}</h3>
                 <p class="w-80 xl-w-100 mb-35px xs-mb-10px">{{ $pageData["umrah-service-text"]?? 
-                
+                "
                     رحلة العمرة مع نيل مصر هي فسحة روح ولقاء مع
                     أطهر البقاع. نوفر برامج متنوعة تناسب جميع الميزانيات
                     والمواعيد، تبدأ من استخراج التأشيرات بسرعة وسهولة،
@@ -105,7 +105,7 @@
                     على مسافات قريبة أو مناسبة من الحرم. نخطط بعناية
                     لكل خطوة، حتى يكون تركيزكم على الخشوع في الطواف
                     والسعي، لا على التفاصيل اللوجستية.
-                
+                "
                  }}</p>
             </div>
             <div class="col-lg-7 position-relative">
