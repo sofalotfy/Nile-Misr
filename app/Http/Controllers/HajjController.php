@@ -32,7 +32,7 @@ class HajjController extends Controller
     }
 
     public function store(Request $request)
-    { 
+    {
         $validated = $request->validate([
             'package_id' => [
                 'required',
@@ -66,28 +66,27 @@ class HajjController extends Controller
                 'max:5',
             ],
         ]);
-        
-        
-        $roomType = match ($request['room-type']) {
-                'single' => RoomTypes::فردي->value,
-                'double' => RoomTypes::ثنائـــــــــي->value,
-                'triple' => RoomTypes::ثلاثــــــــي->value,
-                'quad'   => RoomTypes::رباعي_أو_خماسي->value,
-                default  => abort(422, 'نوع الغرفة غير صالح'),
-            };
-        $price = HajjPrice::where('hajj_package_id', $request->hajj_package_id)
+
+        $roomType = match ($validated['room-type']) {
+            'single' => RoomTypes::فردي->value,
+            'double' => RoomTypes::ثنائـــــــــي->value,
+            'triple' => RoomTypes::ثلاثــــــــي->value,
+            'quad'   => RoomTypes::رباعي_أو_خماسي->value,
+        };
+
+        $price = HajjPrice::where('hajj_package_id', $validated['package_id'])
             ->where('type', $roomType)
             ->firstOrFail();
 
         HajjBooking::create([
-            'hajj_package_id' => $request->hajj_package_id,
+            'hajj_package_id' => $validated['package_id'],
             'hajj_price_id'   => $price->id,
-            'name'            => $request->name,
-            'phone'           => $request->phone,
-            'count'            => $request->count,
-            'price'            => ($price->price * $request->count),
+            'name'            => $validated['name'],
+            'phone'           => $validated['phone'],
+            'count'           => $validated['count'],
+            'price'           => $price->price * $validated['count'],
         ]);
-        
+
         return redirect()
             ->back()
             ->with('success', 'تم إرسال طلب الحجز بنجاح');
