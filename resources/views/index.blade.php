@@ -15,7 +15,7 @@ function umrah_card($program)
     <div class="position-relative">
         <img src="<?php echo "storage/" . $program['image']; ?>" class="w-100" alt="<?php echo $program['name']; ?>">
         <div class="opacity-medium bg-black"></div>
-        
+
         <div class="position-absolute bottom-10px w-100 px-4 text-white fs-16 fw-600 z-index-1">
             <span class="fs-13 d-block"> تبدأ من</span>
             <div class="fs-24 fw-800 text-white"><?php echo $starting_price; ?> <span class="fs-14 fw-600 text-white">جنية</span></div>
@@ -25,7 +25,7 @@ function umrah_card($program)
         <div class="d-flex justify-content-between align-items-start mb-15px">
             <h3 class="fs-19 fw-700 text-dark-gray mb-0 lh-sm"><?php echo $program['name']; ?></h3>
         </div>
-        
+
         <ul class="fs-14 fw-500 mb-15px px-0">
             <li class="pb-5px">
                 <i class="feather icon-feather-clock text-tussock-yellow me-10px"></i><?php echo $program['duration']; ?>
@@ -40,7 +40,7 @@ function umrah_card($program)
 
         <div class="fs-14 fw-500 px-0 pt-15px mt-auto border-top border-color-extra-medium-gray pt-20px">
             <div class="d-flex align-items-center gap-2 w-100">
-                <a href="javascript:void(0);" 
+                <a href="javascript:void(0);"
                    class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
                    data-package-id="<?php echo htmlspecialchars($program['id']); ?>"
                    data-type="umrah"
@@ -178,14 +178,14 @@ function umrah_card($program)
 <!-- start section -->
 <section class="pb-0">
     <div class="container">
-        <div class="row justify-content-between align-items-center sm-pb-9">
+        <div class="row justify-content-between align-items-center">
             <div class="col-lg-6 col-md-9 position-relative md-mb-15 text-center text-lg-start d-flex align-items-center justify-content-center"
                 data-anime='{ "el": "childs", "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 15, "easing": "easeOutQuad" }'>
                 <img src="{{ $pageData['section1-image'] ? 'storage/' . $pageData['section1-image'] : asset('imgs/journy.jpg') }}" alt="">
                 <!-- <img src="{{ $pageData['section1-floating-image'] ?'storage/' . $pageData['section1-floating-image'] :asset('imgs/pattern/patt12.png') }}imgs/pattern/patt12.png" class="position-absolute top-50 left-minus-100px lg-left-minus-40px sm-left-minus-30px lg-w-50 sm-w-55" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-220px)" alt=""> -->
                 <!-- <img src="images/demo-corporate-02.png" class="position-absolute top-0px xl-top-minus-10px w-170px right-20px md-right-40px xs-w-40" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)" alt=""> -->
             </div>
-            <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>
+            <div class="col-lg-5" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>
                 <span class="mb-10px text-tussock-yellow fs-22 fw-600 d-block">{!! $pageData["section1-tag"] ?? 'نحمل قلوبكم لبيت الله' !!}</span>
                 <h2 class="alt-font text-dark-gray ls-minus-2px">{!! $pageData["section1-title"] ?? 'رحلة نيل مصر عبر ربع قرن من الإنجاز' !!}</h2>
                 {!! $pageData["section1-description"] ?? '
@@ -301,8 +301,8 @@ function umrah_card($program)
                         </div>
                     </div>
                 @endforeach
-                
-                    
+
+
                 <!-- end stack card -->
             </div>
         </div>
