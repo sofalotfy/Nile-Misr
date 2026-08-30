@@ -19,7 +19,7 @@ class ReviewsPageForm
                         TextInput::make('hero-tag')
                             ->label('Tag'),
 
-                        RichEditor::make('hero-text')
+                        TextInput::make('hero-text')
                             ->label('Text')
                             ->columnSpanFull(),
 
