@@ -19,7 +19,7 @@ class OurServicesPageForm
                         TextInput::make('hero-title')
                             ->label('Title'),
 
-                        RichEditor::make('hero-text')
+                        TextInput::make('hero-text')
                             ->label('Text')
                             ->columnSpanFull(),
 
