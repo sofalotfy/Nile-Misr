@@ -351,7 +351,7 @@
             <div class="col-xxl-5 col-lg-6 col-md-10 md-mb-50px xs-mb-30px">
                 <h3 class="fw-500 text-base-color ls-minus-2px mb-0">{{ $pageData["achievements-quote"]?? 'أعلام خافقة.. وأعمال منفردة لنيل مصر للسياحة' }}</h3>
             </div>
-            <div class="col-xxl-2 offset-xxl-1 col-md-3 col-sm-4 text-center xs-mb-30px text-dark-gray fw-600 fs-100 ls-minus-2px text-highlight"">
+            <div class="col-xxl-2 offset-xxl-1 col-md-3 col-sm-4 text-center xs-mb-30px text-dark-gray fw-600 fs-100 ls-minus-2px text-highlight mb-2">
                 {!! $pageData["achievements-years-count"]?? '25' !!}<br><span class="fs-24 text-tussock-yellow">ســنــة</span>
             </div>
             <div class="col-lg-4 col-md-5 col-sm-6 last-paragraph-no-margin text-center text-sm-start">
