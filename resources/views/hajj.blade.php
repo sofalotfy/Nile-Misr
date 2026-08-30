@@ -3,7 +3,7 @@
     use App\Enums\HajjPackageLevel;
     use App\Enums\HajjPackageDuration;
 
-    
+
 @endphp
 <!-- start page title -->
 <section
@@ -57,7 +57,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-10 col-md-9 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <!-- <span class="fs-20 mb-15px text-base-color fw-500 d-block">Life around great food</span> -->
-                {!!$pageData['description']??'<h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>'!!}
+                {{ $pageData['description'] ?? '<h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>' }}
             </div>
         </div>
     </div>
