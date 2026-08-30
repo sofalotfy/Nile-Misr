@@ -201,11 +201,11 @@
 
                             <!-- Route -->
 
-                            @if($pageData['flight-stops'])
+                            @if($package['flight-stops'])
 
                                 <div class="d-flex align-items-center flex-wrap gap-2 fs-13 fw-600 text-dark-gray bg-very-light-gray border-radius-30px px-3 py-2">
 
-                                    @foreach($pageData['flight-stops'] as $stop)
+                                    @foreach($package['flight-stops'] as $stop)
 
 
                                         <span>
