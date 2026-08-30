@@ -172,6 +172,25 @@ class HomePageForm
                             ->columnSpanFull(),
                     ]),
 
+                Section::make('Contact Form')
+                    ->schema([
+                        FileUpload::make('contact_form_image')
+                            ->label('Form Image')
+                            ->image()
+                            ->disk('public')
+                            ->directory('home-pages/contact'),
+
+                        TextInput::make('contact_form_name_placeholder')
+                            ->label('Name Placeholder'),
+
+                        TextInput::make('contact_form_phone_placeholder')
+                            ->label('Phone Placeholder'),
+
+                        TextInput::make('contact_form_email_placeholder')
+                            ->label('Email Placeholder'),
+                    ])
+                    ->columns(2),
+
             ])->columns(1);
     }
 }

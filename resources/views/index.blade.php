@@ -371,4 +371,59 @@ function umrah_card($program)
     </div>
 </section>
 <!-- end section -->
+
+<!-- start contact form section -->
+<section class="pb-0 position-relative overflow-hidden mb-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 col-md-10 md-mb-50px">
+                <img src="{{ !empty($pageData['contact_form_image']) ? asset('storage/' . $pageData['contact_form_image']) : asset('imgs/saa1.jpg') }}" alt="" class="w-100 border-radius-10px">
+            </div>
+            <div class="col-lg-6 col-md-10">
+                <div class="bg-very-light-gray p-5 border-radius-10px box-shadow-large">
+                    <h3 class="fw-700 text-dark-gray mb-4 text-center">سجل بياناتك للتواصل</h3>
+                    <form action="{{ route('contact.store') }}" method="POST">
+                        @csrf
+                        <div class="mb-4">
+                            <div class="d-flex gap-3 booking-type-selector justify-content-center">
+                                <div class="w-50">
+                                    <input type="radio" name="type" id="typeUmrah" value="عمرة" class="btn-check" autocomplete="off" checked>
+                                    <label class="btn btn-outline-dark-gray border-radius-50px fw-700 px-5 py-3 fs-15 w-100 text-center" for="typeUmrah">عمرة</label>
+                                </div>
+                                <div class="w-50">
+                                    <input type="radio" name="type" id="typeHajj" value="حج" class="btn-check" autocomplete="off">
+                                    <label class="btn btn-outline-dark-gray border-radius-50px fw-700 px-5 py-3 fs-15 w-100 text-center" for="typeHajj">حج</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position-relative mb-4 mt-4">
+                            <input type="text" class="form-control bg-white text-dark-gray border-radius-50px px-4 py-3 border-0" id="name" name="name" required placeholder="{{ $pageData['contact_form_name_placeholder'] ?? 'الاسم بالكامل' }}">
+                        </div>
+
+                        <div class="position-relative mb-4 mt-4">
+                            <input type="tel" class="form-control bg-white text-dark-gray border-radius-50px px-4 py-3 border-0" id="phone" name="phone" required placeholder="{{ $pageData['contact_form_phone_placeholder'] ?? 'رقم التليفون الخاص بك' }}">
+                        </div>
+
+                        <div class="position-relative mb-5 mt-4">
+                            <input type="email" class="form-control bg-white text-dark-gray border-radius-50px px-4 py-3 border-0" id="email" name="email" placeholder="{{ $pageData['contact_form_email_placeholder'] ?? 'البريد الإلكتروني' }}">
+                        </div>
+
+                        <button type="submit" class="btn btn-large btn-yellow border-radius-50px w-100 fw-700 fs-18">
+                            احجز الأن
+                        </button>
+
+                        @if(session('success'))
+                            <div class="text-success mt-3 text-center fw-600">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact form section -->
+
 @include('footer')
