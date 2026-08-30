@@ -781,7 +781,7 @@
                                             {{ $loop->last ? 'cpt-rounded-tl' : '' }}
                                         ">
 
-                                            {{ $price->type }}
+                                            {{ $price->type->value() }}
 
                                         </td>
 
