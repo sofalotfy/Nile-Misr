@@ -89,7 +89,7 @@
                                             {{ $site['name'] }}
                                         </span>
 
-                                        <p>
+                                        <p class = "">
                                             {{ $site['address'] }}
                                         </p>
 
@@ -155,7 +155,7 @@
                                             {{ $site['name'] }}
                                         </span>
 
-                                        <p>
+                                        <p class = "w-90">
                                             {{ $site['address'] }}
                                         </p>
 
