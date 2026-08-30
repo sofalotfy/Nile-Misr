@@ -12,7 +12,7 @@
                             {{ $pageData['hero-tag'] }}
                         </h1>
 
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">
+                        <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">
                             {!! $pageData['hero-text'] !!}
                         </p>
                     </div>

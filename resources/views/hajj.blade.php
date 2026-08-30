@@ -25,7 +25,7 @@
                             {!! $pageData['hero-title'] ?? 'برامج الحج 1448هـ' !!}
                         </h1>
 
-                        <p class="fs-20 text-white opacity-7 md-w-80 sm-w-100 mt-1">
+                        <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">
                             {!! $pageData['hero-sub-title'] ?? 'رحلة العمر تبدأ بخطوة... ونحن نرافقكم في كل خطوة نحو بيت الله الحرام.' !!}
                         </p>
                     </div>
