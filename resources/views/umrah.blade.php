@@ -193,13 +193,15 @@ function umrah_card($program)
                 <?php endforeach; ?>
             </div>
             <div class="col-xl-10 col-md-9 text-center mt-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                {!! $pageData['footer-six-days-note']??'<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
-                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>' !!}
+                {!! $pageData['footer-eight-days-note']??
+                '<span class="fs-20 mt-2 text-base-color fw-500 d-block">تم احتساب سعر تذكرة داخل البرنامج 16000 جنيه</span>
+                <span class="fs-20 text-base-color fw-500 d-block">تم احتساب سعر صرف الريال داخل البرنامج 14 جنية مصري</span>'
+                !!}
             </div>
         </div>
 
         <!-- ========================================================
-             10-DAY SECTION
+            10-DAY SECTION
         ======================================================== -->
         <div class="umrah-section mt-70px" id="section-10" data-section-duration="10">
             <div class="umrah-section-header mb-4">
@@ -210,7 +212,7 @@ function umrah_card($program)
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">10 أيام</span> / 9 ليالي</h2>
-                        {!!$pageData['eight-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
+                        <p class="fs-14 text-medium-gray mb-0 mt-1">{{ $pageData['ten-days-note']??"مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong>"}}</p>
 
                     </div>
                 </div>
