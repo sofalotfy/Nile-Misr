@@ -1199,7 +1199,7 @@
     @foreach($prices as $price)
 
         @php
-            $priceType = mb_strtolower(trim($price->type));
+            $priceType = mb_strtolower(trim($price->type->value));
         @endphp
 
         @if($loop->first)
