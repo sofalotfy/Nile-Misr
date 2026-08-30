@@ -137,10 +137,9 @@
                 </p>
                 " !!}
             </div>
-            <div class="col-lg-6 offset-lg-1 position-relative">
-                <div class="overflow-hidden position-relative xs-w-80 float-end" data-anime='{ "effect": "slide", "color": "#A0875B", "direction":"rl", "easing": "easeOutQuad", "duration": 600, "delay":400}'>
-                    <img class="w-100" src="{{  $pageData['religious-supervisors-image']?asset("storage/" . $pageData['religious-supervisors-image']):asset("imgs/real.jpg")   }}" alt="">
-                </div>
+            <div class="col-lg-6 offset-lg-1 md-mb-30px position-relative">
+                <img src="{{  $pageData['religious-supervisors-image']?asset("storage/" . $pageData['religious-supervisors-image']):asset("imgs/real.jpg")   }}" alt="" class="w-100">
+                <!-- <div class="position-absolute top-30px xs-top-0px left-minus-80px lg-left-minus-50px xs-left-minus-0px xs-w-130px"><img src="images/demo-hotel-and-resort-amenities-07.png" alt="" /></div> -->
             </div>
         </div>
     </div>
