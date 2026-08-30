@@ -48,9 +48,9 @@
             <div class="col-xxl-6 col-lg-7" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
                 <div>
-                    <h2 class="fw-600 text-dark-gray ls-minus-2px">
+                    <h3 class="fw-500 text-dark-gray ls-minus-2px">
                         {{ $pageData['media-solutions-title'] }}
-                    </h2>
+                    </h3>
                 </div>
 
             </div>
@@ -59,7 +59,7 @@
 
                 <div class="sm-mb-30px last-paragraph-no-margin">
 
-                    <span class="d-inline-block fs-15 text-uppercase fw-700 text-black mb-5px">
+                    <span class="d-inline-block text-tussock-yellow fs-22 fw-600 mb-5px">
                         {!! $pageData['media-solutions-quote'] !!}
                     </span>
 
