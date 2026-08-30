@@ -752,6 +752,28 @@
 
 <!-- Pricing -->
 
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 8px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #c59b46;
+        border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #a07830;
+    }
+    /* For Firefox */
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #c59b46 #f1f1f1;
+    }
+</style>
+
 <section class="position-relative pt-0">
 
     <div class="container">
@@ -765,7 +787,7 @@
                     </div>
 
                     @if($package['umrahPrices'])
-                        <div class="table-responsive border-0 box-shadow-none">
+                        <div class="table-responsive border-0 box-shadow-none custom-scrollbar pb-3">
                             <table class="custom-pricing-table mb-0 w-100" style="min-width: 500px;">
 
                             <tbody>
