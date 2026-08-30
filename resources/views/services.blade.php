@@ -30,10 +30,10 @@
         <div class="row">
             <div class="col-lg-6 position-relative">
                 <div class="row align-items-center position-relative md-mb-15" data-anime='{ "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <div class="col-md-5 sm-mb-30px" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
+                    <div class="col-md-5 sm-mb-30px d-none d-lg-block" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)">
                         <img class="w-100" src="{{  $pageData["hajj-service-right-image"]?asset("storage/" . $pageData["hajj-service-right-image"]):asset("imgs/haj-3.jpg")   }}" alt="" />
                     </div>
-                    <div class="col-lg-7 col-md-7 sm-mb-30px text-end" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
+                    <div class="col-lg-7 col-md-7 sm-mb-30px text-end d-none d-lg-block" data-bottom-top="transform: translateY(-30px)" data-top-bottom="transform: translateY(30px)">
                         <img src="{{  $pageData["hajj-service-left-image"]?asset("storage/" . $pageData["hajj-service-left-image"]):asset("imgs/haj-2.jpg")   }}" alt="" class="box-shadow-quadruple-large md-w-100" />
                     </div>
                     <div class="w-50 sm-w-100 overflow-hidden position-absolute sm-position-relative left-140px bottom-minus-200px sm-bottom-0px sm-left-0px p-0 sm-ps-15px sm-pe-15px" data-shadow-animation="true" data-animation-delay="100" data-bottom-top="transform: translateY(20px)" data-top-bottom="transform: translateY(-20px)">
