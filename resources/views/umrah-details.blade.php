@@ -1185,39 +1185,36 @@
     class="floating-book-btn open-booking-modal"
 
     data-name="{{ $package->title }}"
-
     data-type="umrah"
-
     data-date="{{ is_array($package->dates) ? implode(' , ', $package->dates) : $package->dates }}"
-
     data-duration="{{ $package->duration }}"
-
     data-category="{{ $package->category }}"
 
-    @foreach($prices as $price)
+    data-price-single="0"
+    data-price-double="0"
+    data-price-triple="0"
+    data-price-quad="0"
 
+    @foreach($prices as $price)
         @php
             $priceType = mb_strtolower(trim($price->type->value));
         @endphp
 
-        @if($loop->first)
+        @if($priceType === 'single')
             data-price-single="{{ $price->price }}"
-        @elseif($loop->iteration === 2)
+        @elseif($priceType === 'double')
             data-price-double="{{ $price->price }}"
-        @elseif($loop->iteration === 3)
+        @elseif($priceType === 'triple')
             data-price-triple="{{ $price->price }}"
-        @elseif($loop->iteration === 4)
+        @elseif($priceType === 'quad')
             data-price-quad="{{ $price->price }}"
         @endif
-
     @endforeach
 >
 
     <i class="feather icon-feather-calendar"></i>
 
-    <span>
-        احجز الآن
-    </span>
+    <span>احجز الآن</span>
 
 </a>
 
