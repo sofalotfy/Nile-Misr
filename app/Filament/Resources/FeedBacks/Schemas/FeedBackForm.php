@@ -18,6 +18,12 @@ class FeedBackForm
                 TextInput::make('email')
                     ->disabled(),
 
+                TextInput::make('phone')
+                    ->disabled(),
+
+                TextInput::make('type')
+                    ->disabled(),
+
                 Textarea::make('message')
                     ->disabled()
                     ->rows(8)

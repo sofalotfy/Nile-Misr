@@ -19,6 +19,14 @@ class FeedBacksTable
                     ->searchable()
                     ->sortable(),
 
+                TextColumn::make('phone')
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('type')
+                    ->badge()
+                    ->sortable(),
+
                 TextColumn::make('message')
                     ->limit(50)
                     ->wrap(),
