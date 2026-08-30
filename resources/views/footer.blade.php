@@ -301,6 +301,13 @@
                 <!-- end footer -->
 
         <!-- Quick Booking Modal -->
+        @php
+            $modalData = \App\Models\HomePage::first();
+            $modalImage = !empty($modalData->contact_form_image) ? asset('storage/' . $modalData->contact_form_image) : asset('imgs/saa1.jpg');
+            $modalNamePlaceholder = $modalData->contact_form_name_placeholder ?? 'الاسم بالكامل';
+            $modalPhonePlaceholder = $modalData->contact_form_phone_placeholder ?? 'رقم التليفون الخاص بك';
+            $modalEmailPlaceholder = $modalData->contact_form_email_placeholder ?? 'البريد الإلكتروني';
+        @endphp
         <div class="modal fade" id="quickBookingModal" tabindex="-1"
              aria-labelledby="quickBookingModalLabel" aria-hidden="true">
 
@@ -308,7 +315,7 @@
                 <div class="modal-content border-0 bg-transparent box-shadow-none">
 
                     <div class="position-relative w-100"
-                         style="height: 220px; background-image: url('{{ asset('imgs/saa1.jpg') }}'); background-size: cover; background-position: center; border-radius: 30px;">
+                         style="height: 220px; background-image: url('{{ $modalImage }}'); background-size: cover; background-position: center; border-radius: 30px;">
 
                         <div class="opacity-extra-medium bg-black overflow-hidden border-radius-30px"></div>
 
@@ -321,16 +328,17 @@
                     <div class="bg-white position-relative"
                          style="margin-top: -50px; border-radius: 30px; padding: 40px 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.1); z-index: 5;">
 
-                        <form action="#" method="POST">
+                        <form action="{{ route('contact.store') }}" method="POST">
+                            @csrf
 
                             <div class="mb-4 mt-3">
                                 <div class="d-flex gap-3 booking-type-selector justify-content-center">
 
                                     <div class="w-50">
                                         <input type="radio"
-                                               name="bookingType"
+                                               name="type"
                                                id="bookingTypeUmrah"
-                                               value="umrah"
+                                               value="عمرة"
                                                class="btn-check"
                                                autocomplete="off"
                                                checked>
@@ -343,9 +351,9 @@
 
                                     <div class="w-50">
                                         <input type="radio"
-                                               name="bookingType"
+                                               name="type"
                                                id="bookingTypeHajj"
-                                               value="hajj"
+                                               value="حج"
                                                class="btn-check"
                                                autocomplete="off">
 
@@ -362,26 +370,26 @@
                                 <input type="text"
                                        class="form-control bg-very-light-gray text-dark-gray border-radius-50px"
                                        id="userName"
-                                       name="userName"
+                                       name="name"
                                        required
-                                       placeholder="الاسم بالكامل">
+                                       placeholder="{{ $modalNamePlaceholder }}">
                             </div>
 
                             <div class="position-relative mb-4 mt-4 custom-input-wrap">
                                 <input type="tel"
                                        class="form-control bg-very-light-gray text-dark-gray border-radius-50px"
                                        id="userPhone"
-                                       name="userPhone"
+                                       name="phone"
                                        required
-                                       placeholder="رقم التليفون الخاص بك">
+                                       placeholder="{{ $modalPhonePlaceholder }}">
                             </div>
 
                             <div class="position-relative mb-5 mt-4 custom-input-wrap">
                                 <input type="email"
                                        class="form-control bg-very-light-gray text-dark-gray border-radius-50px"
                                        id="userEmail"
-                                       name="userEmail"
-                                       placeholder="البريد الإلكتروني">
+                                       name="email"
+                                       placeholder="{{ $modalEmailPlaceholder }}">
                             </div>
 
                             <button type="submit"
