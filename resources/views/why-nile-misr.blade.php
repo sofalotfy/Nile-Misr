@@ -1,4 +1,4 @@
-﻿@include('header')
+@include('header')
 <!-- Hero Section -->
 <section
     class="page-title-separate-breadcrumbs cover-background top-space-margin"
@@ -187,7 +187,7 @@
                 @if(!empty($pageData['royal-inn-logo']))
                     <img
                         src="{{ asset('storage/' . $pageData['royal-inn-logo']) }}"
-                        alt=""
+                        alt="" class="w-20"
                     >
                 @endif
 
@@ -220,7 +220,7 @@
                 @if(!empty($pageData['noon-logo']))
                     <img
                         src="{{ asset('storage/' . $pageData['noon-logo']) }}"
-                        alt=""
+                        alt="" class="w-70"
                     >
                 @endif
 
