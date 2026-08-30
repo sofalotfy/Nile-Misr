@@ -30,7 +30,7 @@ class HajjPackagesPageForm
                             ->columnSpanFull(),
 
 
-                        RichEditor::make('description')
+                        TextInput::make('description')
                             ->label('Description')
                             ->columnSpanFull(),
                     ])

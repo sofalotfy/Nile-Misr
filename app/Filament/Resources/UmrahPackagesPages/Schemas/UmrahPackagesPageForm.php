@@ -28,7 +28,7 @@ class UmrahPackagesPageForm
                             ->disk('public')
                             ->directory('umrah-packages-pages/hero'),
 
-                        RichEditor::make('note')
+                        TextInput::make('note')
                             ->label('General Note')
                             ->columnSpanFull(),
 
