@@ -277,7 +277,7 @@ function umrah_card($program)
                             <div class="row align-items-center justify-content-center g-0">
                                 <div class="col-lg-6 pt-30px pb-30px md-pt-50px md-pb-50px">
                                     <span class="h-50px w-50px border border-color-transparent-dark-very-light fs-13 fw-500 text-dark-gray d-flex align-items-center justify-content-center border-radius-100 mb-35px">{{ $loop->iteration }}</span>
-                                    <h2 class="fw-300 text-dark-gray mb-25px w-70">{{$service['title']??"الحج مع نيل مصر للسياحة"}}</h2>
+                                    <h2 class="fw-300 text-dark-gray mb-25px">{{$service['title']??"الحج مع نيل مصر للسياحة"}}</h2>
                                     <div class="text-end me-50px md-me-0"><i class="bi bi-arrow-down-right icon-very-medium text-dark-gray"></i></div>
                                     <div class="border-top border-color-transparent-dark-very-light pt-40px mt-40px lg-pt-20px lg-mt-20px md-pt-30px md-mt-30px">
                                         <div class="w-70 text-dark-gray mb-35px lg-w-90 sm-w-100">
