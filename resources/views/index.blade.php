@@ -42,6 +42,7 @@ function umrah_card($program)
             <div class="d-flex align-items-center gap-2 w-100">
                 <a href="javascript:void(0);" 
                    class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
+                   data-package-id="<?php echo htmlspecialchars($program['id']); ?>"
                    data-type="umrah"
                    data-name="<?php echo htmlspecialchars($program['name']); ?>"
                    data-date="<?php echo htmlspecialchars(implode(' , ', $program['dates'])); ?>"
