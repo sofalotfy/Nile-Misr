@@ -209,7 +209,7 @@
 
 
                                         <span>
-                                            {{ $stop['stop'] }}
+                                            {{ $stop }}
                                         </span>
 
                                         @if(!$loop->last)
