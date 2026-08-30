@@ -34,19 +34,22 @@ $getPrice = function ($type) use ($prices) {
 
 <!-- start page title -->
 
-<section class="ipad-top-space-margin md-pt-0">
-    <div class="container">
+<section class="ipad-top-space-margin">
+
+    <div class="container mt-4">
+
         <div class="row align-items-center justify-content-center">
+
             <div class="col-12 col-xl-6 col-lg-8 text-center position-relative page-title-double-large">
+
                 <div class="d-flex flex-column justify-content-center extra-very-small-screen">
 
-```
-                <h1 class="text-dark-gray alt-font ls-minus-1px fw-700 mb-20px">
+                    <h1 class="text-dark-gray alt-font ls-minus-1px fw-700 mb-20px">
                     {{ $pageData->title }}
                 </h1>
 
                 <p class="text-dark-gray fs-20">
-                    {!! $pageData->quote !!}
+                    {{ $pageData->quote }}
                 </p>
 
             </div>

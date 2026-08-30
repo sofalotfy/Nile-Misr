@@ -18,7 +18,7 @@ class SingleHijjPackagePageForm
                         TextInput::make('title')
                             ->label('Title'),
 
-                        RichEditor::make('quote')
+                        TextInput::make('quote')
                             ->label('Quote')
                             ->columnSpanFull(),
                     ])
