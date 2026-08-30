@@ -150,7 +150,7 @@ function umrah_card($program)
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">6 أيام</span> / 5 ليالي</h2>
-                        {!!$pageData['six-days-note']??'<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>'!!}
+                        {!! $pageData['six-days-note']?? '<p class="fs-14 text-medium-gray mb-0 mt-1">مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong></p>' !!}
                     </div>
                 </div>
                 <div class="umrah-section-line mt-3"></div>
@@ -212,7 +212,7 @@ function umrah_card($program)
                     </div>
                     <div>
                         <h2 class="alt-font fs-28 fw-700 text-dark-gray mb-0 ls-minus-1px">برامج <span class="text-tussock-yellow">10 أيام</span> / 9 ليالي</h2>
-                        <p class="fs-14 text-medium-gray mb-0 mt-1">{{ $pageData['ten-days-note']??"مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong>"}}</p>
+                        <p class="fs-14 text-medium-gray mb-0 mt-1">{{ $pageData['ten-days-note']??'مستوى خمس نجوم — <strong class="text-dark-gray">13 , 20 , 24 أغسطس 2026</strong>'}}</p>
 
                     </div>
                 </div>
