@@ -132,7 +132,7 @@ function umrah_card($program)
 
                     </div>
                     <div class="text-center">
-                        <p class="text-base-color fw-600 fs-20 ls-minus-1px mb-0"><{{  $pageData['note']??"جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة" }}</p>
+                        <p class="text-base-color fw-600 fs-20 ls-minus-1px mb-0">{{  $pageData['note']??"جميع البرامج تشمل قطار الحرمين السريع والافطار بمكة" }}</p>
                     </div>
                 </div>
             </div>
