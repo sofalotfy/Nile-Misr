@@ -50,7 +50,7 @@ class UmrahPackagesPageForm
                             ->columnSpanFull(),
 
                         TextInput::make('footer-eight-days-note')
-                            ->label('Note at 6 Days Category Footer')
+                            ->label('Note at 8 Days Category Footer')
                             ->columnSpanFull(),
 
                         TextInput::make('ten-days-note')
@@ -58,7 +58,7 @@ class UmrahPackagesPageForm
                             ->columnSpanFull(),
 
                         TextInput::make('footer-ten-days-note')
-                            ->label('Note at 6 Days Category Footer')
+                            ->label('Note at 10 Days Category Footer')
                             ->columnSpanFull(),
                         
                         TextInput::make('fifteen-days-note')
@@ -66,7 +66,7 @@ class UmrahPackagesPageForm
                             ->columnSpanFull(),
 
                         TextInput::make('footer-fifteen-days-note')
-                            ->label('Note at 6 Days Category Footer')
+                            ->label('Note at 15 Days Category Footer')
                             ->columnSpanFull(),
                     ])->columns(1),
             ])->columns(1);
