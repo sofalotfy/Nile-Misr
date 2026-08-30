@@ -182,7 +182,7 @@ function umrah_card($program)
             <div class="col-lg-6 col-md-9 position-relative md-mb-15 text-center text-lg-start d-flex align-items-center justify-content-center"
                 data-anime='{ "el": "childs", "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 15, "easing": "easeOutQuad" }'>
                 <img src="{{ $pageData['section1-image'] ? 'storage/' . $pageData['section1-image'] : asset('imgs/journy.jpg') }}" alt="">
-                <img src="{{ $pageData['section1-floating-image'] ?'storage/' . $pageData['section1-floating-image'] :asset('imgs/pattern/patt12.png') }}imgs/pattern/patt12.png" class="position-absolute top-50 left-minus-100px lg-left-minus-40px sm-left-minus-30px lg-w-50 sm-w-55" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-220px)" alt="">
+                <!-- <img src="{{ $pageData['section1-floating-image'] ?'storage/' . $pageData['section1-floating-image'] :asset('imgs/pattern/patt12.png') }}imgs/pattern/patt12.png" class="position-absolute top-50 left-minus-100px lg-left-minus-40px sm-left-minus-30px lg-w-50 sm-w-55" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-220px)" alt=""> -->
                 <!-- <img src="images/demo-corporate-02.png" class="position-absolute top-0px xl-top-minus-10px w-170px right-20px md-right-40px xs-w-40" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)" alt=""> -->
             </div>
             <div class="col-lg-5 md-mb-50px" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 800, "delay": 200, "easing": "easeOutCirc" }'>

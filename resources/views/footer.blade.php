@@ -103,12 +103,12 @@
                         {{ $site['name'] ?? '' }}
                     </span>
 
-                    <p class="mb-1">
+                    <p class="mb-1 text-white">
                         {{ $site['address'] ?? '' }}
                     </p>
 
                     @if(!empty($site['number']))
-                        <p>
+                        <p class="text-white">
                             ت:
                             <a href="tel:{{ $site['number'] }}">
                                 {{ $site['number'] }}
@@ -130,12 +130,12 @@
                         {{ $site['name'] ?? '' }}
                     </span>
 
-                    <p class="mb-1">
+                    <p class="mb-1 text-white">
                         {{ $site['address'] ?? '' }}
                     </p>
 
                     @if(!empty($site['number']))
-                        <p>
+                        <p class="text-white">
                             ت:
                             <a href="tel:{{ $site['number'] }}">
                                 {{ $site['number'] }}
@@ -155,7 +155,7 @@
                     تواصل معنا
                 </span>
 
-                <p class="mb-0">
+                <p class="mb-0 text-white">
                     للاستفسار والحجز:
                 </p>
 
@@ -228,7 +228,7 @@
             <!-- Copyright -->
             <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
 
-                <p>
+                <p class="text-white">
                     &copy; 2025 نيل مصر للسياحة -
                     <a
                         href="https://www.dawayerstudio.com/"
