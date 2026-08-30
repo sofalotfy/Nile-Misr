@@ -349,7 +349,7 @@
     <div class="container">
         <div class="row align-items-center justify-content-center text-center text-lg-start" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
             <div class="col-xxl-5 col-lg-6 col-md-10 md-mb-50px xs-mb-30px">
-                <h3 class="fw-500 text-base-color ls-minus-2px mb-0">{!! $pageData["achievements-quote"]?? 'أعلام خافقة.. وأعمال منفردة لنيل مصر للسياحة' !!}</h3>
+                <h3 class="fw-500 text-base-color ls-minus-2px mb-0">{{ $pageData["achievements-quote"]?? 'أعلام خافقة.. وأعمال منفردة لنيل مصر للسياحة' }}</h3>
             </div>
             <div class="col-xxl-2 offset-xxl-1 col-md-3 col-sm-4 text-center xs-mb-30px">
                 <span class="text-dark-gray fw-600 fs-100 ls-minus-2px text-highlight">{!! $pageData["achievements-years-count"]?? '25' !!}<span class="fs-24 text-tussock-yellow top-140px">ســنــة</span></span>

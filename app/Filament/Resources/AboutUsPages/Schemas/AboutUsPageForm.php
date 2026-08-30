@@ -204,7 +204,7 @@ class AboutUsPageForm
 
                 Section::make('Achievements')
                     ->schema([
-                        RichEditor::make('achievements-quote')
+                        TextInput::make('achievements-quote')
                             ->label('Quote')
                             ->columnSpanFull(),
 
