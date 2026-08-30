@@ -768,7 +768,7 @@
 
 
                     @if($package['umrahPrices'])
-    {{dd($package['umrahPrices'])}}
+    {{dd($package)}}
                         <table class="custom-pricing-table mb-0 w-100">
 
                             <tbody>
