@@ -16,7 +16,7 @@ class UmrahPrice extends Model
         'type'  =>  RoomTypes::class,
     ];
 
-    public function umrahPackage(): BelongsTo
+    public function umrahPackage()
     {
         return $this->belongsTo(UmrahPackages::class, 'umrah_package_id');
     }
