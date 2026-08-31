@@ -20,7 +20,7 @@ class SingleUmrahPackagePageForm
                             ->label('Image')
                             ->image()
                             ->disk('public')
-                            ->directory('single-hijj-pages')
+                            ->directory('single-umrah-pages')
                             ->columnSpanFull(),
 
                         TextInput::make('title')
