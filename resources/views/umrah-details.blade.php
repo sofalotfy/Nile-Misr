@@ -77,14 +77,14 @@
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column">
                     <div class="" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
-                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData["hero-title"] ?? 'خدماتنا' !!}</h1>
-                        <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">{{ $pageData["hero-text"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' }}</p>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData["title"] ?? 'خدماتنا' !!}</h1>
+                        <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">{{ $pageData["quote"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' }}</p>
                     </div>
                     <!-- start breadcrumb -->
                     <div class=" justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
                             <li><a href="/" class="text-white">الرئيسية</a></li>
-                            <li>{!! $pageData["hero-title"] ?? 'خدماتنا' !!}</li>
+                            <li>{!! $pageData["title"] ?? 'خدماتنا' !!}</li>
                         </ul>
                     </div>
                     <!-- end breadcrumb -->
@@ -151,7 +151,7 @@
 
 
 <!-- start section -->
-<section class="position-relative pb-4 pt-0">
+<section class="position-relative pb-4">
 
     <div class="container">
 
