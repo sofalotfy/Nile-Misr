@@ -182,13 +182,13 @@
                                         <a href="{{ route('whyus') }}" class="nav-link">لماذا نيل مصر؟</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a>
                                     </li>
 
                                     <li class="nav-item">
                                         <a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a>
-                                    </li>
+                                    </li> -->
 
                                     <li class="nav-item">
                                         <a href="{{ route('contact') }}" class="nav-link">تواصل معنا</a>
@@ -197,7 +197,7 @@
                                 </ul>
                         </div>
                     </div>
-                    <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
+                    <!-- <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
                         <div class="header-icon">
                             <div class="fs-15 widget-text fw-500">
                                         <span class="w-35px h-35px bg-yellow d-inline-flex align-items-center justify-content-center me-10px border-radius-100px">
@@ -205,11 +205,11 @@
                                         </span>
                                         <a href="tel:+{{$siteData['hotline']}}" class="widget-text fw-600 fs-18">{{$siteData['hotline']}}</a>
                                     </div>
-                                    <!-- <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
+                                    <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
                                         احـجــــــز الآن
-                                    </a> -->
+                                    </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
             <!-- end navigation -->
