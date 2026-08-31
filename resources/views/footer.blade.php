@@ -104,7 +104,7 @@
                         {{ $site['address'] ?? '' }}
                     </p>
 
-                    @if(!empty($site['number']))
+                    <!-- @if(!empty($site['number']))
                         <p class="text-white">
                             ت:
                             <a href="tel:{{ $site['number'] }}">
@@ -113,7 +113,7 @@
                         </p>
                     @endif
 
-                @endforeach
+                @endforeach -->
 
             </div>
 
@@ -131,14 +131,14 @@
                         {{ $site['address'] ?? '' }}
                     </p>
 
-                    @if(!empty($site['number']))
+                    <!-- @if(!empty($site['number']))
                         <p class="text-white">
                             ت:
                             <a href="tel:{{ $site['number'] }}">
                                 {{ $site['number'] }}
                             </a>
                         </p>
-                    @endif
+                    @endif -->
 
                 @endforeach
 
@@ -148,7 +148,7 @@
             <!-- Contact Information -->
             <div class="col-12 col-xl-3 col-lg-4 col-md-6 order-lg-4 order-md-2 md-mb-30px sm-mb-0">
 
-                <span class="fs-16 fw-600 d-block text-white text-uppercase">
+                <!-- <span class="fs-16 fw-600 d-block text-white text-uppercase">
                     تواصل معنا
                 </span>
 
@@ -203,44 +203,9 @@
                         <br>
                     @endif
 
-                @endforeach
+                @endforeach -->
 
-            </div>
-
-        </div>
-
-
-        <!-- Bottom Footer -->
-        <div class="row justify-content-center align-items-center pt-5 sm-pt-35px">
-
-            <!-- Divider -->
-            <div class="col-12">
-                <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
-            </div>
-
-
-            <!-- Copyright -->
-            <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
-
-                <p class="text-white">
-                    &copy; 2025 نيل مصر للسياحة -
-                    <a
-                        href="https://www.dawayerstudio.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-white fw-500 text-decoration-line-bottom"
-                    >
-                        Dawayer Studio
-                    </a>
-                </p>
-
-            </div>
-
-
-            <!-- Footer Menu -->
-            <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
-
-                <ul class="footer-navbar sm-lh-normal">
+                <ul class="">
 
                     <li>
                         <a href="{{ route('home') }}" class="nav-link text-white">
@@ -284,8 +249,84 @@
 
         </div>
 
+
+        <!-- Bottom Footer -->
+
     </div>
 </footer>
+
+        <div class="row justify-content-center align-items-center pt-5 sm-pt-35px bg-dark-gray">
+
+            <!-- Divider -->
+            <div class="col-12">
+                <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
+            </div>
+
+
+            <!-- Copyright -->
+            <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
+
+                <p class="text-white">
+                    &copy; 2025 نيل مصر للسياحة -
+                    <a
+                        href="https://www.dawayerstudio.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fw-500 text-decoration-line-bottom"
+                    >
+                        Dawayer Studio
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Footer Menu -->
+            <!-- <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
+
+                <ul class="footer-navbar sm-lh-normal">
+
+                    <li>
+                        <a href="{{ route('home') }}" class="nav-link text-white">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('about') }}" class="nav-link text-white">
+                            من نحن؟
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('services') }}" class="nav-link text-white">
+                            خدماتنا
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('hajj.index') }}" class="nav-link text-white">
+                            برامج الحج
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('umrah.index') }}" class="nav-link text-white">
+                            برامج العمرة
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('whyus') }}" class="nav-link text-white">
+                            لماذا نيل مصر؟
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div> -->
+
+        </div>
 <!-- end footer -->
 
         <!-- javascript libraries -->
@@ -403,10 +444,10 @@
 
         <!-- Premium Booking Modal -->
         <div class="modal fade"
-     id="bookingModal"
-     tabindex="-1"
-     aria-labelledby="bookingModalLabel"
-     aria-hidden="true">
+            id="bookingModal"
+            tabindex="-1"
+            aria-labelledby="bookingModalLabel"
+            aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered modal-lg">
 
