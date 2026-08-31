@@ -253,90 +253,92 @@
 
     </div>
 </footer>
-<div class="container bg-dark-gray">
-    <div class="row justify-content-center align-items-center sm-pt-35px bg-dark-gray">
+<section class="p-0 bg-dark-gray">
+    <div class="container">
+        <div class="row justify-content-center align-items-center sm-pt-35px bg-dark-gray">
 
-        <!-- Copyright -->
-        <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
+            <!-- Copyright -->
+            <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
 
-            <p class="text-white">
-                &copy; 2025 نيل مصر للسياحة -
-                <a
-                    href="https://www.dawayerstudio.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-white fw-500"
-                >
-                    Dawayer Studio
-                </a>
-            </p>
+                <p class="text-white">
+                    &copy; 2025 نيل مصر للسياحة -
+                    <a
+                        href="https://www.dawayerstudio.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fw-500"
+                    >
+                        Dawayer Studio
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
+
+                <p class="text-white">
+                    &copy; 2025 نيل مصر للسياحة -
+                    <a
+                        href="https://www.dawayerstudio.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fw-500"
+                    >
+                        Dawayer Studio
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Footer Menu -->
+            <!-- <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
+
+                <ul class="footer-navbar sm-lh-normal">
+
+                    <li>
+                        <a href="{{ route('home') }}" class="nav-link text-white">
+                            الرئيسية
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('about') }}" class="nav-link text-white">
+                            من نحن؟
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('services') }}" class="nav-link text-white">
+                            خدماتنا
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('hajj.index') }}" class="nav-link text-white">
+                            برامج الحج
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('umrah.index') }}" class="nav-link text-white">
+                            برامج العمرة
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('whyus') }}" class="nav-link text-white">
+                            لماذا نيل مصر؟
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div> -->
 
         </div>
-
-        <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
-
-            <p class="text-white">
-                &copy; 2025 نيل مصر للسياحة -
-                <a
-                    href="https://www.dawayerstudio.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-white fw-500"
-                >
-                    Dawayer Studio
-                </a>
-            </p>
-
-        </div>
-
-
-        <!-- Footer Menu -->
-        <!-- <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
-
-            <ul class="footer-navbar sm-lh-normal">
-
-                <li>
-                    <a href="{{ route('home') }}" class="nav-link text-white">
-                        الرئيسية
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('about') }}" class="nav-link text-white">
-                        من نحن؟
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('services') }}" class="nav-link text-white">
-                        خدماتنا
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('hajj.index') }}" class="nav-link text-white">
-                        برامج الحج
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('umrah.index') }}" class="nav-link text-white">
-                        برامج العمرة
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{{ route('whyus') }}" class="nav-link text-white">
-                        لماذا نيل مصر؟
-                    </a>
-                </li>
-
-            </ul>
-
-        </div> -->
-
     </div>
-</div>
+</section>
 <!-- end footer -->
 
         <!-- javascript libraries -->
