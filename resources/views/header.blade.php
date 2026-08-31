@@ -62,12 +62,14 @@
                 <div class="container-fluid">
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 fw-500 justify-content-between">
-                            <span class="me-25px fs-15 md-m-0">
-                                <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
-                            </span>
-                            <span class="me-25px fs-15 md-m-0">
-                                <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
-                            </span>
+                            <div>
+                                <span class="me-25px fs-15 md-m-0">
+                                    <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
+                                </span>
+                                <span class="me-25px fs-15 md-m-0">
+                                    <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
+                                </span>
+                            </div>
                             <div>
                                 <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
                                 <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>

@@ -111,9 +111,9 @@
                                 {{ $site['number'] }}
                             </a>
                         </p>
-                    @endif
+                    @endif -->
 
-                @endforeach -->
+                @endforeach
 
             </div>
 
@@ -255,16 +255,32 @@
     </div>
 </footer>
 
-        <div class="row justify-content-center align-items-center pt-5 sm-pt-35px bg-dark-gray">
+        <div class="row justify-content-center align-items-center sm-pt-35px bg-dark-gray">
 
             <!-- Divider -->
             <div class="col-12">
-                <div class="divider-style-03 divider-style-03-01 border-color-extra-medium-gray"></div>
+                <div class="divider-style-03 divider-style-03-01 "></div>
             </div>
 
 
             <!-- Copyright -->
             <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
+
+                <p class="text-white">
+                    &copy; 2025 نيل مصر للسياحة -
+                    <a
+                        href="https://www.dawayerstudio.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-white fw-500 text-decoration-line-bottom"
+                    >
+                        Dawayer Studio
+                    </a>
+                </p>
+
+            </div>
+
+            <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
 
                 <p class="text-white">
                     &copy; 2025 نيل مصر للسياحة -
