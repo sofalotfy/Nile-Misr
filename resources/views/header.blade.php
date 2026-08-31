@@ -65,14 +65,71 @@
                             <span class="me-25px fs-15 md-m-0">
                                 <i class="feather icon-feather-phone-call text-white me-10px"></i><span class="text-tussock-yellow">{{$siteData['hotline']}}</span>
                             </span>
-                            <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
-                            <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
+                            <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
+                            <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>
                         </div>
                         <div class="col-md-5 text-end d-none d-lg-flex fs-15">
-                            <a href="http://www.facebook.com" target="_blank" class="me-25px lg-me-15px">Facebook</a>
-                            <a href="http://www.twitter.com" target="_blank" class="me-25px lg-me-15px">Twitter</a>
-                            <a href="https://in.pinterest.com/" target="_blank" class="me-25px lg-me-15px">Pinterest</a>
-                            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                            <div  class="elements-social social-icon-style-04 mt-auto text-center text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <ul class="small-icon light">
+
+                        @if(!empty($siteData['tiktok']))
+                            <li class="m-0">
+                                <a
+                                    class="tiktok"
+                                    href="{{ $siteData['tiktok'] }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fa-brands fa-tiktok"></i>
+                                    <span></span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if(!empty($siteData['twitter']))
+                            <li class="m-0">
+                                <a
+                                    class="x-twitter"
+                                    href="{{ $siteData['twitter'] }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                    <span></span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if(!empty($siteData['instgram']))
+                            <li class="m-0">
+                                <a
+                                    class="instagram"
+                                    href="{{ $siteData['instgram'] }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <span></span>
+                                </a>
+                            </li>
+                        @endif
+
+                        @if(!empty($siteData['facebook']))
+                            <li class="m-0">
+                                <a
+                                    class="facebook"
+                                    href="{{ $siteData['facebook'] }}"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <span></span>
+                                </a>
+                            </li>
+                        @endif
+
+                    </ul>
+                </div>
                         </div>
                     </div>
                 </div>
