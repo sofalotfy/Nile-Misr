@@ -197,10 +197,7 @@
                     @endphp
 
                     @if($emailAddress)
-                        <a
-                            href="mailto:{{ $emailAddress }}"
-                            class="text-white text-decoration-line-bottom fw-500 fs-16 d-inline-block"
-                        >
+                        <a  href="mailto:{{ $emailAddress }}" class="text-white text-decoration-line-bottom fw-500 fs-16 d-inline-block" >
                             {{ $emailAddress }}
                         </a>
                         <br>

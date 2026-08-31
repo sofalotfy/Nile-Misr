@@ -63,7 +63,10 @@
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 col-lg-7 fw-500 justify-content-lg-start justify-content-center">
                             <span class="me-25px fs-15 md-m-0">
-                                <i class="feather icon-feather-phone-call text-white me-10px"></i><span class="text-tussock-yellow">{{$siteData['hotline']}}</span>
+                                <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
+                            </span>
+                            <span class="me-25px fs-15 md-m-0">
+                                <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $emailAddress }}" class="text-white" >{{ $emailAddress }}</a>
                             </span>
                             <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
                             <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>
@@ -197,19 +200,19 @@
                                 </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
+                    <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
                         <div class="header-icon">
                             <div class="fs-15 widget-text fw-500">
-                                        <span class="w-35px h-35px bg-yellow d-inline-flex align-items-center justify-content-center me-10px border-radius-100px">
+                                        <!-- <span class="w-35px h-35px bg-yellow d-inline-flex align-items-center justify-content-center me-10px border-radius-100px">
                                             <i class="feather icon-feather-phone"></i>
                                         </span>
                                         <a href="tel:+{{$siteData['hotline']}}" class="widget-text fw-600 fs-18">{{$siteData['hotline']}}</a>
-                                    </div>
+                                    </div> -->
                                     <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
                                         احـجــــــز الآن
                                     </a>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </nav>
             <!-- end navigation -->
