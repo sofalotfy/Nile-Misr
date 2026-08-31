@@ -58,14 +58,15 @@
 
         <!-- start header -->
         <header class="header-with-topbar">
-            <div class="header-top-bar top-bar-dark bg-dark-gray">
+            <div class="header-top-bar top-bar-dark bg-base-color">
                 <div class="container-fluid">
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 col-lg-7 fw-500 justify-content-lg-start justify-content-center">
                             <span class="me-25px fs-15 md-m-0">
-                                <i class="feather icon-feather-phone-call text-base-color me-10px"></i><span class="text-light-gray">Phone: 1 800 222 000 - Any time 24/7</span>
+                                <i class="feather icon-feather-phone-call text-white me-10px"></i><span class="text-tussock-yellow">{{$siteData['hotline']}}</span>
                             </span>
-                            <span class="d-xl-inline-block d-none fs-15"><i class="feather icon-feather-mail text-base-color me-10px"></i><a href="mailto:no-reply@domain.com" class="widget text-light-gray text-white-hover">no-reply@domain.com</a></span>
+                            <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
+                            <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
                         </div>
                         <div class="col-md-5 text-end d-none d-lg-flex fs-15">
                             <a href="http://www.facebook.com" target="_blank" class="me-25px lg-me-15px">Facebook</a>
@@ -147,9 +148,9 @@
                                         </span>
                                         <a href="tel:+{{$siteData['hotline']}}" class="widget-text fw-600 fs-18">{{$siteData['hotline']}}</a>
                                     </div>
-                                    <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
+                                    <!-- <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
                                         احـجــــــز الآن
-                                    </a>
+                                    </a> -->
                         </div>
                     </div>
                 </div>
