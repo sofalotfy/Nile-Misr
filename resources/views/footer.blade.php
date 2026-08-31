@@ -253,14 +253,8 @@
 
     </div>
 </footer>
-<div class="container">
+<div class="container bg-dark-gray">
     <div class="row justify-content-center align-items-center sm-pt-35px bg-dark-gray">
-
-        <!-- Divider -->
-        <div class="col-12">
-            <div class="divider-style-03 divider-style-03-01 "></div>
-        </div>
-
 
         <!-- Copyright -->
         <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
@@ -271,7 +265,7 @@
                     href="https://www.dawayerstudio.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-white fw-500 text-decoration-line-bottom"
+                    class="text-white fw-500"
                 >
                     Dawayer Studio
                 </a>
@@ -287,7 +281,7 @@
                     href="https://www.dawayerstudio.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-white fw-500 text-decoration-line-bottom"
+                    class="text-white fw-500"
                 >
                     Dawayer Studio
                 </a>
