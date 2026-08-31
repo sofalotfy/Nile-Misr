@@ -7,8 +7,7 @@
     $emails = $siteData['emails'] ?? [];
 @endphp
 
-<footer
-    class="bg-base-color pb-0 sm-pt-20px xs-pb-30px"
+<footer class="bg-base-color sm-pt-20px xs-pb-30px"
     style="background-image: url('{{ asset('imgs/footer.png') }}')"
 >
     <div class="container">
@@ -100,7 +99,7 @@
                         {{ $site['name'] ?? '' }}
                     </span>
 
-                    <p class="mb-1 text-white">
+                    <p class="mb-1 text-white mb-7">
                         {{ $site['address'] ?? '' }}
                     </p>
 
@@ -127,7 +126,7 @@
                         {{ $site['name'] ?? '' }}
                     </span>
 
-                    <p class="mb-1 text-white">
+                    <p class="mb-1 text-white mb-7">
                         {{ $site['address'] ?? '' }}
                     </p>
 
@@ -254,95 +253,96 @@
 
     </div>
 </footer>
+<div class="container">
+    <div class="row justify-content-center align-items-center sm-pt-35px bg-dark-gray">
 
-        <div class="row justify-content-center align-items-center sm-pt-35px bg-dark-gray">
-
-            <!-- Divider -->
-            <div class="col-12">
-                <div class="divider-style-03 divider-style-03-01 "></div>
-            </div>
-
-
-            <!-- Copyright -->
-            <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
-
-                <p class="text-white">
-                    &copy; 2025 نيل مصر للسياحة -
-                    <a
-                        href="https://www.dawayerstudio.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-white fw-500 text-decoration-line-bottom"
-                    >
-                        Dawayer Studio
-                    </a>
-                </p>
-
-            </div>
-
-            <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
-
-                <p class="text-white">
-                    &copy; 2025 نيل مصر للسياحة -
-                    <a
-                        href="https://www.dawayerstudio.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-white fw-500 text-decoration-line-bottom"
-                    >
-                        Dawayer Studio
-                    </a>
-                </p>
-
-            </div>
+        <!-- Divider -->
+        <div class="col-12">
+            <div class="divider-style-03 divider-style-03-01 "></div>
+        </div>
 
 
-            <!-- Footer Menu -->
-            <!-- <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
+        <!-- Copyright -->
+        <div class="col-lg-5 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
 
-                <ul class="footer-navbar sm-lh-normal">
-
-                    <li>
-                        <a href="{{ route('home') }}" class="nav-link text-white">
-                            الرئيسية
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('about') }}" class="nav-link text-white">
-                            من نحن؟
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('services') }}" class="nav-link text-white">
-                            خدماتنا
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('hajj.index') }}" class="nav-link text-white">
-                            برامج الحج
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('umrah.index') }}" class="nav-link text-white">
-                            برامج العمرة
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('whyus') }}" class="nav-link text-white">
-                            لماذا نيل مصر؟
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div> -->
+            <p class="text-white">
+                &copy; 2025 نيل مصر للسياحة -
+                <a
+                    href="https://www.dawayerstudio.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white fw-500 text-decoration-line-bottom"
+                >
+                    Dawayer Studio
+                </a>
+            </p>
 
         </div>
+
+        <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
+
+            <p class="text-white">
+                &copy; 2025 نيل مصر للسياحة -
+                <a
+                    href="https://www.dawayerstudio.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-white fw-500 text-decoration-line-bottom"
+                >
+                    Dawayer Studio
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- Footer Menu -->
+        <!-- <div class="col-lg-7 pt-15px pb-15px md-pb-5px fs-15 order-1 order-lg-2 text-center text-lg-end">
+
+            <ul class="footer-navbar sm-lh-normal">
+
+                <li>
+                    <a href="{{ route('home') }}" class="nav-link text-white">
+                        الرئيسية
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('about') }}" class="nav-link text-white">
+                        من نحن؟
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('services') }}" class="nav-link text-white">
+                        خدماتنا
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('hajj.index') }}" class="nav-link text-white">
+                        برامج الحج
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('umrah.index') }}" class="nav-link text-white">
+                        برامج العمرة
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('whyus') }}" class="nav-link text-white">
+                        لماذا نيل مصر؟
+                    </a>
+                </li>
+
+            </ul>
+
+        </div> -->
+
+    </div>
+</div>
 <!-- end footer -->
 
         <!-- javascript libraries -->
