@@ -31,10 +31,34 @@ $getPrice = function ($type) use ($prices) {
 
 
 @endphp
-
+<!-- start page title -->
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/service-banner-2.jpg")   }})">
+    <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12 text-center position-relative page-title-extra-large">
+                <div class="d-flex flex-column small-screen">
+                    <div class="" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">{!! $pageData["hero-title"] ?? 'خدماتنا' !!}</h1>
+                        <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">{{ $pageData["hero-text"] ?? 'برامج متكاملة للحج والعمرة بخدمة راقية واهتمام روحي كامل' }}</p>
+                    </div>
+                    <!-- start breadcrumb -->
+                    <div class=" justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
+                        <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <li><a href="/" class="text-white">الرئيسية</a></li>
+                            <li>{!! $pageData["hero-title"] ?? 'خدماتنا' !!}</li>
+                        </ul>
+                    </div>
+                    <!-- end breadcrumb -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end page title -->
 <!-- start page title -->
 
-<section class="ipad-top-space-margin">
+<!-- <section class="ipad-top-space-margin">
 
     <div class="container mt-4">
 
@@ -78,7 +102,7 @@ $getPrice = function ($type) use ($prices) {
 </div>
 
 
-</section>
+</section> -->
 <!-- end page title -->
 
 <!-- start section -->

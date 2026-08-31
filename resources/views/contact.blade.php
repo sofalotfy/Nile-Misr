@@ -1,13 +1,13 @@
 ﻿@include('header')
 
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background top-space-margin" style="background-image: url('{{ asset('storage/' . $pageData['hero-image']) }}')">
+<section class="page-title-separate-breadcrumbs cover-background top-space-margin" top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('{{ asset('storage/' . $pageData['hero-image']) }}')">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-12 text-center position-relative page-title-extra-large">
                 <div class="d-flex flex-column small-screen">
-                    <div class="mt-auto" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <div class="" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
 
                         <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">
                             {{ $pageData['hero-title'] }}
@@ -20,7 +20,7 @@
                     </div>
 
                     <!-- start breadcrumb -->
-                    <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
+                    <div class=" justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
 
                             <li>

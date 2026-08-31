@@ -5,9 +5,11 @@
 
 
 @endphp
+
+
 <!-- start page title -->
 <section
-    class="page-title-separate-breadcrumbs cover-background top-space-margin position-relative"
+    class="page-title-separate-breadcrumbs cover-background top-space-margin position-relative" top-space-margin" data-parallax-background-ratio="0.5"
     style="background-image: url({{ !empty($pageData['hero-image'])
         ? asset('storage/' . $pageData['hero-image'])
         : asset('imgs/hijj-banner.jpg') }})"
@@ -20,7 +22,7 @@
 
                 <div class="d-flex flex-column small-screen">
 
-                    <div class="mt-auto">
+                    <div class="">
                         <h1 class="text-white alt-font mb-0 text-shadow-extra-large fw-600 ls-minus-1px">
                             {!! $pageData['hero-title'] ?? 'برامج الحج 1448هـ' !!}
                         </h1>
@@ -30,7 +32,7 @@
                         </p>
                     </div>
 
-                    <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
+                    <div class=" justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul>
                             <li>
                                 <a href="{{ url('/') }}" class="text-white">
@@ -57,7 +59,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-10 col-md-9 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 <!-- <span class="fs-20 mb-15px text-base-color fw-500 d-block">Life around great food</span> -->
-                {{ $pageData['description'] ?? '<h4 class="alt-font text-base-color ls-minus-1px mb-0">جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران </h4>' }}
+                <h4 class="alt-font text-base-color ls-minus-1px mb-0">{{ $pageData['description'] ?? 'جميع البرامج تشمل أيام المناسك تشمل الانتقال بقطار الحرمين السريع - القاهرة - جدة / المدينة - القاهرة - لا تشمل تذكرة الطيران' }}</h4>
             </div>
         </div>
     </div>
