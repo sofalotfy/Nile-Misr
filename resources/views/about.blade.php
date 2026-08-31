@@ -12,7 +12,7 @@
                         <p class="fs-20 text-white md-w-80 sm-w-100 mt-1">{!! $pageData["subtitle"] ?? '25 عامًا من الثقة والريادة في خدمة ضيوف الرحمن.' !!}</p>
                     </div>
                     <!-- start breadcrumb -->
-                    <div class="mt-auto justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
+                    <div class="justify-content-center breadcrumb breadcrumb-style-01 alt-font text-white">
                         <ul data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 400, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
                             <li><a href="/" class="text-white">الرئيسية</a></li>
                             <li>{!! $pageData["title"] ?? 'مــن نحن؟' !!}</li>
