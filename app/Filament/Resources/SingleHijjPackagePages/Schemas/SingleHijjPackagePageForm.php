@@ -15,6 +15,13 @@ class SingleHijjPackagePageForm
             ->components([
                 Section::make('Package Information')
                     ->schema([
+                        FileUpload::make('image')
+                            ->label('Image')
+                            ->image()
+                            ->disk('public')
+                            ->directory('single-hijj-pages')
+                            ->columnSpanFull(),
+
                         TextInput::make('title')
                             ->label('Title'),
 
