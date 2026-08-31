@@ -70,7 +70,7 @@
 @endphp
 
 <!-- start page title -->
-<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['hero-image']?asset("storage/" . $pageData['hero-image']):asset("imgs/service-banner-2.jpg")   }})">
+<section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url({{  $pageData['image']?asset("storage/" . $pageData['image']):asset("imgs/service-banner-2.jpg")   }})">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
     <div class="container">
         <div class="row align-items-center justify-content-center">
