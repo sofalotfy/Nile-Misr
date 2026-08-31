@@ -207,37 +207,37 @@
                 <ul class="">
 
                     <li>
-                        <a href="{{ route('home') }}" class="nav-link text-white">
+                        <a href="{{ route('home') }}" class="text-white">
                             الرئيسية
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('about') }}" class="nav-link text-white">
+                        <a href="{{ route('about') }}" class="text-white">
                             من نحن؟
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('services') }}" class="nav-link text-white">
+                        <a href="{{ route('services') }}" class="text-white">
                             خدماتنا
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('hajj.index') }}" class="nav-link text-white">
+                        <a href="{{ route('hajj.index') }}" class="text-white">
                             برامج الحج
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('umrah.index') }}" class="nav-link text-white">
+                        <a href="{{ route('umrah.index') }}" class="text-white">
                             برامج العمرة
                         </a>
                     </li>
 
                     <li>
-                        <a href="{{ route('whyus') }}" class="nav-link text-white">
+                        <a href="{{ route('whyus') }}" class="text-white">
                             لماذا نيل مصر؟
                         </a>
                     </li>
