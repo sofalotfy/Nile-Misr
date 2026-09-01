@@ -15,7 +15,7 @@
         <div class="row">
 
             <!-- Logo + Social Media -->
-            <div class="col-12 col-xl-3 col-lg-12 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-md-1">
+            <div class="col-12 col-xl-4 col-lg-12 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-md-1">
 
                 <a href="{{ route('home') }}" class="footer-logo d-inline-block lg-mb-30px">
                     <img
@@ -24,6 +24,11 @@
                         alt="Nile Misr"
                     >
                 </a>
+
+                <span class="ms-25px fs-50 md-m-0">
+                    <i class="feather icon-feather-phone-call text-white me-10px"></i>
+                    <a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
+                </span>
 
                 <div  class="elements-social social-icon-style-04 mt-auto text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <ul class="small-icon light">
@@ -90,7 +95,7 @@
             </div>
 
             <!-- Contact Information -->
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 order-md-2 md-mb-30px sm-mb-0">
+            <div class="col-12 col-xl-2 col-lg-4 col-md-6 order-md-2 md-mb-30px sm-mb-0">
 
                 <ul class="">
 
