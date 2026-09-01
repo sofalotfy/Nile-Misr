@@ -7691,8 +7691,9 @@ header.sticky.sticky-active
   opacity: 1;
 }
 header.sticky.sticky-active [data-header-hover="light"] {
-  background-color: var(--white) !important;
+  background-color: var(--base-color) !important;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.1);
+  color: #fff !important;
 }
 header.sticky.sticky-active [data-header-hover="light"] .navbar-nav .nav-link {
   color: var(--dark-gray);
