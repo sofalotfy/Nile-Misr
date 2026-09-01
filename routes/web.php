@@ -14,6 +14,7 @@ Route::controller(SinglePageController::class)->group(function () {
     Route::get('/whyus', 'whyus')->name('whyus');
     Route::get('/reviews', 'reviews')->name('reviews');
     Route::get('/media', 'media')->name('media');
+    Route::get('/media-details', 'mediaDetails')->name('media-details');
 });
 
 Route::controller(HajjController::class)->group(function () {

@@ -84,7 +84,7 @@
                                 <img src="https://placehold.co/800x1100" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
                                     <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">Preferred style of accommodation.</span>
-                                    <a href="#" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-bookmark-heart align-middle icon-extra-medium me-10px"></i>Superior service</a>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-bookmark-heart align-middle icon-extra-medium me-10px"></i>Superior service</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -98,7 +98,7 @@
                                 <img src="https://placehold.co/800x1100" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
                                     <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">Our local guides and tour directors.</span>
-                                    <a href="#" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-award align-middle icon-extra-medium me-10px"></i>Greatest guides</a>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-award align-middle icon-extra-medium me-10px"></i>Greatest guides</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -112,7 +112,7 @@
                                 <img src="https://placehold.co/800x1100" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
                                     <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">The best consumer protection plan.</span>
-                                    <a href="#" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-shield-check align-middle icon-extra-medium me-10px"></i>Fully protected</a>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-shield-check align-middle icon-extra-medium me-10px"></i>Fully protected</a>
                                 </figcaption>
                             </figure>
                         </div>
