@@ -113,65 +113,6 @@
 </section>
 <!-- end section -->
 
-
-<!-- start section -->
-<section class="half-section pt-0">
-
-    <div class="container">
-
-        <div class="row position-relative z-index-1 m-0">
-
-            <div class="col-12 position-relative overflow-hidden border-radius-6px h-700px lg-h-550px md-h-400px d-flex align-items-center justify-content-center">
-
-                <video muted class="video-bg html-video border-radius-6px video-play-icon" poster="{{$pageData['video_poster']?asset("storage/" . $pageData['video_poster']):asset("imgs/banner-1.jpg")}}">
-
-                    <source
-                        type="video/mp4"
-                        src="{{ asset('storage/' . $pageData['vidoe']) }}"
-                    />
-
-                    <source
-                        type="video/webm"
-                        src="{{ asset('storage/' . $pageData['vidoe']) }}"
-                    />
-
-                </video>
-
-                <a href="{{$pageData['vidoe']}}" class="html-video-play video-icon-box video-icon-extra-large position-relative">
-
-                    <span>
-
-                        <span class="video-icon bg-white">
-
-                            <i class="play-icon feather icon-feather-play text-dark-gray ms-0" aria-hidden="true"></i>
-
-                            <i class="pause-icon feather icon-feather-pause text-dark-gray ms-0" aria-hidden="true"></i>
-
-                            <span class="video-icon-sonar">
-
-                                <span class="video-icon-sonar-bfr bg-white opacity-7"></span>
-
-                            </span>
-
-                        </span>
-
-                    </span>
-
-                </a>
-
-            </div>
-
-            <!-- <div class="col-12 text-center position-absolute left-0px bottom-minus-100px md-bottom-minus-80px z-index-9">
-                        <img src="images/demo-hotel-and-resort-about-us-09.png" alt="" data-bottom-top="transform: translate3d(100px, 0px, 0px);" data-top-bottom="transform: translate3d(-100px, 0px, 0px);" />
-                    </div> -->
-
-        </div>
-
-    </div>
-
-</section>
-<!-- end section -->
-
 <!-- start videos section -->
 <section class="pt-0 pb-5">
     <div class="container">
