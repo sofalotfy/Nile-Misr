@@ -4,8 +4,10 @@ namespace App\Filament\Resources\MediaPages\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\TextArea;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Repeater;
 use Filament\Schemas\Schema;
 
 class MediaPageForm
@@ -43,69 +45,32 @@ class MediaPageForm
                         RichEditor::make('media-solutions-text')
                             ->label('Text')
                             ->columnSpanFull(),
-
-                        FileUpload::make('images')
-                            ->label('Images')
-                            ->image()
-                            ->multiple()
-                            ->reorderable()
-                            ->disk('public')
-                            ->directory('media-pages/media-solutions')
-                            ->columnSpanFull(),
                     ])
                     ->columns(2),
 
-                Section::make('Video')
+                Section::make('Media Solutions')
                     ->schema([
-                        FileUpload::make('video_poster')
-                            ->label('Video Poster')
-                            ->disk('public')
-                            ->directory('media-pages')
-                            ->image()
+                        Repeater::make('cards')
+                            ->label('Cards')
+                            ->schema([
+                                FileUpload::make('image')
+                                    ->label('Image')
+                                    ->image()
+                                    ->disk('public')
+                                    ->directory('media'),
+
+                                TextInput::make('title')
+                                    ->label('Title'),
+
+                                TextArea::make('description')
+                                    ->label('Description')
+                                    ->columnSpanFull(),
+                            ])
+                            ->collapsible()
+                            ->reorderable()
+                            ->cloneable()
                             ->columnSpanFull(),
 
-                        TextInput::make('vidoe')
-                            ->label('Video Link')
-                            ->columnSpanFull(),
-                    ]),
-
-                Section::make('Media Gallery')
-                    ->schema([
-                        FileUpload::make('media-image-1')
-                            ->label('Image 1')
-                            ->image()
-                            ->disk('public')
-                            ->directory('media-pages/gallery'),
-
-                        FileUpload::make('media-image-2')
-                            ->label('Image 2')
-                            ->image()
-                            ->disk('public')
-                            ->directory('media-pages/gallery'),
-
-                        FileUpload::make('media-image-3')
-                            ->label('Image 3')
-                            ->image()
-                            ->disk('public')
-                            ->directory('media-pages/gallery'),
-
-                        FileUpload::make('media-image-4')
-                            ->label('Image 4')
-                            ->image()
-                            ->disk('public')
-                            ->directory('media-pages/gallery'),
-
-                        FileUpload::make('media-image-5')
-                            ->label('Image 5')
-                            ->image()
-                            ->disk('public')
-                            ->directory('media-pages/gallery'),
-
-                        FileUpload::make('media-image-6')
-                            ->label('Image 6')
-                            ->image()
-                            ->disk('public')
-                            ->directory('media-pages/gallery'),
                     ])
                     ->columns(2),
             ])->columns(1);

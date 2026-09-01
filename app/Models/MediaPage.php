@@ -9,7 +9,6 @@ class MediaPage extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'images' => 'array',
-        'videos_links' => 'array',
+        'cards' => 'array',
     ];
 }

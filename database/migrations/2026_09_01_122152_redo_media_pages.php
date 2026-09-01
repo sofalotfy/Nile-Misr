@@ -22,19 +22,10 @@ return new class extends Migration
             $table->text("media-solutions-quote")->nullable();
             $table->text("media-solutions-title")->nullable();
             $table->text("media-solutions-text")->nullable();
-            $table->json("images")->nullable(); // array of strings
 
-            // Video
-            $table->text("vidoe")->nullable();
-            $table->text('video_poster')->nullable();
 
-            //media
-            $table->text("media-image-1")->nullable();
-            $table->text("media-image-2")->nullable();
-            $table->text("media-image-3")->nullable();
-            $table->text("media-image-4")->nullable();
-            $table->text("media-image-5")->nullable();
-            $table->text("media-image-6")->nullable();
+            $table->text("cards")->nullable();
+
 
             $table->timestamps();
         });
