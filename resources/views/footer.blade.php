@@ -25,9 +25,9 @@
                     >
                 </a>
 
-                <span class="ms-25px fs-50 md-m-0">
-                    <i class="feather icon-feather-phone-call text-white me-10px"></i>
-                    <a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
+                <span class="fs-50 md-m-0 mt-auto">
+                    <i class="feather icon-feather-phone-call text-yellow me-10px"></i>
+                    <a href="tel:{{ $siteData['hotline'] }}" class="text-white fw-600">{{ $siteData['hotline'] }}</a>
                 </span>
 
                 <div  class="elements-social social-icon-style-04 mt-auto text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
