@@ -1268,13 +1268,22 @@
         @endif
         </script>
 
-        @if(!in_array(Route::currentRouteName(), ['hajj.show', 'umrah.show']))
-            <div style="position: fixed !important; bottom: 30px !important; left: 30px !important; z-index: 9999999 !important; display: block !important;">
-                <a href="javascript:void(0);" class="btn btn-medium btn-yellow btn-rounded shadow-lg" data-bs-toggle="modal" data-bs-target="#quickBookingModal" style="opacity: 1 !important; visibility: visible !important; display: inline-block !important; transform: none !important;">
-                    احـجــــــز الآن
-                </a>
-            </div>
-        @endif
+        <!-- Floating Book Now Button -->
+        <div id="floating-book-btn" style="position:fixed;bottom:30px;left:30px;z-index:9999999;">
+            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#quickBookingModal"
+               style="display:inline-block;padding:12px 28px;background-color:#c59b46;color:#fff;font-weight:700;border-radius:50px;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,0.3);font-size:16px;">
+                احـجــــــز الآن
+            </a>
+        </div>
+        <script>
+            (function(){
+                var path = window.location.pathname;
+                if(path.indexOf('/hajj/') !== -1 || path.indexOf('/umrah/') !== -1){
+                    var el = document.getElementById('floating-book-btn');
+                    if(el) el.style.display = 'none';
+                }
+            })();
+        </script>
 
     </body>
 </html>
