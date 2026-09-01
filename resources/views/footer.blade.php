@@ -90,7 +90,7 @@
             </div>
 
             <!-- Contact Information -->
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 order-lg-4 order-md-2 md-mb-30px sm-mb-0">
+            <div class="col-12 col-xl-3 col-lg-4 col-md-6 order-md-2 md-mb-30px sm-mb-0">
 
                 <ul class="">
 
@@ -139,7 +139,7 @@
 
                 @foreach($siteColumns[0] ?? [] as $site)
 
-                    <span class="fs-16 fw-600 d-block text-white text-uppercase">
+                    <span class="fs-16 fw-600 d-block text-white text-uppercase md-mt-15 mt-0">
                         {{ $site['name'] ?? '' }}
                     </span>
 
@@ -186,11 +186,6 @@
                 @endforeach
 
             </div>
-
-
-            <!-- Contact Information -->
-
-
         </div>
 
 
