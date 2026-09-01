@@ -74,7 +74,7 @@
                                             @if(!empty($siteData['tiktok']))
                                                 <li class="m-0">
                                                     <a
-                                                        class="tiktok"
+                                                        class=""
                                                         href="{{ $siteData['tiktok'] }}"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
@@ -88,7 +88,7 @@
                                             @if(!empty($siteData['twitter']))
                                                 <li class="m-0">
                                                     <a
-                                                        class="x-twitter"
+                                                        class=""
                                                         href="{{ $siteData['twitter'] }}"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
@@ -102,7 +102,7 @@
                                             @if(!empty($siteData['instgram']))
                                                 <li class="m-0">
                                                     <a
-                                                        class="instagram"
+                                                        class=""
                                                         href="{{ $siteData['instgram'] }}"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
@@ -116,7 +116,7 @@
                                             @if(!empty($siteData['facebook']))
                                                 <li class="m-0">
                                                     <a
-                                                        class="facebook"
+                                                        class=""
                                                         href="{{ $siteData['facebook'] }}"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
