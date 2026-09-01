@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class MediaDetailsPage extends Model
 {
     protected $guarded = [];
+
+    protected $casts = [
+        'images' => 'array',
+        'videos_links' => 'array',
+    ];
 }

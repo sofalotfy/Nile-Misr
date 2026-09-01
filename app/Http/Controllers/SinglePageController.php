@@ -11,6 +11,7 @@ use App\Services\Pages\SuperVisors;
 use App\Services\Pages\WhyUs;
 use App\Services\Pages\Reviews;
 use App\Services\Pages\Media;
+use App\Services\Pages\MediaDetails;
 use App\Services\Umrah\ListPackages;
 use App\Services\Reviews\ListReviews;
 
@@ -70,7 +71,7 @@ class SinglePageController extends Controller
     public function mediaDetails()
     {
         return view("media-details", [
-            "pageData"  => Media::execute(),
+            "pageData"  => MediaDetails::execute(),
         ]);
     }
 }

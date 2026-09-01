@@ -6,6 +6,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Repeater;
 use Filament\Schemas\Schema;
 
 class MediaDetailsPageForm
@@ -55,19 +56,33 @@ class MediaDetailsPageForm
                     ])
                     ->columns(2),
 
-                Section::make('Video')
+                Section::make('Videos')
                     ->schema([
-                        FileUpload::make('video_poster')
-                            ->label('Video Poster')
-                            ->disk('public')
-                            ->directory('media-pages')
-                            ->image()
+                        Repeater::make('videos')
+                            ->label('Videos')
+                            ->schema([
+                                TextInput::make('link')
+                                    ->label('video Embedded link'),
+                            ])
+                            ->collapsible()
+                            ->reorderable()
                             ->columnSpanFull(),
+                    ])
+                    ->columns(2),
 
-                        TextInput::make('vidoe')
-                            ->label('Video Link')
-                            ->columnSpanFull(),
-                    ]),
+                // Section::make('Video')
+                //     ->schema([
+                //         FileUpload::make('video_poster')
+                //             ->label('Video Poster')
+                //             ->disk('public')
+                //             ->directory('media-pages')
+                //             ->image()
+                //             ->columnSpanFull(),
+
+                //         TextInput::make('vidoe')
+                //             ->label('Video Link')
+                //             ->columnSpanFull(),
+                //     ]),
 
                 Section::make('Media Gallery')
                     ->schema([
