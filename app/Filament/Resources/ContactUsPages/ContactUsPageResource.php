@@ -27,7 +27,7 @@ class ContactUsPageResource extends Resource
 
     public static function getNavigationSort(): ?int
     {
-        return 13;
+        return 14;
     }
 
     public static function getNavigationUrl(): string
