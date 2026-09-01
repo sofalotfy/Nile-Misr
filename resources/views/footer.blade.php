@@ -1269,9 +1269,11 @@
         </script>
 
         @if(!in_array(Route::currentRouteName(), ['hajj.show', 'umrah.show']))
-            <a href="javascript:void(0);" class="btn btn-medium btn-yellow btn-rounded shadow-lg" data-bs-toggle="modal" data-bs-target="#quickBookingModal" style="position: fixed !important; bottom: 30px !important; left: 30px !important; z-index: 999999 !important; display: inline-block !important; opacity: 1 !important; visibility: visible !important;">
-                احـجــــــز الآن
-            </a>
+            <div style="position: fixed !important; bottom: 30px !important; left: 30px !important; z-index: 9999999 !important; display: block !important;">
+                <a href="javascript:void(0);" class="btn btn-medium btn-yellow btn-rounded shadow-lg" data-bs-toggle="modal" data-bs-target="#quickBookingModal" style="opacity: 1 !important; visibility: visible !important; display: inline-block !important; transform: none !important;">
+                    احـجــــــز الآن
+                </a>
+            </div>
         @endif
 
     </body>
