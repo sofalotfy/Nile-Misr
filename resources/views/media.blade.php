@@ -77,6 +77,10 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center" data-anime='{"el": "childs", "translateY": [0, 0], "perspective": [1000,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <!-- start interactive banner item -->
+                     @php
+                     dd($pageData['cards']);
+                     @endphp
+                     
                     @if($pageData['cards'])
                         @foreach($pageData['cards'] as $card)
                             <div class="col interactive-banner-style-03 transition-inner-all md-mb-30px">
