@@ -10,5 +10,6 @@ class MediaPage extends Model
 
     protected $casts = [
         'images' => 'array',
+        'videos_links' => 'array',
     ];
 }
