@@ -6,6 +6,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\Repeater;
 use Filament\Schemas\Schema;
 
 class MediaDetailsPageForm
