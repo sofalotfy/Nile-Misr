@@ -1268,18 +1268,20 @@
         @endif
         </script>
 
-        <!-- Floating Book Now Button -->
-        <div id="floating-book-btn" style="position:fixed;bottom:30px;left:30px;z-index:9999999;">
-            <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#quickBookingModal"
-               style="display:inline-block;padding:12px 28px;background-color:#c59b46;color:#fff;font-weight:700;border-radius:50px;text-decoration:none;box-shadow:0 4px 15px rgba(0,0,0,0.3);font-size:16px;">
-                احـجــــــز الآن
-            </a>
-        </div>
+        <!-- Floating Book Now Button (hidden on hajj-details & umrah-details) -->
+        <a href="javascript:void(0);"
+           class="floating-book-btn"
+           id="global-floating-book-btn"
+           data-bs-toggle="modal"
+           data-bs-target="#quickBookingModal">
+            <i class="feather icon-feather-calendar"></i>
+            <span>احجز الآن</span>
+        </a>
         <script>
             (function(){
                 var path = window.location.pathname;
                 if(path.indexOf('/hajj/') !== -1 || path.indexOf('/umrah/') !== -1){
-                    var el = document.getElementById('floating-book-btn');
+                    var el = document.getElementById('global-floating-book-btn');
                     if(el) el.style.display = 'none';
                 }
             })();
