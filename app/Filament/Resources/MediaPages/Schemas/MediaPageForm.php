@@ -4,7 +4,6 @@ namespace App\Filament\Resources\MediaPages\Schemas;
 
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\TextArea;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\Repeater;
@@ -62,7 +61,7 @@ class MediaPageForm
                                 TextInput::make('title')
                                     ->label('Title'),
 
-                                TextArea::make('description')
+                                TextInput::make('description')
                                     ->label('Description')
                                     ->columnSpanFull(),
                             ])
