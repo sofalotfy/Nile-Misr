@@ -178,4 +178,12 @@
     </div>
 </section>
 <!-- end section -->
+ <a href="javascript:void(0);"
+           class="floating-book-btn"
+           id="global-floating-book-btn"
+           data-bs-toggle="modal"
+           data-bs-target="#quickBookingModal">
+            <!-- <i class="feather icon-feather-calendar"></i> -->
+            <span class="">احجز <br> الآن</span>
+        </a>
 @include('footer')

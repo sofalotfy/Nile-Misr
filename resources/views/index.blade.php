@@ -431,7 +431,7 @@ function umrah_card($program)
            data-bs-toggle="modal"
            data-bs-target="#quickBookingModal">
             <!-- <i class="feather icon-feather-calendar"></i> -->
-            <span class="fs-30">احجز الآن</span>
+            <span class="">احجز <br> الآن</span>
         </a>
         <!-- <script>
             (function(){

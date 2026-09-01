@@ -1258,7 +1258,7 @@
     @endforeach
 >
 
-    <i class="feather icon-feather-calendar"></i>
+    <!-- <i class="feather icon-feather-calendar"></i> -->
 
     <span>
         احجز الآن
