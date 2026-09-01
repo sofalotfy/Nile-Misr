@@ -84,7 +84,7 @@ function umrah_card($program)
                         animation: customSpin 60s linear infinite;
                     }
                 </style>
-                <div class="position-absolute d-none d-xl-flex justify-content-center align-items-center opacity-5" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 708px; z-index: 0; pointer-events: none;">
+                <div class="position-absolute d-none d-xl-flex justify-content-center align-items-center opacity-5" style="top: 55%; left: 50%; transform: translate(-50%, -50%); width: 708px; z-index: 0; pointer-events: none;">
                     <img src="{{$pageData['hero-floating-image']?asset('storage/' . $pageData['hero-floating-image']):asset('imgs/pattern/patt6.png')}}" class="patt6-spin" style="width: 100%;" alt="">
                 </div>
 
