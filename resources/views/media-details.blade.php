@@ -175,17 +175,17 @@
 <!-- start videos section -->
 <section class="pt-0 pb-5">
     <div class="container">
-        <div class="row mb-4">
+        <!-- <div class="row mb-4">
             <div class="col-12 text-center">
                 <h4 class="fw-500 text-dark-gray">الفيديوهات</h4>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             @php
                 // يمكنك تمرير الروابط (مثل روابط YouTube Embed أو أي رابط فيديو خارجي) من الكنترولر هنا
-                $videoLinks = $pageData['video_links'] ?? [];
+                $videoLinks = !empty($pageData['video_links']) ? $pageData['video_links'] : ['https://www.youtube.com/embed/7CUBw9pYO18'];
             @endphp
-            
+
             @forelse($videoLinks as $link)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="position-relative overflow-hidden border-radius-6px h-250px d-flex align-items-center justify-content-center bg-dark-gray">
