@@ -59,16 +59,10 @@
         <!-- start header -->
         <header class="header-with-topbar">
             <div class="header-top-bar top-bar-dark bg-base-color">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 fw-500 justify-content-between">
                             <div>
-                                <span class="me-25px fs-15 md-m-0">
-                                    <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
-                                </span>
-                                <!-- <span class="me-25px fs-15 md-m-0">
-                                    <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
-                                </span> -->
                                 <div class="ctext-end d-none d-lg-flex fs-15">
                                 <div  class="elements-social social-icon-style-04 mt-auto text-center text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                                     <ul class="small-icon light">
@@ -132,6 +126,13 @@
                                     </ul>
                                 </div>
                             </div>
+                                <span class="me-25px fs-15 md-m-0">
+                                    <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
+                                </span>
+                                <!-- <span class="me-25px fs-15 md-m-0">
+                                    <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
+                                </span> -->
+
                             </div>
                             <div>
                                 <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
@@ -144,7 +145,7 @@
             </div>
             <!-- start navigation -->
             <nav class="navbar navbar-expand-lg header-light bg-white header-reverse" data-header-hover="light">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="col-auto">
                         <a class="navbar-brand" href="{{ route('home') }}">
                             <img src="{{ asset('storage/' . $siteData['header-logo']) }}" data-at2x="{{ asset('storage/' . $siteData['header-logo']) }}" alt="" class="default-logo">
