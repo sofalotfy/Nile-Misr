@@ -83,8 +83,8 @@
                                 <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
                                 <img src="imgs/media-details.jpg" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
-                                    <span class="mb-auto fs-22 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
-                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
+                                    <span class="mb-auto fs-18 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-22 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -97,8 +97,8 @@
                                 <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
                                 <img src="imgs/media-details.jpg" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
-                                    <span class="mb-auto fs-22 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
-                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
+                                    <span class="mb-auto fs-18 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-22 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -111,8 +111,8 @@
                                 <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
                                 <img src="imgs/media-details.jpg" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
-                                    <span class="mb-auto fs-22 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
-                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
+                                    <span class="mb-auto fs-18 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-22 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
                                 </figcaption>
                             </figure>
                         </div>
