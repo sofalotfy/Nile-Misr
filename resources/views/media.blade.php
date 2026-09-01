@@ -1,5 +1,4 @@
 @include('header')
-
 <!-- start page title -->
 <section class="page-title-separate-breadcrumbs cover-background  top-space-margin position-relative" top-space-margin" data-parallax-background-ratio="0.5" style="background-image: url('{{ asset('storage/' . $pageData['hero-image']) }}')">
     <div class="opacity-full-dark bg-gradient-dark-transparent"></div>
@@ -37,8 +36,6 @@
     </div>
 </section>
 <!-- end page title -->
-
-
 <!-- start section -->
 <section class="overflow-hidden big-section bg-gradient-very-light-gray">
     <div class="container">
@@ -72,181 +69,57 @@
             </div>
 
         </div>
-
-
-        <div class="row">
-
-            <div class="col-12 position-relative">
-
-                <div class="outside-box-right-25 xs-outside-box-right-0">
-
-                    <div class="swiper swiper-width-auto magic-cursor drag-cursor"
-                         data-slider-options='{ "slidesPerView": "auto", "spaceBetween": 30, "loop": true, "autoplay": { "delay": 2000, "disableOnInteraction": false }, "pagination": { "el": ".swiper-pagination-bullets-02", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-01", "prevEl": ".slider-one-slide-prev-01" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "spaceBetween": 80 }, "992": { "spaceBetween": 50 } }, "effect": "slide" }'>
-
-                        <div class="swiper-wrapper">
-
-                            @foreach($pageData['images'] ?? [] as $image)
-
-                                <!-- start content carousal item -->
-                                <div class="swiper-slide">
-                                    <img
-                                        src="{{ asset('storage/' . $image) }}"
-                                        class="md-h-400px sm-h-250px"
-                                        alt=""
-                                    />
-                                </div>
-                                <!-- end content carousal item -->
-
-                            @endforeach
-
+    </div>
+</section>
+<!-- end section -->
+<!-- start section -->
+        <section class="big-section">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center" data-anime='{"el": "childs", "translateY": [0, 0], "perspective": [1000,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <!-- start interactive banner item -->
+                    <div class="col interactive-banner-style-03 transition-inner-all md-mb-30px">
+                        <div class="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
+                            <figure class="m-0">
+                                <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
+                                <img src="https://placehold.co/800x1100" alt="" />
+                                <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
+                                    <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">Preferred style of accommodation.</span>
+                                    <a href="#" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-bookmark-heart align-middle icon-extra-medium me-10px"></i>Superior service</a>
+                                </figcaption>
+                            </figure>
                         </div>
-
                     </div>
-
+                    <!-- end interactive banner item -->
+                    <!-- start interactive banner item -->
+                    <div class="col interactive-banner-style-03 transition-inner-all md-mb-30px">
+                        <div class="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
+                            <figure class="m-0">
+                                <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
+                                <img src="https://placehold.co/800x1100" alt="" />
+                                <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
+                                    <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">Our local guides and tour directors.</span>
+                                    <a href="#" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-award align-middle icon-extra-medium me-10px"></i>Greatest guides</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- end interactive banner item -->
+                    <!-- start interactive banner item -->
+                    <div class="col interactive-banner-style-03 transition-inner-all">
+                        <div class="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
+                            <figure class="m-0">
+                                <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
+                                <img src="https://placehold.co/800x1100" alt="" />
+                                <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
+                                    <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">The best consumer protection plan.</span>
+                                    <a href="#" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-shield-check align-middle icon-extra-medium me-10px"></i>Fully protected</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- end interactive banner item -->
                 </div>
-
-                <!-- start slider pagination -->
-                <!--<div class="swiper-pagination swiper-pagination-bullets-02 swiper-pagination-style-2 swiper-pagination-clickable swiper-pagination-bullets"></div>-->
-                <!-- end slider pagination -->
-
             </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- end section -->
-
-
-<!-- start section -->
-<section class="half-section pt-0">
-
-    <div class="container">
-
-        <div class="row position-relative z-index-1 m-0">
-
-            <div class="col-12 position-relative overflow-hidden border-radius-6px h-700px lg-h-550px md-h-400px d-flex align-items-center justify-content-center">
-
-                <video muted class="video-bg html-video border-radius-6px video-play-icon" poster="{{$pageData['video_poster']?asset("storage/" . $pageData['video_poster']):asset("imgs/banner-1.jpg")}}">
-
-                    <source
-                        type="video/mp4"
-                        src="{{ asset('storage/' . $pageData['vidoe']) }}"
-                    />
-
-                    <source
-                        type="video/webm"
-                        src="{{ asset('storage/' . $pageData['vidoe']) }}"
-                    />
-
-                </video>
-
-                <a href="{{$pageData['vidoe']}}" class="html-video-play video-icon-box video-icon-extra-large position-relative">
-
-                    <span>
-
-                        <span class="video-icon bg-white">
-
-                            <i class="play-icon feather icon-feather-play text-dark-gray ms-0" aria-hidden="true"></i>
-
-                            <i class="pause-icon feather icon-feather-pause text-dark-gray ms-0" aria-hidden="true"></i>
-
-                            <span class="video-icon-sonar">
-
-                                <span class="video-icon-sonar-bfr bg-white opacity-7"></span>
-
-                            </span>
-
-                        </span>
-
-                    </span>
-
-                </a>
-
-            </div>
-
-            <!-- <div class="col-12 text-center position-absolute left-0px bottom-minus-100px md-bottom-minus-80px z-index-9">
-                        <img src="images/demo-hotel-and-resort-about-us-09.png" alt="" data-bottom-top="transform: translate3d(100px, 0px, 0px);" data-top-bottom="transform: translate3d(-100px, 0px, 0px);" />
-                    </div> -->
-
-        </div>
-
-    </div>
-
-</section>
-<!-- end section -->
-
-
-<!-- start section -->
-<section class="ps-2 pe-2 pt-0">
-
-    <div class="container-fluid">
-
-        <div class="row">
-
-            <div class="col sm-p-0">
-
-                <div class="justified-gallery image-gallery-style-06"
-                     data-justified-options='{ "rowHeight": 500, "maxRowHeight": false, "captions": false, "margins": 15, "waitThumbnailsLoad": true }'
-                     data-anime='{ "el": "childs", "translateY": [0, 0],"opacity": [0,1], "duration": 500, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-
-                    @php
-                        $mediaImages = [
-                            $pageData['media-image-1'] ?? null,
-                            $pageData['media-image-2'] ?? null,
-                            $pageData['media-image-3'] ?? null,
-                            $pageData['media-image-4'] ?? null,
-                            $pageData['media-image-5'] ?? null,
-                            $pageData['media-image-6'] ?? null,
-                        ];
-                    @endphp
-
-                    @foreach($mediaImages as $image)
-
-                        @if($image)
-
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-
-                                <a
-                                    href="{{ asset('storage/' . $image) }}"
-                                    data-group="lightbox-group-gallery-item-6"
-                                    title="Lightbox gallery image title"
-                                >
-
-                                    <div class="position-relative bg-dark-gray">
-
-                                        <img
-                                            src="{{ asset('storage/' . $image) }}"
-                                            alt=""
-                                        />
-
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-
-                                        </div>
-
-                                    </div>
-
-                                </a>
-
-                            </div>
-                            <!-- end gallery item -->
-
-                        @endif
-
-                    @endforeach
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- end section -->
-
+        </section>
+        <!-- end section -->
 @include('footer')
