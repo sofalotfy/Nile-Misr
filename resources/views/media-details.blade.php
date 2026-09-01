@@ -43,7 +43,7 @@
 <section class="overflow-hidden big-section bg-gradient-very-light-gray">
     <div class="container">
 
-        <div class="row mb-5">
+        <!-- <div class="row mb-5">
 
             <div class="col-xxl-6 col-lg-7" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
@@ -71,7 +71,7 @@
 
             </div>
 
-        </div>
+        </div> -->
 
 
         <div class="row">
@@ -104,10 +104,6 @@
                     </div>
 
                 </div>
-
-                <!-- start slider pagination -->
-                <!--<div class="swiper-pagination swiper-pagination-bullets-02 swiper-pagination-style-2 swiper-pagination-clickable swiper-pagination-bullets"></div>-->
-                <!-- end slider pagination -->
 
             </div>
 
