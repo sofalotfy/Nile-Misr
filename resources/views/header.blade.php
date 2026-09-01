@@ -62,8 +62,8 @@
                 <div class="container">
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 fw-500 justify-content-between">
-                            <div class="d-flex ">
-                                <span class="me-25px fs-15 md-m-0">
+                            <div class="d-flex align-items-center">
+                                <span class="ms-25px fs-15 md-m-0">
                                     <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
                                 </span>
                                 <!-- <span class="me-25px fs-15 md-m-0">
