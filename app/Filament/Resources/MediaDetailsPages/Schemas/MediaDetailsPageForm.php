@@ -2,6 +2,10 @@
 
 namespace App\Filament\Resources\MediaDetailsPages\Schemas;
 
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 
 class MediaDetailsPageForm
