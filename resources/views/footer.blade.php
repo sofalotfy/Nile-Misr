@@ -206,15 +206,7 @@
             <div class="col-lg-6 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-start last-paragraph-no-margin">
 
                 <p class="text-white">
-                    &copy; 2025 نيل مصر للسياحة -
-                    <a
-                        href="https://www.dawayerstudio.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-white fw-500"
-                    >
-                        Dawayer Studio
-                    </a>
+                    جميع الحقوق محفوظة لشركة نيل مصر للسياحة
                 </p>
 
             </div>
@@ -222,7 +214,7 @@
             <div class="col-lg-6 pt-15px pb-15px md-pt-0 fs-15 order-2 order-lg-1 text-center text-lg-end last-paragraph-no-margin">
 
                 <p class="text-white">
-                    &copy; 2025 نيل مصر للسياحة -
+                    Designed, Developed & Powered by
                     <a
                         href="https://www.dawayerstudio.com/"
                         target="_blank"
@@ -1275,6 +1267,12 @@
             alert(@json($errors->first()));
         @endif
         </script>
+
+        @if(!in_array(Route::currentRouteName(), ['hajj.show', 'umrah.show']))
+            <a href="javascript:void(0);" class="btn btn-medium btn-yellow btn-rounded shadow-lg" data-bs-toggle="modal" data-bs-target="#quickBookingModal" style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;">
+                احـجــــــز الآن
+            </a>
+        @endif
 
     </body>
 </html>

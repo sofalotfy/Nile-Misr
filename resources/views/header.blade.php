@@ -207,8 +207,8 @@
                                 </ul>
                         </div>
                     </div>
-                    <!-- <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
-                        <div class="header-icon">
+                    <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
+                        <!-- <div class="header-icon">
                             <div class="fs-15 widget-text fw-500">
                                 <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
                                     احـجــــــز الآن
