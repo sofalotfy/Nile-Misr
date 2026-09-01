@@ -430,10 +430,10 @@ function umrah_card($program)
            id="global-floating-book-btn"
            data-bs-toggle="modal"
            data-bs-target="#quickBookingModal">
-            <i class="feather icon-feather-calendar"></i>
-            <span>احجز الآن</span>
+            <!-- <i class="feather icon-feather-calendar"></i> -->
+            <span class="fs-30">احجز الآن</span>
         </a>
-        <script>
+        <!-- <script>
             (function(){
                 var path = window.location.pathname;
                 if(path.indexOf('/hajj/') !== -1 || path.indexOf('/umrah/') !== -1){
@@ -441,5 +441,5 @@ function umrah_card($program)
                     if(el) el.style.display = 'none';
                 }
             })();
-        </script>
+        </script> -->
 @include('footer')
