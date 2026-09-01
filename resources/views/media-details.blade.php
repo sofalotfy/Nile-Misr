@@ -123,7 +123,7 @@
         </div> -->
         <div class="row">
             @php
-            dd($pageData['videos_links'])
+            dd($pageData['videos_links']);
                 // يمكنك تمرير الروابط (مثل روابط YouTube Embed أو أي رابط فيديو خارجي) من الكنترولر هنا
                 $videoLinks = !empty($pageData['videos_links']) ? $pageData['videos_links'] : ['https://www.youtube.com/embed/7CUBw9pYO18'];
             @endphp
