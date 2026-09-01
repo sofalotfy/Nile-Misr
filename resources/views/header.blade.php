@@ -63,14 +63,12 @@
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 fw-500 justify-content-between">
                             <div class="d-flex align-items-center">
-                                <span class="ms-25px fs-15 md-m-0">
-                                    <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
-                                </span>
+
                                 <!-- <span class="me-25px fs-15 md-m-0">
                                     <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
                                 </span> -->
                                 <div class="ctext-end d-none d-lg-flex fs-15">
-                                    <div  class="elements-social social-icon-style-04 mt-auto text-center text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                                    <div  class="elements-social mt-auto text-center text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                                         <ul class="small-icon light">
 
                                             @if(!empty($siteData['tiktok']))
@@ -132,6 +130,9 @@
                                         </ul>
                                     </div>
                                 </div>
+                                <span class="ms-25px fs-15 md-m-0">
+                                    <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
+                                </span>
                             </div>
 
                             <div>
@@ -163,12 +164,12 @@
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                             <ul class="navbar-nav">
 
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a href="{{ route('home') }}" class="nav-link">الرئيسية</a>
-                                    </li>
+                                    </li> -->
 
                                     <li class="nav-item">
-                                        <a href="{{ route('about') }}" class="nav-link">من نحن؟</a>
+                                        <a href="{{ route('about') }}" class="nav-link">من نحن</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -188,7 +189,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="{{ route('whyus') }}" class="nav-link">لماذا نيل مصر؟</a>
+                                        <a href="{{ route('whyus') }}" class="nav-link">لماذا نيل مصر</a>
                                     </li>
 
                                     <!-- <li class="nav-item">

@@ -89,120 +89,8 @@
 
             </div>
 
-
-            <!-- Sites Column 1 -->
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-lg-2 order-md-3 sm-mb-20px">
-
-                @foreach($siteColumns[0] ?? [] as $site)
-
-                    <span class="fs-16 fw-600 d-block text-white text-uppercase">
-                        {{ $site['name'] ?? '' }}
-                    </span>
-
-                    <p class="mb-1 text-white mb-7">
-                        {{ $site['address'] ?? '' }}
-                    </p>
-
-                    <!-- @if(!empty($site['number']))
-                        <p class="text-white">
-                            ت:
-                            <a href="tel:{{ $site['number'] }}">
-                                {{ $site['number'] }}
-                            </a>
-                        </p>
-                    @endif -->
-
-                @endforeach
-
-            </div>
-
-
-            <!-- Sites Column 2 -->
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
-
-                @foreach($siteColumns[1] ?? [] as $site)
-
-                    <span class="fs-16 fw-600 d-block text-white text-uppercase">
-                        {{ $site['name'] ?? '' }}
-                    </span>
-
-                    <p class="mb-1 text-white mb-7">
-                        {{ $site['address'] ?? '' }}
-                    </p>
-
-                    <!-- @if(!empty($site['number']))
-                        <p class="text-white">
-                            ت:
-                            <a href="tel:{{ $site['number'] }}">
-                                {{ $site['number'] }}
-                            </a>
-                        </p>
-                    @endif -->
-
-                @endforeach
-
-            </div>
-
-
             <!-- Contact Information -->
             <div class="col-12 col-xl-3 col-lg-4 col-md-6 order-lg-4 order-md-2 md-mb-30px sm-mb-0">
-
-                <!-- <span class="fs-16 fw-600 d-block text-white text-uppercase">
-                    تواصل معنا
-                </span>
-
-                <p class="mb-0 text-white">
-                    للاستفسار والحجز:
-                </p>
-
-                @foreach($phones as $phone)
-
-                    @php
-                        $phoneNumber = is_array($phone)
-                            ? ($phone['phone'] ?? '')
-                            : $phone;
-                    @endphp
-
-                    @if($phoneNumber)
-                        <a
-                            href="tel:{{ $phoneNumber }}"
-                            class="text-white text-decoration-line-bottom fw-500 fs-16 mb-15px d-inline-block"
-                        >
-                            {{ $phoneNumber }}
-                        </a>
-                        <br>
-                    @endif
-
-                @endforeach
-
-
-                @if(!empty($siteData['hotline']))
-                    <a
-                        href="tel:{{ $siteData['hotline'] }}"
-                        class="text-white text-decoration-line-bottom fw-500 fs-16 mb-15px d-inline-block"
-                    >
-                        Hotline : {{ $siteData['hotline'] }}
-                    </a>
-                    <br>
-                @endif
-
-
-                @foreach($emails as $email)
-
-                    @php
-                        $emailAddress = is_array($email)
-                            ? ($email['email'] ?? '')
-                            : $email;
-                    @endphp
-
-                    @if($emailAddress)
-                        <a  href="mailto:{{ $emailAddress }}" class="text-white text-decoration-line-bottom fw-500 fs-16 d-inline-block" >
-                            {{ $emailAddress }}
-                        </a>
-                        <br>
-                    @endif
-
-                @endforeach -->
 
                 <ul class="">
 
@@ -245,6 +133,63 @@
                 </ul>
 
             </div>
+
+            <!-- Sites Column 1 -->
+            <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-lg-2 order-md-3 sm-mb-20px">
+
+                @foreach($siteColumns[0] ?? [] as $site)
+
+                    <span class="fs-16 fw-600 d-block text-white text-uppercase">
+                        {{ $site['name'] ?? '' }}
+                    </span>
+
+                    <p class="mb-1 text-white mb-7 fs-14">
+                        {{ $site['address'] ?? '' }}
+                    </p>
+
+                    <!-- @if(!empty($site['number']))
+                        <p class="text-white">
+                            ت:
+                            <a href="tel:{{ $site['number'] }}">
+                                {{ $site['number'] }}
+                            </a>
+                        </p>
+                    @endif -->
+
+                @endforeach
+
+            </div>
+
+
+            <!-- Sites Column 2 -->
+            <div class="col-12 col-xl-3 col-lg-4 col-md-6 last-paragraph-no-margin order-md-4 sm-mb-30px">
+
+                @foreach($siteColumns[1] ?? [] as $site)
+
+                    <span class="fs-16 fw-600 d-block text-white text-uppercase">
+                        {{ $site['name'] ?? '' }}
+                    </span>
+
+                    <p class="mb-1 text-white mb-7 fs-14">
+                        {{ $site['address'] ?? '' }}
+                    </p>
+
+                    <!-- @if(!empty($site['number']))
+                        <p class="text-white">
+                            ت:
+                            <a href="tel:{{ $site['number'] }}">
+                                {{ $site['number'] }}
+                            </a>
+                        </p>
+                    @endif -->
+
+                @endforeach
+
+            </div>
+
+
+            <!-- Contact Information -->
+
 
         </div>
 

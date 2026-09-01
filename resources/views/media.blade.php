@@ -37,7 +37,7 @@
 </section>
 <!-- end page title -->
 <!-- start section -->
-<section class="overflow-hidden big-section bg-gradient-very-light-gray">
+<section class="overflow-hidden big-section bg-gradient-very-light-gray pb-0">
     <div class="container">
 
         <div class="row mb-5">
@@ -73,7 +73,7 @@
 </section>
 <!-- end section -->
 <!-- start section -->
-        <section class="big-section">
+        <section class="big-section pt-0">
             <div class="container">
                 <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center" data-anime='{"el": "childs", "translateY": [0, 0], "perspective": [1000,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <!-- start interactive banner item -->
