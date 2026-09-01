@@ -124,14 +124,14 @@
         <div class="row">
             @php
                 // يمكنك تمرير الروابط (مثل روابط YouTube Embed أو أي رابط فيديو خارجي) من الكنترولر هنا
-                $videoLinks = !empty($pageData['video_links']) ? $pageData['video_links'] : ['https://www.youtube.com/embed/7CUBw9pYO18'];
+                $videoLinks = !empty($pageData['videos_links']) ? $pageData['videos_links'] : ['https://www.youtube.com/embed/7CUBw9pYO18'];
             @endphp
 
             @forelse($videoLinks as $link)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="position-relative overflow-hidden border-radius-6px h-550px d-flex align-items-center justify-content-center bg-dark-gray">
                     <!-- استخدمنا iframe ليدعم روابط يوتيوب وغيرها من منصات الفيديو الخارجية -->
-                    <iframe class="w-100 h-100 border-0" src="{{ $link }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="w-100 h-100 border-0" src="{{ $link['link'] }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             @empty

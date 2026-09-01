@@ -58,7 +58,7 @@ class MediaDetailsPageForm
 
                 Section::make('Videos')
                     ->schema([
-                        Repeater::make('videos')
+                        Repeater::make('videos_links')
                             ->label('Videos')
                             ->schema([
                                 TextInput::make('link')
