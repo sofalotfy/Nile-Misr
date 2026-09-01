@@ -64,7 +64,7 @@ class SinglePageController extends Controller
 
     public function media()
     {
-        return view("media-details", [
+        return view("media", [
             "pageData"  => MediaDetails::execute(),
         ]);
     }
