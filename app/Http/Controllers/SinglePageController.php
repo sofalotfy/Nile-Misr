@@ -67,7 +67,7 @@ class SinglePageController extends Controller
             "pageData"  => Media::execute(),
         ]);
     }
-    public function mediaDetails($slug)
+    public function mediaDetails()
     {
         return view("media-details", [
             "pageData"  => Media::execute(),
