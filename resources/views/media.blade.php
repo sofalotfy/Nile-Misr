@@ -81,10 +81,10 @@
                         <div class="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                             <figure class="m-0">
                                 <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                                <img src="https://placehold.co/800x1100" alt="" />
+                                <img src="imgs/media-details.jpg" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
-                                    <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">Preferred style of accommodation.</span>
-                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-bookmark-heart align-middle icon-extra-medium me-10px"></i>Superior service</a>
+                                    <span class="mb-auto fs-22 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -95,10 +95,10 @@
                         <div class="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                             <figure class="m-0">
                                 <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                                <img src="https://placehold.co/800x1100" alt="" />
+                                <img src="imgs/media-details.jpg" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
-                                    <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">Our local guides and tour directors.</span>
-                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-award align-middle icon-extra-medium me-10px"></i>Greatest guides</a>
+                                    <span class="mb-auto fs-22 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -109,10 +109,10 @@
                         <div class="position-relative overflow-hidden border-radius-6px last-paragraph-no-margin">
                             <figure class="m-0">
                                 <div class="bg-gradient-gray-light-dark-transparent position-absolute top-0px left-0px w-100 h-100 z-index-1"></div>
-                                <img src="https://placehold.co/800x1100" alt="" />
+                                <img src="imgs/media-details.jpg" alt="" />
                                 <figcaption class="d-flex flex-column w-100 h-100 p-60px lg-p-35px z-index-1">
-                                    <span class="mb-auto fs-24 text-white text-white-hover w-90 lg-w-100">The best consumer protection plan.</span>
-                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white"><i class="bi bi-shield-check align-middle icon-extra-medium me-10px"></i>Fully protected</a>
+                                    <span class="mb-auto fs-22 text-white text-white-hover w-90 lg-w-100">مساحة تجمع أحدث أخبارنا وتغطياتنا الإعلامية، إلى جانب الصور والفيديوهات وأبرز لحظات رحلاتنا وتجارب ضيوفنا.</span>
+                                    <a href="{{ route('media-details') }}" class="align-self-start fs-15 fw-500 ls-1px text-uppercase text-white">نبض نيل مصر، لحظة بلحظة.</a>
                                 </figcaption>
                             </figure>
                         </div>
