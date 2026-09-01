@@ -25,7 +25,7 @@
                     >
                 </a>
 
-                <span class="fs-50 md-m-0 mt-auto">
+                <span class="fs-40 md-m-0 mt-auto">
                     <i class="feather icon-feather-phone-call text-yellow me-10px"></i>
                     <a href="tel:{{ $siteData['hotline'] }}" class="text-white fw-600">{{ $siteData['hotline'] }}</a>
                 </span>
