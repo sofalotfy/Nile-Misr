@@ -26,6 +26,7 @@ return new class extends Migration
 
             // Video
             $table->text("vidoe")->nullable();
+            $table->text('video_poster')->nullable();
 
             //media
             $table->text("media-image-1")->nullable();
