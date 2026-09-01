@@ -59,22 +59,17 @@
         <!-- start header -->
         <header class="header-with-topbar">
             <div class="header-top-bar top-bar-dark bg-base-color">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 fw-500 justify-content-between">
                             <div>
                                 <span class="me-25px fs-15 md-m-0">
                                     <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
                                 </span>
-                                <span class="me-25px fs-15 md-m-0">
+                                <!-- <span class="me-25px fs-15 md-m-0">
                                     <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
-                                </span>
-                            </div>
-                            <div>
-                                <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
-                                <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>
-                            </div>
-                            <div class="ctext-end d-none d-lg-flex fs-15">
+                                </span> -->
+                                <div class="ctext-end d-none d-lg-flex fs-15">
                                 <div  class="elements-social social-icon-style-04 mt-auto text-center text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                                     <ul class="small-icon light">
 
@@ -137,6 +132,12 @@
                                     </ul>
                                 </div>
                             </div>
+                            </div>
+                            <div>
+                                <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
+                                <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -204,19 +205,15 @@
                                 </ul>
                         </div>
                     </div>
-                    <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
+                    <!-- <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
                         <div class="header-icon">
                             <div class="fs-15 widget-text fw-500">
-                                        <!-- <span class="w-35px h-35px bg-yellow d-inline-flex align-items-center justify-content-center me-10px border-radius-100px">
-                                            <i class="feather icon-feather-phone"></i>
-                                        </span>
-                                        <a href="tel:+{{$siteData['hotline']}}" class="widget-text fw-600 fs-18">{{$siteData['hotline']}}</a>
-                                    </div> -->
-                                    <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
-                                        احـجــــــز الآن
-                                    </a>
+                                <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
+                                    احـجــــــز الآن
+                                </a>
+                            </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </nav>
             <!-- end navigation -->
