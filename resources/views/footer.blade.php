@@ -1269,23 +1269,7 @@
         </script>
 
         <!-- Floating Book Now Button (hidden on hajj-details & umrah-details) -->
-        <a href="javascript:void(0);"
-           class="floating-book-btn"
-           id="global-floating-book-btn"
-           data-bs-toggle="modal"
-           data-bs-target="#quickBookingModal">
-            <i class="feather icon-feather-calendar"></i>
-            <span>احجز الآن</span>
-        </a>
-        <script>
-            (function(){
-                var path = window.location.pathname;
-                if(path.indexOf('/hajj/') !== -1 || path.indexOf('/umrah/') !== -1){
-                    var el = document.getElementById('global-floating-book-btn');
-                    if(el) el.style.display = 'none';
-                }
-            })();
-        </script>
+        
 
     </body>
 </html>
