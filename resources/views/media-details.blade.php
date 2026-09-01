@@ -172,6 +172,38 @@
 </section>
 <!-- end section -->
 
+<!-- start videos section -->
+<section class="pt-0 pb-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h4 class="fw-500 text-dark-gray">الفيديوهات</h4>
+            </div>
+        </div>
+        <div class="row">
+            @php
+                // يمكنك تمرير الروابط (مثل روابط YouTube Embed أو أي رابط فيديو خارجي) من الكنترولر هنا
+                $videoLinks = $pageData['video_links'] ?? [];
+            @endphp
+            
+            @forelse($videoLinks as $link)
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="position-relative overflow-hidden border-radius-6px h-250px d-flex align-items-center justify-content-center bg-dark-gray">
+                    <!-- استخدمنا iframe ليدعم روابط يوتيوب وغيرها من منصات الفيديو الخارجية -->
+                    <iframe class="w-100 h-100 border-0" src="{{ $link }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            @empty
+            <!-- يمكن إزالة هذه الرسالة أو تركها تظهر في حال عدم وجود فيديوهات -->
+            <div class="col-12 text-center">
+                <p>لا توجد فيديوهات متاحة حالياً.</p>
+            </div>
+            @endforelse
+        </div>
+    </div>
+</section>
+<!-- end videos section -->
+
 
 <!-- start section -->
 <section class="ps-2 pe-2 pt-0">
