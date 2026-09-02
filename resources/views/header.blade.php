@@ -180,18 +180,23 @@
                                         <a href="{{ route('whyus') }}" class="nav-link">لماذا نيل مصر</a>
                                     </li>
 
-                                    <!-- <li class="nav-item">
+                                    <li class="nav-item d-block d-md-none">
                                         <a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a>
                                     </li>
 
-                                    <li class="nav-item">
+                                    <li class="nav-item d-block d-md-none">
                                         <a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a>
-                                    </li> -->
+                                    </li>
 
                                     <li class="nav-item">
                                         <a href="{{ route('contact') }}" class="nav-link">تواصل معنا</a>
                                     </li>
-
+                                    <li class="nav-item d-block d-md-none">
+                                        <span class="fs-15">
+                                            <i class="feather icon-feather-phone-call text-yellow me-10px"></i>
+                                            <a href="tel:{{ $siteData['hotline'] }}" class="text-dark-gray">{{ $siteData['hotline'] }}</a>
+                                        </span>
+                                    </li>
                                 </ul>
                         </div>
                     </div>
