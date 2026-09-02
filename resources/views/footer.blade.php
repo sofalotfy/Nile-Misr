@@ -17,7 +17,7 @@
             <!-- Logo + Social Media -->
             <div class="col-12 col-xl-4 col-lg-12 col-md-6 d-flex flex-column lg-mb-30px sm-mb-20px order-md-1">
 
-                <a href="{{ route('home') }}" class="footer-logo d-inline-block lg-mb-30px">
+                <a href="{{ route('home') }}" class="footer-logo d-inline-block lg-mb-30px w-80">
                     <img
                         src="{{ asset('storage/' . $siteData['footer-logo']) }}"
                         data-at2x="{{ asset('storage/' . $siteData['footer-logo']) }}"
@@ -1269,7 +1269,7 @@
         </script>
 
         <!-- Floating Book Now Button (hidden on hajj-details & umrah-details) -->
-        
+
 
     </body>
 </html>
