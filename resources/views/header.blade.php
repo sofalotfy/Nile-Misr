@@ -192,9 +192,9 @@
                                         <a href="{{ route('contact') }}" class="nav-link">تواصل معنا</a>
                                     </li>
                                     <li class="nav-item d-block d-md-none">
-                                        <span class="fs-15">
-                                            <i class="feather icon-feather-phone-call text-yellow me-10px"></i>
-                                            <a href="tel:{{ $siteData['hotline'] }}" class="text-dark-gray">{{ $siteData['hotline'] }}</a>
+                                        <span class="d-flex align-items-center">
+                                            <i class="fs-20 nav-link feather icon-feather-phone-call text-yellow me-10px"></i>
+                                            <a href="tel:{{ $siteData['hotline'] }}" class="text-dark-gray nav-link">{{ $siteData['hotline'] }}</a>
                                         </span>
                                     </li>
                                 </ul>
