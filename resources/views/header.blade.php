@@ -45,7 +45,6 @@
                 transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
             }
         </style>
-
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 requestAnimationFrame(function () {
@@ -55,7 +54,6 @@
                 });
             });
         </script>
-
         <!-- start header -->
         <header class="header-with-topbar">
             <div class="header-top-bar top-bar-dark bg-base-color">
@@ -63,22 +61,12 @@
                     <div class="row h-45px align-items-center m-0">
                         <div class="col-12 fw-500 justify-content-between">
                             <div class="d-flex align-items-center">
-
-                                <!-- <span class="me-25px fs-15 md-m-0">
-                                    <i class="feather icon-feather-mail text-white me-10px"></i><a href="mailto:{{ $siteData['emails'][0]['email'] }}" class="text-white" >{{ $siteData['emails'][0]['email'] }}</a>
-                                </span> -->
-                                <div class="ctext-end d-none d-lg-flex fs-15">
+                                <div class="text-end d-none d-md-flex fs-15">
                                     <div  class="elements-social mt-auto text-center text-md-start ps-lg-0" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                                         <ul class="small-icon light">
-
                                             @if(!empty($siteData['tiktok']))
                                                 <li class="m-0">
-                                                    <a
-                                                        class=""
-                                                        href="{{ $siteData['tiktok'] }}"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
+                                                    <a class=""href= "{{ $siteData['tiktok'] }}" target="_blank" rel="noopener noreferrer">
                                                         <i class="fa-brands fa-tiktok"></i>
                                                         <span></span>
                                                     </a>
@@ -130,14 +118,14 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <span class="ms-25px fs-15 md-m-0">
+                                <span class="ms-25px fs-15">
                                     <i class="feather icon-feather-phone-call text-white me-10px"></i><a href="tel:{{ $siteData['hotline'] }}" class="text-white">{{ $siteData['hotline'] }}</a>
                                 </span>
                             </div>
 
                             <div>
-                                <span class="d-xl-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
-                                <span class="d-xl-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>
+                                <span class="d-md-inline-block d-none fs-15 text-white mx-3"><a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a></span>
+                                <span class="d-md-inline-block d-none fs-15 text-white"><a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a></span>
                             </div>
 
                         </div>
@@ -208,162 +196,8 @@
                         </div>
                     </div>
                     <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex">
-                        <!-- <div class="header-icon">
-                            <div class="fs-15 widget-text fw-500">
-                                <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
-                                    احـجــــــز الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </nav>
             <!-- end navigation -->
         </header>
-        <!-- end header -->
-
-        <!-- start header -->
-        <!-- <header>
-
-            <nav class="navbar navbar-expand-lg header-light bg-white top-logo disable-fixed header-demo">
-
-                <div class="container-fluid flex-wrap">
-
-                    <div class="col-12 col-sm-12 col-lg-8 p-0 mx-lg-auto d-flex align-items-center justify-content-between">
-
-                        <div class="col col-lg-2">
-
-                            <div class="header-icon header-desktop-only">
-
-                                <div>
-                                    <div class="header-icon">
-                                        <div class="me-25px">
-                                            <div class="fs-15 xl-fs-13 widget-text fw-500">
-                                                <span class="w-35px h-35px bg-yellow d-inline-flex align-items-center justify-content-center me-10px border-radius-100px">
-                                                    <i class="feather icon-feather-phone"></i>
-                                                </span>
-                                                <a
-                                                    href="tel:+{{$siteData['hotline']}}"
-                                                    class="widget-text text-white-hover fw-600 fs-18"
-                                                >
-                                                    {{$siteData['hotline']}}
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button
-                                class="navbar-toggler float-start"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#navbarNav"
-                                aria-controls="navbarNav"
-                                aria-label="Toggle navigation"
-                            >
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                                <span class="navbar-toggler-line"></span>
-                            </button>
-
-                        </div>
-
-                        <div class="col-auto text-center">
-                            <a class="navbar-brand section-link" href="{{ route('home') }}">
-                                <img src="{{ asset('storage/' . $siteData['header-logo']) }}" data-at2x="{{ asset('storage/' . $siteData['header-logo']) }}" alt="Nile Misr" class="default-logo">
-                                <img src="{{ asset('storage/' . $siteData['header-logo']) }}" data-at2x="{{ asset('storage/' . $siteData['header-logo']) }}" alt="Nile Misr" class="alt-logo">
-                                <img src="{{ asset('storage/' . $siteData['header-logo']) }}" data-at2x="{{ asset('storage/' . $siteData['header-logo']) }}" alt="Nile Misr" class="mobile-logo">
-                            </a>
-                        </div>
-
-                        <div class="header-icon header-desktop-only">
-                            <div class="">
-                                <div class="header-icon">
-                                    <div class="header-button">
-                                        <a
-                                            href="javascript:void(0);"
-                                            class="btn btn-small btn-yellow btn-rounded"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#quickBookingModal"
-                                        >
-                                            احـجــــــز الآن
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-12 d-flex align-items-center justify-content-between position-static border-top border-color-extra-medium-gray md-border-none">
-                        <div class="col-auto m-auto">
-
-                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-
-                                <ul class="navbar-nav">
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('home') }}" class="nav-link">الرئيسية</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('about') }}" class="nav-link">من نحن؟</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('services') }}" class="nav-link">خدماتنا</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('moderators') }}" class="nav-link">المشرفين</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('hajj.index') }}" class="nav-link">برامج الحج</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('umrah.index') }}" class="nav-link">برامج العمرة</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('whyus') }}" class="nav-link">لماذا نيل مصر؟</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('reviews') }}" class="nav-link">أراء العملاء</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('media') }}" class="nav-link">المركز الإعلامي</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ route('contact') }}" class="nav-link">تواصل معنا</a>
-                                    </li>
-
-                                </ul>
-
-                                <div class="header-mobile-only d-flex align-items-center justify-content-start pe-2 gap-3 py-3 border-top border-color-extra-medium-gray mt-2">
-                                    <div class="fs-15 widget-text fw-500">
-                                        <span class="w-35px h-35px bg-yellow d-inline-flex align-items-center justify-content-center me-10px border-radius-100px">
-                                            <i class="feather icon-feather-phone"></i>
-                                        </span>
-                                        <a href="tel:+{{$siteData['hotline']}}" class="widget-text fw-600 fs-18">{{$siteData['hotline']}}</a>
-                                    </div>
-                                    <a href="javascript:void(0);" class="btn btn-small btn-yellow btn-rounded" data-bs-toggle="modal" data-bs-target="#quickBookingModal">
-                                        احـجــــــز الآن
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </nav>
-
-        </header> -->
         <!-- end header -->
