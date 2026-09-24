@@ -503,7 +503,7 @@
 
                         <div class="row room-type-selector gap-3 gap-md-0">
 
-                            <div class="col-md-3 mb-2"
+                            <div class="room-type-btn-col mb-2"
                                  id="bm-room-single-wrapper">
 
                                 <input type="radio"
@@ -516,7 +516,7 @@
                                 <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                        for="bm-room-single">
 
-                                    <span class="fs-15">فردي</span>
+                                    <span class="fs-15">{{ \App\Enums\RoomTypes::فردي->label() }}</span>
 
                                     <span class="fs-12 opacity-7 bm-room-price"
                                           id="bm-price-single"></span>
@@ -526,7 +526,7 @@
                             </div>
 
 
-                            <div class="col-md-3 mb-2"
+                            <div class="room-type-btn-col mb-2"
                                  id="bm-room-double-wrapper">
 
                                 <input type="radio"
@@ -540,7 +540,7 @@
                                 <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                        for="bm-room-double">
 
-                                    <span class="fs-15">ثنائـــــــــي</span>
+                                    <span class="fs-15">{{ \App\Enums\RoomTypes::ثنائـــــــــي->label() }}</span>
 
                                     <span class="fs-12 opacity-7 bm-room-price"
                                           id="bm-price-double"></span>
@@ -550,7 +550,7 @@
                             </div>
 
 
-                            <div class="col-md-3 mb-2"
+                            <div class="room-type-btn-col mb-2"
                                  id="bm-room-triple-wrapper">
 
                                 <input type="radio"
@@ -563,7 +563,7 @@
                                 <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                        for="bm-room-triple">
 
-                                    <span class="fs-15">ثلاثــــــــي</span>
+                                    <span class="fs-15">{{ \App\Enums\RoomTypes::ثلاثــــــــي->label() }}</span>
 
                                     <span class="fs-12 opacity-7 bm-room-price"
                                           id="bm-price-triple"></span>
@@ -573,7 +573,7 @@
                             </div>
 
 
-                            <div class="col-md-3 mb-2"
+                            <div class="room-type-btn-col mb-2"
                                  id="bm-room-quad-wrapper">
 
                                 <input type="radio"
@@ -586,10 +586,32 @@
                                 <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                        for="bm-room-quad">
 
-                                    <span class="fs-15">رباعي/خماسي</span>
+                                    <span class="fs-15">{{ \App\Enums\RoomTypes::رباعي->label() }}</span>
 
                                     <span class="fs-12 opacity-7 bm-room-price"
                                           id="bm-price-quad"></span>
+
+                                </label>
+
+                            </div>
+
+                            <div class="room-type-btn-col mb-2"
+                                 id="bm-room-quint-wrapper">
+
+                                <input type="radio"
+                                       name="room-type"
+                                       id="bm-room-quint"
+                                       value="quint"
+                                       class="btn-check"
+                                       autocomplete="off">
+
+                                <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
+                                       for="bm-room-quint">
+
+                                    <span class="fs-15">{{ \App\Enums\RoomTypes::خماسي->label() }}</span>
+
+                                    <span class="fs-12 opacity-7 bm-room-price"
+                                          id="bm-price-quint"></span>
 
                                 </label>
 
@@ -796,7 +818,7 @@
 
                                 <div class="row room-type-selector gap-3 gap-md-0">
 
-                                    <div class="col-md-3 mb-2"
+                                    <div class="room-type-btn-col mb-2"
                                          id="bm-room-single-wrapper">
 
                                         <input type="radio"
@@ -809,7 +831,7 @@
                                         <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                                for="bm-room-single">
 
-                                            <span class="fs-15">فردي</span>
+                                            <span class="fs-15">{{ \App\Enums\RoomTypes::فردي->label() }}</span>
                                             <span class="fs-12 opacity-7 bm-room-price"
                                                   id="bm-price-single"></span>
 
@@ -818,7 +840,7 @@
                                     </div>
 
 
-                                    <div class="col-md-3 mb-2"
+                                    <div class="room-type-btn-col mb-2"
                                          id="bm-room-double-wrapper">
 
                                         <input type="radio"
@@ -832,7 +854,7 @@
                                         <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                                for="bm-room-double">
 
-                                            <span class="fs-15">ثنائـــــــــي</span>
+                                            <span class="fs-15">{{ \App\Enums\RoomTypes::ثنائـــــــــي->label() }}</span>
                                             <span class="fs-12 opacity-7 bm-room-price"
                                                   id="bm-price-double"></span>
 
@@ -841,7 +863,7 @@
                                     </div>
 
 
-                                    <div class="col-md-3 mb-2"
+                                    <div class="room-type-btn-col mb-2"
                                          id="bm-room-triple-wrapper">
 
                                         <input type="radio"
@@ -854,7 +876,7 @@
                                         <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                                for="bm-room-triple">
 
-                                            <span class="fs-15">ثلاثــــــــي</span>
+                                            <span class="fs-15">{{ \App\Enums\RoomTypes::ثلاثــــــــي->label() }}</span>
                                             <span class="fs-12 opacity-7 bm-room-price"
                                                   id="bm-price-triple"></span>
 
@@ -863,7 +885,7 @@
                                     </div>
 
 
-                                    <div class="col-md-3 mb-2"
+                                    <div class="room-type-btn-col mb-2"
                                          id="bm-room-quad-wrapper">
 
                                         <input type="radio"
@@ -876,9 +898,30 @@
                                         <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
                                                for="bm-room-quad">
 
-                                            <span class="fs-15">رباعي/خماسي</span>
+                                            <span class="fs-15">{{ \App\Enums\RoomTypes::رباعي->label() }}</span>
                                             <span class="fs-12 opacity-7 bm-room-price"
                                                   id="bm-price-quad"></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="room-type-btn-col mb-2"
+                                         id="bm-room-quint-wrapper">
+
+                                        <input type="radio"
+                                               name="room-type"
+                                               id="bm-room-quint"
+                                               value="quint"
+                                               class="btn-check"
+                                               autocomplete="off">
+
+                                        <label class="btn btn-outline-dark-gray w-100 border-radius-5px fw-600 py-2 d-flex flex-column align-items-center"
+                                               for="bm-room-quint">
+
+                                            <span class="fs-15">{{ \App\Enums\RoomTypes::خماسي->label() }}</span>
+                                            <span class="fs-12 opacity-7 bm-room-price"
+                                                  id="bm-price-quint"></span>
 
                                         </label>
 
@@ -1093,6 +1136,10 @@
 
                     quad: parsePrice(
                         btn.data('price-quad')
+                    ),
+
+                    quint: parsePrice(
+                        btn.data('price-quint')
                     )
 
                 };
@@ -1109,6 +1156,9 @@
 
                 $('#bm-price-quad')
                     .text(formatCurrency(currentPrices.quad));
+
+                $('#bm-price-quint')
+                    .text(formatCurrency(currentPrices.quint));
 
 
                 if (
@@ -1162,6 +1212,24 @@
                 }
 
 
+                if (
+                    currentPrices.quint === 0 ||
+                    isNaN(currentPrices.quint)
+                ) {
+                    $('#bm-room-quint-wrapper').hide();
+
+                    if (
+                        $('#bm-room-quint').is(':checked')
+                    ) {
+                        $('#bm-room-quad')
+                            .prop('checked', true);
+                    }
+
+                } else {
+                    $('#bm-room-quint-wrapper').show();
+                }
+
+
                 $('input[name="room-type"]:checked')
                     .trigger('change');
 
@@ -1200,6 +1268,8 @@
                     else if (type === 'triple')
                         currentMax = 3;
                     else if (type === 'quad')
+                        currentMax = 4;
+                    else if (type === 'quint')
                         currentMax = 5;
 
 
@@ -1270,6 +1340,22 @@
 
         <!-- Floating Book Now Button (hidden on hajj-details & umrah-details) -->
 
+
+        <style>
+            .room-type-selector .room-type-btn-col {
+                flex: 0 0 20%;
+                max-width: 20%;
+                width: 20%;
+            }
+
+            @media (max-width: 767.98px) {
+                .room-type-selector .room-type-btn-col {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        </style>
 
     </body>
 </html>

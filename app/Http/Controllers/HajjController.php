@@ -56,7 +56,7 @@ class HajjController extends Controller
 
             'room-type' => [
                 'required',
-                'in:single,double,triple,quad',
+                'in:single,double,triple,quad,quint',
             ],
 
             'count' => [
@@ -71,7 +71,8 @@ class HajjController extends Controller
             'single' => RoomTypes::فردي->value,
             'double' => RoomTypes::ثنائـــــــــي->value,
             'triple' => RoomTypes::ثلاثــــــــي->value,
-            'quad'   => RoomTypes::رباعي_أو_خماسي->value,
+            'quad'   => RoomTypes::رباعي->value,
+            'quint'  => RoomTypes::خماسي->value,
         };
 
         $price = HajjPrice::where('hajj_package_id', $validated['package_id'])

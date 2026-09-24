@@ -59,7 +59,12 @@ class ListPackages
 
                     'price_quad'    => self::getPrice(
                         $package,
-                        RoomTypes::رباعي_أو_خماسي
+                        RoomTypes::رباعي
+                    ),
+
+                    'price_quint'   => self::getPrice(
+                        $package,
+                        RoomTypes::خماسي
                     ),
 
                     'image'         => $package->card_image,

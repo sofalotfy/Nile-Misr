@@ -55,7 +55,7 @@ class UmrahController extends Controller
 
             'room-type' => [
                 'required',
-                'in:single,double,triple,quad',
+                'in:single,double,triple,quad,quint',
             ],
 
             'count' => [
@@ -71,7 +71,8 @@ class UmrahController extends Controller
                 'single' => RoomTypes::فردي->value,
                 'double' => RoomTypes::ثنائـــــــــي->value,
                 'triple' => RoomTypes::ثلاثــــــــي->value,
-                'quad'   => RoomTypes::رباعي_أو_خماسي->value,
+                'quad'   => RoomTypes::رباعي->value,
+                'quint'  => RoomTypes::خماسي->value,
                 default  => abort(422, 'نوع الغرفة غير صالح'),
             };
         $price = UmrahPrice::where('umrah_package_id', $request->package_id)

@@ -19,10 +19,10 @@ class ListPackages
             ->get()
             ->map(function ($package) {
                 $prices = $package->hajjPrices
-                    ->sortBy('price')
+                    ->sortBy(fn ($price) => $price->type->capacity())
                     ->values();
 
-                $lowestPrice = $prices->first()?->price;
+                $lowestPrice = $package->hajjPrices->min('price');
 
                 return [
                     'id' => $package->id,
@@ -47,7 +47,7 @@ class ListPackages
 
                     'price_details' => $prices
                         ->map(function ($price) {
-                            return self::formatPriceType($price->type->value)
+                            return $price->type->label()
                                 . ': '
                                 . number_format($price->price)
                                 . ' ج';
@@ -72,16 +72,5 @@ class ListPackages
             'maka_hotel_id',
             'madina_hotel_id',
         ];
-    }
-
-    private static function formatPriceType(string $type): string
-    {
-        return match ($type) {
-            'single' => 'فردي',
-            'double' => 'ثنائي',
-            'triple' => 'ثلاثي',
-            'quad' => 'رباعي أو خماسي',
-            default => $type,
-        };
     }
 }

@@ -2,6 +2,7 @@
 @php
     use App\Enums\HajjPackageLevel;
     use App\Enums\HajjPackageDuration;
+    use App\Enums\RoomTypes;
 
 
 @endphp
@@ -176,10 +177,20 @@
                                 $h_price_double = 0;
                                 $h_price_triple = 0;
                                 $h_price_quad = 0;
-                                if (preg_match('/خماسي:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي.*?:\s*([\d,]+)/', $program['price_details'], $m) || preg_match('/رباعي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_quad = str_replace(',', '', $m[1]);
-                                if (preg_match('/ثلاثــــــــي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_triple = str_replace(',', '', $m[1]);
-                                if (preg_match('/ثنائـــــــــي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_double = str_replace(',', '', $m[1]);
-                                if (preg_match('/فردي:\s*([\d,]+)/', $program['price_details'], $m)) $h_price_single = str_replace(',', '', $m[1]);
+                                $h_price_quint = 0;
+                                foreach (RoomTypes::cases() as $type) {
+                                    if (!preg_match('/' . preg_quote($type->label(), '/') . ':\s*([\d,]+)/', $program['price_details'], $m)) {
+                                        continue;
+                                    }
+                                    $type_price = str_replace(',', '', $m[1]);
+                                    match ($type) {
+                                        RoomTypes::فردي        => $h_price_single = $type_price,
+                                        RoomTypes::ثنائـــــــــي => $h_price_double = $type_price,
+                                        RoomTypes::ثلاثــــــــي => $h_price_triple = $type_price,
+                                        RoomTypes::رباعي        => $h_price_quad = $type_price,
+                                        RoomTypes::خماسي        => $h_price_quint = $type_price,
+                                    };
+                                }
                                 ?>
                                 <a href="javascript:void(0);"
                                     class="btn btn-yellow btn-small btn-rounded btn-box-shadow flex-grow-1 open-booking-modal"
@@ -192,7 +203,8 @@
                                     data-price-single="<?php echo $h_price_single; ?>"
                                     data-price-double="<?php echo $h_price_double; ?>"
                                     data-price-triple="<?php echo $h_price_triple; ?>"
-                                    data-price-quad="<?php echo $h_price_quad; ?>">احجز الآن</a>
+                                    data-price-quad="<?php echo $h_price_quad; ?>"
+                                    data-price-quint="<?php echo $h_price_quint; ?>">احجز الآن</a>
                                 <a href="/hajj/<?= $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
                             </div>
                         </div>

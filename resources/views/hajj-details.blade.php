@@ -387,7 +387,7 @@ $getPrice = function ($type) use ($prices) {
 
                                 <td class="cpt-header fs-24 {{ $loop->last ? 'cpt-rounded-tl' : '' }}">
 
-                                    {{ $price->type }}
+                                    {{ $price->type->label() }}
 
                                 </td>
 
@@ -517,15 +517,17 @@ data-category="{{ $package->level }}"
 
 @foreach($prices as $price)
 
-
-   @if($loop->first)
+   @if($price->type === \App\Enums\RoomTypes::فردي)
+       data-price-single="{{ $price->price }}"
+   @elseif($price->type === \App\Enums\RoomTypes::ثنائـــــــــي)
        data-price-double="{{ $price->price }}"
-   @elseif($loop->iteration === 2)
+   @elseif($price->type === \App\Enums\RoomTypes::ثلاثــــــــي)
        data-price-triple="{{ $price->price }}"
-   @elseif($loop->iteration === 3)
+   @elseif($price->type === \App\Enums\RoomTypes::رباعي)
        data-price-quad="{{ $price->price }}"
+   @elseif($price->type === \App\Enums\RoomTypes::خماسي)
+       data-price-quint="{{ $price->price }}"
    @endif
-
 
 @endforeach
 

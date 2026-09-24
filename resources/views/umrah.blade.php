@@ -6,7 +6,8 @@
 function umrah_card($program)
         {
             // Determine the lowest price to display on the image
-            $starting_price = $program['price_quad'];
+            $starting_price = $program['price_quint'];
+            if (empty($starting_price)) $starting_price = $program['price_quad'];
             if (empty($starting_price)) $starting_price = $program['price_triple'];
             if (empty($starting_price)) $starting_price = $program['price_double'];
             if (empty($starting_price)) $starting_price = $program['price_single'];
@@ -52,6 +53,7 @@ function umrah_card($program)
                    data-price-double="<?php echo $program['price_double'] ?? 0; ?>"
                    data-price-triple="<?php echo $program['price_triple'] ?? 0; ?>"
                    data-price-quad="<?php echo $program['price_quad'] ?? 0; ?>"
+                   data-price-quint="<?php echo $program['price_quint'] ?? 0; ?>"
                 >احجز الآن</a>
                 <a href="/umrah/<?= $program['id'] ?>" class="btn btn-transparent-dark-gray border-1 border-color-dark-gray btn-small btn-rounded flex-grow-1 text-center">التفاصيل</a>
             </div>
